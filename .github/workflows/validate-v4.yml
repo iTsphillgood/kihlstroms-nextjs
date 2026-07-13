@@ -1,0 +1,20 @@
+name: Validate Kihlstroms V4
+on:
+  push:
+    paths:
+      - "v4/**"
+      - ".github/workflows/validate-v4.yml"
+  pull_request:
+    paths:
+      - "v4/**"
+      - ".github/workflows/validate-v4.yml"
+  workflow_dispatch:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node v4/scripts/validate.mjs
