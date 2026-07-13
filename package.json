@@ -1,0 +1,12 @@
+{
+  "name": "kihlstroms-digital-showroom-2026",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "serve": "python3 -m http.server 8080",
+    "qa": "node scripts/qa.mjs",
+    "sync": "node scripts/crawl-sites.mjs",
+    "sync:download": "node scripts/crawl-sites.mjs --download"
+  }
+}
