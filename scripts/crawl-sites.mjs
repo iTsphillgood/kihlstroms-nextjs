@@ -1,0 +1,16 @@
+#!/usr/bin/env node
+/**
+ * Crawls public seed pages and writes a normalized image/link manifest.
+ * Run: node scripts/crawl-sites.mjs
+ * Run and download allowed brand assets: node scripts/crawl-sites.mjs --download
+ */
+import fs from 'node:fs/promises';import crypto from 'node:crypto';
+const out=new URL('../data/live-crawl.json',import.meta.url);const download=process.argv.includes('--download');
+const seeds=['https://www.kihlstroms.se/v3/','https://www.kihlstroms.se/v3/kontakt/','https://www.kihlstroms.se/v3/kampanjer/','https://www.kihlstroms.se/v3/bygg-din-lastbil/','https://maxus.se/modeller','https://maxus.se/modeller/e-deliver-3','https://maxus.se/modeller/e-deliver-3-chassis','https://maxus.se/modeller/e-deliver-5','https://maxus.se/modeller/e-deliver-7','https://maxus.se/modeller/deliver-7','https://maxus.se/modeller/e-deliver-9-elektrisk-transportbil','https://maxus.se/modeller/e-deliver-9-chassi','https://maxus.se/modeller/deliver-9','https://maxus.se/modeller/t90ev-transportbil','https://maxus.se/modeller/t60','https://maxus.se/modeller/eterron-9'];
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));const abs=(v,base)=>{try{return new URL(v,base).href}catch{return null}};
+const decodeImage=u=>{try{const x=new URL(u);if(x.pathname.includes('/_next/image')&&x.searchParams.get('url'))return decodeURIComponent(x.searchParams.get('url'));return u}catch{return u}};
+const extract=(html,base)=>{const links=new Set(),images=new Set();for(const m of html.matchAll(/\b(?:href|src)=["']([^"']+)["']/gi)){const u=abs(m[1],base);if(!u)continue;(m[0].toLowerCase().startsWith('src=')?images:links).add(decodeImage(u))}for(const m of html.matchAll(/\bsrcset=["']([^"']+)["']/gi))for(const part of m[1].split(',')){const u=abs(part.trim().split(/\s+/)[0],base);if(u)images.add(decodeImage(u))}return{links:[...links],images:[...images]}};
+const result={generatedAt:new Date().toISOString(),pages:[],errors:[]};for(const url of seeds){try{const r=await fetch(url,{headers:{'user-agent':'KihlstromsContentSync/1.0 (+https://www.kihlstroms.se/)'}});if(!r.ok)throw new Error(`${r.status} ${r.statusText}`);const html=await r.text();const x=extract(html,r.url);result.pages.push({url:r.url,title:(html.match(/<title[^>]*>([^<]*)/i)||[])[1]||'',...x});await sleep(450)}catch(e){result.errors.push({url,error:String(e.message||e)})}}
+const allImages=[...new Set(result.pages.flatMap(p=>p.images))];const allLinks=[...new Set(result.pages.flatMap(p=>p.links))];result.summary={pages:result.pages.length,images:allImages.length,links:allLinks.length,errors:result.errors.length};result.images=allImages;result.links=allLinks;await fs.writeFile(out,JSON.stringify(result,null,2));
+if(download){const allow=new Set(['cdn.sanity.io','www.kihlstroms.se','kihlstroms.se']);const dir=new URL('../assets/remote/',import.meta.url);await fs.mkdir(dir,{recursive:true});for(const u of allImages){try{const x=new URL(u);if(!allow.has(x.hostname))continue;const r=await fetch(u);if(!r.ok)continue;const ext=(x.pathname.match(/\.(png|jpe?g|webp|svg)$/i)||[])[1]||'bin';const name=crypto.createHash('sha1').update(u).digest('hex')+'.'+ext;await fs.writeFile(new URL(name,dir),Buffer.from(await r.arrayBuffer()));await sleep(250)}catch{}}}
+console.log(JSON.stringify(result.summary));
