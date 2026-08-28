@@ -1,0 +1,212 @@
+{
+  "company": {
+    "name": "Kihlströms Transport & Lastbilscenter",
+    "shortName": "Kihlströms",
+    "tagline": "Auktoriserad återförsäljare och verkstad för IVECO, Isuzu och Maxus",
+    "pitch": "Sveriges största IVECO-återförsäljare – två fullserviceanläggningar i Stockholm som håller din transportbil, pickup eller lastbil i arbete.",
+    "phone": "08-19 56 26",
+    "phoneHref": "tel:+468195626",
+    "email": "info@kihlstroms.se",
+    "claims": [
+      "Sveriges största IVECO-återförsäljare",
+      "Auktoriserade för IVECO, Isuzu och Maxus",
+      "MECA-verkstad för alla märken",
+      "Två anläggningar – Smista och Spånga"
+    ],
+    "brands": ["IVECO", "Isuzu", "Maxus"]
+  },
+  "locations": [
+    {
+      "id": "smista",
+      "name": "Kihlströms Syd – Smista",
+      "region": "Stockholm Syd",
+      "address": "Smista Allé 19",
+      "city": "Segeltorp",
+      "salesHours": "Mån–Fre 08:00–17:00",
+      "workshopHours": "Mån–Fre 07:00–16:00",
+      "email": "info.smista@kihlstroms.se",
+      "phone": "08-19 56 26",
+      "phoneHref": "tel:+468195626",
+      "mapsUrl": "https://www.google.com/maps?q=Kihlstr%C3%B6ms+Transport,+Smista",
+      "wazeUrl": "https://www.waze.com/ul?q=Kihlstr%C3%B6ms%20Transport,%20Smista"
+    },
+    {
+      "id": "spanga",
+      "name": "Kihlströms Norr – Spånga",
+      "region": "Stockholm Norr",
+      "address": "Finspångsgatan 49",
+      "city": "Spånga",
+      "salesHours": "Mån–Fre 08:30–17:00",
+      "workshopHours": "Mån–Fre 07:00–16:00",
+      "email": "info.norr@kihlstroms.se",
+      "phone": "08-19 56 26",
+      "phoneHref": "tel:+468195626",
+      "mapsUrl": "https://www.google.com/maps?q=Kihlstr%C3%B6ms+Transport,+Sp%C3%A5nga",
+      "wazeUrl": "https://www.waze.com/ul?q=Kihlstr%C3%B6ms%20Transport,%20Sp%C3%A5nga"
+    }
+  ],
+  "staff": [
+    {
+      "name": "Alexander Pasaportis",
+      "role": "Försäljningschef",
+      "location": "Syd – Smista",
+      "email": "alexander@kihlstroms.se",
+      "phone": "070-328 87 00",
+      "phoneHref": "tel:+46703288700",
+      "brands": ["IVECO", "Isuzu", "Maxus"],
+      "bio": "Kanske Sveriges mest pålästa säljare på italienska transportbilar, med 20 års erfarenhet av IVECO."
+    },
+    {
+      "name": "Philip Pasaportis",
+      "role": "Transportbilssäljare",
+      "location": "Syd – Smista",
+      "email": "philip@kihlstroms.se",
+      "phone": "070-644 07 00",
+      "phoneHref": "tel:+46706440700",
+      "brands": ["Maxus", "IVECO", "Isuzu"],
+      "bio": "Brinner för säljprocessen och kundrelationen – tar mer än gärna en fika i showern med kunder som vill utveckla sin synlighet online."
+    },
+    {
+      "name": "Wasse",
+      "role": "Transportbilssäljare",
+      "location": "Syd – Smista",
+      "email": "wasse@kihlstroms.se",
+      "phone": "08-19 56 26",
+      "phoneHref": "tel:+468195626",
+      "brands": ["IVECO", "Isuzu", "Maxus"],
+      "bio": "Professionell rådgivning, offert och anpassning av nya och begagnade transportbilar, pickuper och lätta lastbilar."
+    },
+    {
+      "name": "Alexander Österberg",
+      "role": "Transportbilssäljare",
+      "location": "Norr – Spånga",
+      "email": "osterberg@kihlstroms.se",
+      "phone": "0706-530 001",
+      "phoneHref": "tel:+46706530001",
+      "brands": ["IVECO", "Isuzu", "Maxus"],
+      "bio": "Alex i Spånga hittar du i stort sett alltid i anläggningen i Spånga – gärna lite efter stängningsdags."
+    },
+    {
+      "name": "Vendela",
+      "role": "Servicerådgivare",
+      "location": "Norr – Spånga",
+      "email": "verkstad.norr@kihlstroms.se",
+      "phone": "08-545 287 29",
+      "phoneHref": "tel:+46854528729",
+      "brands": ["Verkstad"],
+      "bio": "Superkrafter när det gäller att organisera mängder av rörliga komponenter – uppskattad av kunder och kollegor."
+    },
+    {
+      "name": "Leo",
+      "role": "Servicerådgivare",
+      "location": "Norr – Spånga",
+      "email": "verkstad.norr@kihlstroms.se",
+      "phone": "08-19 56 26",
+      "phoneHref": "tel:+468195626",
+      "brands": ["Verkstad"],
+      "bio": "Brinner för kundkontakt, försäljning och att göra kundernas vardag enklare."
+    },
+    {
+      "name": "Marcus",
+      "role": "Verkstadschef",
+      "location": "Norr – Spånga",
+      "email": "marcus@kihlstroms.se",
+      "phone": "08-19 56 26",
+      "phoneHref": "tel:+468195626",
+      "brands": ["Verkstad"],
+      "bio": "Målinriktad perfektionist med en fot i driften och den andra i framtidsstrategierna."
+    },
+    {
+      "name": "Ronnie",
+      "role": "Verkmästare",
+      "location": "Syd – Smista",
+      "email": "ronnie@kihlstroms.se",
+      "phone": "08-19 56 26",
+      "phoneHref": "tel:+468195626",
+      "brands": ["Verkstad"],
+      "bio": "Spenderar helst halva sin tid med att skruva själv – ovärderligt för kvalitetssäkringen mot kunderna."
+    },
+    {
+      "name": "Andreas",
+      "role": "Reservdelar",
+      "location": "Syd – Smista",
+      "email": "andreas@kihlstroms.se",
+      "phone": "08-545 287 05",
+      "phoneHref": "tel:+46854528705",
+      "brands": ["Reservdelar"],
+      "bio": "Många års erfarenhet inom reservdelar och ansvarar för ett lager på flera tusen artiklar."
+    },
+    {
+      "name": "Marcin",
+      "role": "Reservdelar",
+      "location": "Norr – Spånga",
+      "email": "reservdelar.norr@kihlstroms.se",
+      "phone": "08-545 287 10",
+      "phoneHref": "tel:+46854528710",
+      "brands": ["Reservdelar"],
+      "bio": "Barnsligt förtjust i lastbilar med 20 års erfarenhet – och alltid ett skämt på lager."
+    },
+    {
+      "name": "Carina",
+      "role": "Ekonomi och bokföring",
+      "location": "Administration",
+      "email": "carina@kihlstroms.se",
+      "phone": "08-545 287 23",
+      "phoneHref": "tel:+46854528723",
+      "brands": ["Ekonomi"],
+      "bio": "Vår mest lojala medarbetare med över 20 anställningsår."
+    },
+    {
+      "name": "Catarina",
+      "role": "Ekonomichef",
+      "location": "Administration",
+      "email": "catarina@kihlstroms.se",
+      "phone": "08-545 287 12",
+      "phoneHref": "tel:+46854528712",
+      "brands": ["Ekonomi"],
+      "bio": "Bakgrund som revisor på PwC och financial controller på Länsförsäkringar."
+    },
+    {
+      "name": "Micha",
+      "role": "Verkställande direktör",
+      "location": "Administration",
+      "email": "micha@kihlstroms.se",
+      "phone": "08-545 287 18",
+      "phoneHref": "tel:+46854528718",
+      "brands": ["Ledning"],
+      "bio": "Gediget förflutet som VD i åkeribranschen och manisk förälskelse i Italien och italienska produkter."
+    }
+  ],
+  "brands": [
+    {
+      "id": "iveco",
+      "name": "IVECO",
+      "tagline": "Transportbilar och lätta lastbilar från Italien",
+      "description": "Kihlströms är Sveriges största IVECO-återförsäljare. Dailyfamiljen erbjuder HVO100, biogas (CBG), diesel och eldrift – från 3,5 till 7 ton, plus Eurocargo, S-Way, X-Way och T-Way för tyngre uppdrag.",
+      "color": "#1B5FAA",
+      "image": "/images/models/iveco-daily.png",
+      "sourceUrl": "https://iveco.se/",
+      "highlights": ["Daily från 419 000 kr exkl. moms", "eDaily – enda eltransportbilen som drar 3,5 ton", "20 färdiga kampanjmodeller 2026"]
+    },
+    {
+      "id": "isuzu",
+      "name": "Isuzu",
+      "tagline": "Sveriges mest sålda pickup – tre år i rad",
+      "description": "Isuzu D-Max är byggd för hårt arbete: ramchassi, 3 500 kg dragvikt, upp till ett ton i flaket och 80 cm vaddjup. Dieselpickupen finns som Extended Cab och Double Cab, med Arctic Trucks-varianter och ren eldrift (BEV).",
+      "color": "#C8102E",
+      "image": "/images/models/isuzu-dmax-xrx.jpg",
+      "sourceUrl": "https://isuzusverige.se/",
+      "highlights": ["Sveriges mest sålda pickup 2023, 2024 och 2025", "Från 469 900 kr exkl. moms", "Klassens lägsta CO₂-utsläpp"]
+    },
+    {
+      "id": "maxus",
+      "name": "Maxus",
+      "tagline": "El, diesel, chassi och pickup",
+      "description": "Maxus erbjuder åtta modeller i Sverige: eldrivna och dieseldrivna skåpbilar, chassin för påbyggnad och pickuper. Alla modeller rostskyddsbehandlas i Sverige och säljs med upp till 5 års nybilsgaranti och 8 års batterigaranti.",
+      "color": "#0E7490",
+      "image": "/images/models/maxus-eterron9.webp",
+      "sourceUrl": "https://maxus.se/modeller",
+      "highlights": ["Elskåpbilar från 339 900 kr exkl. moms", "T90 EV till kampanjpris 299 900 kr", "Rostskyddsbehandlas i Sverige"]
+    }
+  ]
+}

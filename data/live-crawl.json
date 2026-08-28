@@ -1,0 +1,78 @@
+{
+  "generatedAt": "2026-08-28T08:58:55.480Z",
+  "pages": [],
+  "errors": [
+    {
+      "url": "https://www.kihlstroms.se/v3/",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://www.kihlstroms.se/v3/kontakt/",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://www.kihlstroms.se/v3/kampanjer/",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://www.kihlstroms.se/v3/bygg-din-lastbil/",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://maxus.se/modeller",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://maxus.se/modeller/e-deliver-3",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://maxus.se/modeller/e-deliver-3-chassis",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://maxus.se/modeller/e-deliver-5",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://maxus.se/modeller/e-deliver-7",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://maxus.se/modeller/deliver-7",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://maxus.se/modeller/e-deliver-9-elektrisk-transportbil",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://maxus.se/modeller/e-deliver-9-chassi",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://maxus.se/modeller/deliver-9",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://maxus.se/modeller/t90ev-transportbil",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://maxus.se/modeller/t60",
+      "error": "fetch failed"
+    },
+    {
+      "url": "https://maxus.se/modeller/eterron-9",
+      "error": "fetch failed"
+    }
+  ],
+  "summary": {
+    "pages": 0,
+    "images": 0,
+    "links": 0,
+    "errors": 16
+  },
+  "images": [],
+  "links": []
+}
