@@ -1,16 +1,15 @@
 # Kihlströms – WordPress-export
 
-Alla sidor från kihlstroms-nextjs, exporterade som ren HTML utan JavaScript-beroenden.
+Alla sidor från kihlstroms-nextjs, exporterade som **självcontained HTML** – designen (CSS) är inbäddad i varje fil, så det finns ingen separat stilmall att installera eller ladda upp.
+
 Genererad av `npm run build:wordpress` – kör igen efter ändringar i sajten så uppdateras mapparna ned.
 
 ## Innehåll
 
 | Katalog/fil | Vad det är |
 |---|---|
-| `pages/*.html` | Kompletta HTML-sidor med menyer, sidfot och delad CSS – fungerar att öppna direkt i webbläsaren som granskning, eller att ladda upp som statisk webbplats |
-| `fragments/*.html` | Sidinnehållet (utan menyer/sidfot) insvept i `<div class="kms-scope">` – detta klistras in i WordPress som **Egen HTML**-block |
-| `assets/site.css` | Hela sajtens samlade CSS (33 kB) |
-| `assets/kihlstroms-wp.css` | Samma CSS men scopad under `.kms-scope` – krockar inte med WordPress-temat |
+| `pages/*.html` | Kompletta HTML-sidor med menyer, sidfot och inbäddad CSS – fungerar att öppna direkt i webbläsaren som granskning, eller att ladda upp som statisk webbplats |
+| `fragments/*.html` | Sidinnehållet (utan menyer/sidfot) med inbäddad CSS scopad under `.kms-scope` – klistras in som **Egen HTML**-block i WordPress, inget annat behövs |
 | `assets/images/` | Lokala fallback-bilder (märkes-CDN-bilderna är fortfarande originallänkade) |
 | `index.html` | Granskningslista med länkar till alla sidor |
 
@@ -34,17 +33,15 @@ Genererad av `npm run build:wordpress` – kör igen efter ändringar i sajten s
 
 ## Så här installerar du i WordPress
 
-1. **CSS en gång.** Kopiera innehållet i `assets/kihlstroms-wp.css` under
-   *Utseende → Anpassa → Extra CSS* (eller ladda upp som stilmall i child-temat).
-   Allt är scopat under `.kms-scope` och påverkar inte resten av sajten.
-2. **Skapa sidorna** med samma permalänkar som i tabellen ovan
+1. **Skapa sidorna** med samma permalänkar som i tabellen ovan
    (*Sidor → Ny* och sätt permalänk, t.ex. `lager`).
-3. **Klistra in innehållet.** Öppna `fragments/<sida>.html`, kopiera allt,
-   och klistra in som blocket **Egen HTML** i respektive sida. Blockredigerarens
-   förhandsvisning visar sidan rätt när CSS:en är på plats.
-4. **Meny & sidfot** skapar du med WordPress egna menyer (*Utseende → Menyer*) –
+2. **Klistra in innehållet.** Öppna `fragments/<sida>.html`, kopiera allt,
+   och klistra in som blocket **Egen HTML** i respektive sida.
+   CSS:en följer med i blocket (scopad under `.kms-scope`) så sidan ser rätt ut
+   direkt – och påverkar inte resten av WordPress-temat.
+3. **Meny & sidfot** skapar du med WordPress egna menyer (*Utseende → Menyer*) –
    fragmenten innehåller inga navigationsmennyer.
-5. **Startsidan** pekas in under *Inställningar → Läsa* → "En statisk sida".
+4. **Startsidan** pekas in under *Inställningar → Läsa* → "En statisk sida".
 
 ## Begränsningar att känna till (statisk HTML utan JS)
 
@@ -56,6 +53,8 @@ Genererad av `npm run build:wordpress` – kör igen efter ändringar i sajten s
   första steget.
 - Bilderna laddas från märkenas officiella CDN:er (originallänkade). Fallback-bilderna
   i `assets/images/` laddar du bara upp om något CDN skulle försvinna.
+- WordPress kan rensa `<style>`-taggar för användare med låga behörigheter –
+  klistra in som administratör/redaktör så fungerar det.
 
 ## Uppdatera exporten
 

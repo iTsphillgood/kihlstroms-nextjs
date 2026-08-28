@@ -6,11 +6,9 @@
  *   (eller: npm run build:wordpress)
  *
  * Output i wordpress/:
- *   assets/site.css        – hela sajtens CSS (okopplad, för statiskt bruk)
- *   assets/kihlstroms-wp.css – samma CSS scopad under .kms-scope (för WordPress)
- *   assets/images/         – lokala fallback-bilder (kopieras från public/)
- *   pages/*.html           – kompletta HTML-sidor med nav/footer, länkar mellan sidorna (grund för "Egen HTML"/tema)
- *   fragments/*.html       – innehållet ur <main> insvept i .kms-scope, redo att klistras in som "Egen HTML"-block i WordPress
+ *   pages/*.html     – kompletta HTML-sidor med nav/footer och inbäddad CSS (grund för "Egen HTML"/tema)
+ *   fragments/*.html – innehållet ur <main> med inbäddad, scopad CSS – klart att klistras in som "Egen HTML"-block i WordPress
+ *   assets/images/   – lokala fallback-bilder (kopieras från public/)
  */
 
 import { execSync } from "node:child_process";
@@ -105,15 +103,13 @@ function scopeCss(source, scope) {
 const scopedCss = `${scopeCss(css, ".kms-scope")}\n/* bas för fragmentet */\n.kms-scope{min-height:inherit;}\n`;
 
 /* ---------- 4. Rensa en HTML-sida från Next.js-runtime ---------- */
-function cleanHtml(html, { cssHref }) {
+function cleanHtml(html) {
   let doc = html;
   // bort all JS (Next-runtime, hydration, flight-data)
   doc = doc.replace(/<script\b[\s\S]*?<\/script>/g, "");
   doc = doc.replace(/<script\b[^>]*\/>/g, "");
-  // stylesheet → gemensam css-fil (görs FÖRE /_next-rensningen, som annars slänger den)
-  doc = doc.replace(/<link\b[^>]*rel="stylesheet"[^>]*>/g, (m) =>
-    m.includes("/_next/") ? `<link rel="stylesheet" href="${cssHref}">` : m
-  );
+  // stylesheet-länkar mot /_next tas bort – CSS:en bäddas in i filerna istället
+  doc = doc.replace(/<link\b[^>]*rel="stylesheet"[^>]*>/g, (m) => (m.includes("/_next/") ? "" : m));
   // bort preload/prefetch till /_next
   doc = doc.replace(/<link\b[^>]*href="\/_next[^"]*"[^>]*>/g, "");
   // JSON-flightdata i länkar
@@ -150,10 +146,7 @@ for (const dir of ["pages", "fragments", "assets"]) {
   fs.mkdirSync(path.join(WP, dir), { recursive: true });
 }
 
-fs.writeFileSync(path.join(WP, "assets", "site.css"), css);
-fs.writeFileSync(path.join(WP, "assets", "kihlstroms-wp.css"), scopedCss);
-
-// kopiera lokala bilder
+// lokala fallback-bilder (CSS bäddas in i varje fil – ingen separat css-fil)
 if (fs.existsSync(path.join(OUT, "images"))) {
   fs.cpSync(path.join(OUT, "images"), path.join(WP, "assets", "images"), { recursive: true });
 }
@@ -165,11 +158,14 @@ for (const file of htmlFiles) {
   const flat = (route === "/" ? "index" : route.split("/").filter(Boolean).join("-")) + ".html";
   const raw = fs.readFileSync(file, "utf8");
 
-  // Hel sida (med nav/footer, för granskning och som mall)
-  const page = rewriteLinks(cleanHtml(raw, { cssHref: "../assets/site.css" }));
+  // Hel sida (med nav/footer, för granskning och som mall) – CSS inbäddad i <head>
+  const page = rewriteLinks(cleanHtml(raw)).replace(
+    "</head>",
+    `<style>\n${css}\n</style>\n</head>`
+  );
   fs.writeFileSync(path.join(WP, "pages", flat), page);
 
-  // Fragment (endast <main>-innehållet, för WordPress-block)
+  // Fragment (endast <main>-innehållet) – scopad CSS inbäddad, klart att klistras in i WordPress
   const mainStart = raw.indexOf('<main id="main"');
   const mainEnd = raw.lastIndexOf("</main>");
   if (mainStart !== -1 && mainEnd !== -1) {
@@ -177,12 +173,10 @@ for (const file of htmlFiles) {
     const fragmentBody = raw.slice(innerStart, mainEnd);
     const fragment =
       `<!-- Kihlströms – innehåll för sidan ${route} -->\n` +
-      `<!-- Kräver att kihlstroms-wp.css är inläst (t.ex. via Additional CSS) -->\n` +
+      `<!-- Självcontained: design och innehåll i samma block. Klistra in som "Egen HTML" i WordPress -->\n` +
       `<!-- Interna länkar pekar på WordPress-permalänkar: skapa sidorna med samma sökvägar -->\n` +
-      `<div class="kms-scope">\n` +
-      cleanHtml(fragmentBody, { cssHref: "" })
-        .replace(/<link\b[^>]*rel="stylesheet"[^>]*>/g, "")
-        .trim() +
+      `<div class="kms-scope">\n<style>\n${scopedCss}\n</style>\n` +
+      cleanHtml(fragmentBody).trim() +
       `\n</div>\n`;
     fs.writeFileSync(path.join(WP, "fragments", flat), fragment);
   }
@@ -191,10 +185,10 @@ for (const file of htmlFiles) {
 
 /* ---------- 7. index-fil för granskning ---------- */
 const routes = [...routeToFile.entries()].sort((a, b) => a[0].localeCompare(b[0]));
-const index = `<!doctype html><html lang="sv"><head><meta charset="utf-8"><title>Kihlströms – WordPress-export (granskning)</title><style>body{font-family:system-ui;margin:40px;line-height:1.6}li{margin:4px 0}h1{font-size:22px}</style></head><body><h1>Kihlströms – WordPress-export</h1><p>${pageCount} sidor genererade ${new Date().toISOString().slice(0, 10)}. Öppna pages/ för förhandsgranskning, fragments/ för WordPress-innehåll.</p><ul>${routes
+const index = `<!doctype html><html lang="sv"><head><meta charset="utf-8"><title>Kihlströms – WordPress-export (granskning)</title><style>body{font-family:system-ui;margin:40px;line-height:1.6}li{margin:4px 0}h1{font-size:22px}</style></head><body><h1>Kihlströms – WordPress-export</h1><p>${pageCount} sidor genererade ${new Date().toISOString().slice(0, 10)}. CSS:en är inbäddad i varje fil. Öppna pages/ för förhandsgranskning, fragments/ för WordPress-innehåll.</p><ul>${routes
   .map(([route, file]) => `<li><a href="pages/${file}">${route}</a> – <a href="fragments/${file}">fragment</a></li>`)
   .join("")}</ul></body></html>`;
 fs.writeFileSync(path.join(WP, "index.html"), index);
 
 console.log(`✓ ${pageCount} sidor → wordpress/pages/ och wordpress/fragments/`);
-console.log(`✓ CSS: wordpress/assets/site.css (${(css.length / 1024).toFixed(0)} kB) + kihlstroms-wp.css (scopad)`);
+console.log(`✓ CSS inbäddad i varje fil (≈ ${(css.length / 1024).toFixed(0)} kB/sida, ingen separat css-fil)`);
