@@ -33,6 +33,11 @@ export default function ModelCard({ model }: { model: Model }) {
           </Link>
         </h3>
         <p className="mt-1.5 line-clamp-2 text-sm leading-relaxed text-ink-600">{model.summary}</p>
+        {model.suitedFor?.[0] && (
+          <p className="mt-2 text-xs leading-relaxed text-ink-500">
+            <span className="font-semibold text-ink-700">Passar för:</span> {model.suitedFor[0].toLowerCase()}
+          </p>
+        )}
 
         <dl className="mt-4 grid grid-cols-2 gap-x-4 gap-y-2">
           {model.specs.slice(0, 4).map((s) => (
@@ -52,9 +57,14 @@ export default function ModelCard({ model }: { model: Model }) {
               {model.priceFrom ? `${formatSek(model.priceFrom)} exkl. moms` : "På förfrågan"}
             </p>
           </div>
-          <Link href={`/modeller/${model.slug}`} className="btn-ghost !px-4 !py-2 text-[13px]">
-            Se modellen
-          </Link>
+          <div className="flex flex-col items-end gap-1.5">
+            <Link href={`/modeller/${model.slug}`} className="btn-ghost !px-4 !py-2 text-[13px]">
+              Se modellen
+            </Link>
+            <Link href="/kontakt#meddelande" className="text-[13px] font-semibold text-brand-blue hover:underline">
+              Begär offert
+            </Link>
+          </div>
         </div>
       </div>
     </article>

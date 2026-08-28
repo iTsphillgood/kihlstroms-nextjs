@@ -74,6 +74,28 @@ export default function BrandPage({ params }: { params: { brand: string } }) {
                 </a>
               )}
             </div>
+            <dl className="mt-8 grid grid-cols-3 gap-4 border-t border-white/10 pt-6">
+              <div>
+                <dt className="text-[11px] font-semibold uppercase tracking-wide text-ink-300">Modellfamiljer</dt>
+                <dd className="mt-1 text-2xl font-extrabold tracking-tight text-white">{brandModels.length}</dd>
+              </div>
+              <div>
+                <dt className="text-[11px] font-semibold uppercase tracking-wide text-ink-300">Företagspris från</dt>
+                <dd className="mt-1 text-2xl font-extrabold tracking-tight text-white">
+                  {brandModels.filter((m) => m.priceFrom).length
+                    ? `${new Intl.NumberFormat("sv-SE").format(Math.min(...brandModels.filter((m) => m.priceFrom).map((m) => m.priceFrom as number)))} kr`
+                    : "På förfrågan"}
+                </dd>
+                <p className="text-[11px] text-ink-400">exkl. moms</p>
+              </div>
+              <div>
+                <dt className="text-[11px] font-semibold uppercase tracking-wide text-ink-300">I lager just nu</dt>
+                <dd className="mt-1 text-2xl font-extrabold tracking-tight text-white">
+                  {stock.vehicles.filter((v) => v.brand.toLowerCase() === brand.id || (brand.id === "iveco" && v.brand === "IVECO")).length} st
+                </dd>
+                <p className="text-[11px] text-ink-400">leveransklara bilar</p>
+              </div>
+            </dl>
           </div>
           <div className="overflow-hidden rounded-2xl ring-1 ring-white/15">
             <SmartImg src={brand.image} fallback={brand.imageFallback} alt={`${brand.name} – fordonsbild`} className="aspect-[16/10] w-full object-cover" eager />
@@ -93,6 +115,88 @@ export default function BrandPage({ params }: { params: { brand: string } }) {
           <ModelGrid models={brandModels} showBrandFilter={false} />
         </div>
       </div>
+
+      {(() => {
+        const stockBrand = brand.id === "iveco" ? "IVECO" : brand.id === "isuzu" ? "Isuzu" : "MAXUS";
+        const inStock = stock.vehicles.filter((v) => v.brand === stockBrand);
+        if (inStock.length === 0) return null;
+        return (
+          <section className="border-t border-ink-100 bg-white py-14 md:py-16" aria-labelledby="brand-stock">
+            <div className="container-site">
+              <div className="flex flex-wrap items-end justify-between gap-4">
+                <div className="max-w-2xl">
+                  <p className="section-label">Lagerbilar</p>
+                  <h2 id="brand-stock" className="h-section">{inStock.length} {brand.name}-bilar i lager – leveransklara</h2>
+                  <p className="mt-3 text-[15px] leading-relaxed text-ink-600">
+                    Riktiga annonser med bild och pris exkl. moms. Lagerbilarna levereras betydligt snabbare än
+                    specialbeställda – ring växeln 08-19 56 26 så bokar säljaren en visning, ofta samma dag.
+                  </p>
+                </div>
+                <Link href={brand.id === "iveco" ? "/lager/iveco" : "/lager"} className="btn-ghost">
+                  Se alla {inStock.length} annonserna →
+                </Link>
+              </div>
+              <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {inStock.slice(0, 3).map((v) => (
+                  <article key={v.id} className="card group flex flex-col overflow-hidden transition hover:shadow-lifted">
+                    <a href={v.adUrl} target="_blank" rel="noopener noreferrer" className="relative block overflow-hidden bg-ink-100">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src={v.image} alt={`${v.brand} ${v.model} – ${v.title}`} loading="lazy" className="aspect-[16/10] w-full object-cover transition duration-500 group-hover:scale-[1.03]" />
+                      <span className="absolute left-3 top-3 rounded-full px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide text-white" style={{ backgroundColor: brand.color }}>
+                        {v.condition}
+                      </span>
+                    </a>
+                    <div className="flex flex-1 flex-col p-5">
+                      <p className="text-[11px] font-bold uppercase tracking-[0.14em]" style={{ color: brand.color }}>
+                        {v.model} · {v.fuel}
+                      </p>
+                      <h3 className="mt-1 text-base font-bold leading-snug text-ink-900">{v.title}</h3>
+                      <p className="mt-1 text-xs text-ink-500">
+                        {v.year}{v.mileageKm != null ? ` · ${new Intl.NumberFormat("sv-SE").format(v.mileageKm)} mil` : ""} · {v.transmission}
+                      </p>
+                      <div className="mt-auto flex items-end justify-between gap-3 border-t border-ink-100 pt-4 mt-4">
+                        <div>
+                          <p className="text-[11px] uppercase tracking-wide text-ink-400">Pris enligt annons</p>
+                          <p className="text-base font-extrabold text-ink-900">
+                            {v.price ? `${new Intl.NumberFormat("sv-SE").format(v.price)} kr exkl. moms` : "Se annonsen"}
+                          </p>
+                        </div>
+                        <a href={v.adUrl} target="_blank" rel="noopener noreferrer" className="btn-ghost !px-4 !py-2 text-[13px]">
+                          Annons ↗
+                        </a>
+                      </div>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+        );
+      })()}
+
+      <section className="container-site py-14 md:py-16" aria-labelledby="other-brands">
+        <div className="max-w-2xl">
+          <p className="section-label">Jämför även</p>
+          <h2 id="other-brands" className="h-section">Tre märken, ärlig rådgivning</h2>
+          <p className="mt-3 text-[15px] leading-relaxed text-ink-600">
+            Vi jämför mellan märkena och rekommenderar bilen som passar ert jobb – inte den som passar oss.
+          </p>
+        </div>
+        <div className="mt-8 grid gap-4 sm:grid-cols-2">
+          {brandInfo.filter((b) => b.id !== brand.id).map((b) => (
+            <Link key={b.id} href={`/marke/${b.id}`} className="card group flex items-center gap-4 p-5 transition hover:shadow-lifted">
+              <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl text-sm font-black text-white" style={{ backgroundColor: b.color }} aria-hidden="true">
+                {b.name.slice(0, 2).toUpperCase()}
+              </span>
+              <span className="min-w-0">
+                <span className="block text-lg font-bold tracking-tight text-ink-900 group-hover:text-brand-blue">{b.name}</span>
+                <span className="block text-sm text-ink-500">{b.tagline}</span>
+              </span>
+              <span className="ml-auto font-semibold text-brand-blue" aria-hidden="true">→</span>
+            </Link>
+          ))}
+        </div>
+      </section>
 
       {ivecoCampaign.brand === brand.id && (
         <section className="border-t border-ink-100 bg-ink-50 py-14 md:py-20" aria-labelledby="campaign-models">
