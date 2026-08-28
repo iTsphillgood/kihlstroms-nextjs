@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { locations, company } from "../../lib/data";
 import LocationCards from "../../components/LocationCards";
+import ServiceForm from "../../components/ServiceForm";
 
 export const metadata: Metadata = {
   title: "Verkstad & service – auktoriserad för IVECO, Isuzu och Maxus",
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 const services = [
-  { title: "Servicerådgivning", desc: "Vi hamnar rätt direkt – redan vid första kontakten. Ring växeln eller mejla verksten.", target: "verkstad" },
+  { title: "Servicerådgivning", desc: "Vi hamnar rätt direkt – redan vid första kontakten. Ring växeln eller skicka ett ärende.", target: "verkstad" },
   { title: "Boka service", desc: "Vanlig service, stor service eller kamrem – bokning samma vecka där det finns luckor.", target: "verkstad" },
   { title: "Skadeverkstad", desc: "Vi tar emot skador och samordnar med försäkringsbolag så att bilen kommer ut i arbete igen.", target: "verkstad" },
   { title: "Husbil & specialfordon", desc: "Vi servar och reparerar transportfordon och husbil – oavsett märke.", target: "verkstad" },
@@ -63,34 +64,12 @@ export default function ServicePage() {
         <p className="section-label">Bokning</p>
         <h2 id="boka-heading" className="h-section">Skicka ett serviceärende</h2>
         <p className="mt-3 max-w-2xl text-[15px] leading-relaxed text-ink-600">
-          Välj &quot;Verkstad/service&quot; i formuläret och ange registreringsnummer, ärende och önskad anläggning.
-          Servicerådgivarna återkommer med tidsförslag.
+          Ange registreringsnummer, ärende och anläggning – servicerådgivaren återkommer med tidsförslag,
+          oftast samma arbetsdag. Akuta ärenden: ring växeln{" "}
+          <a href={company.phoneHref} className="link font-semibold">{company.phone}</a>.
         </p>
-        <div className="card mt-6 p-6 sm:p-8">
-          <div className="grid gap-5 sm:grid-cols-2">
-            <div>
-              <label htmlFor="svc-reg" className="field-label">Registreringsnummer</label>
-              <input id="svc-reg" className="field uppercase" placeholder="ABC 123" />
-            </div>
-            <div>
-              <label htmlFor="svc-loc" className="field-label">Anläggning</label>
-              <select id="svc-loc" className="field">
-                {locations.map((l) => (
-                  <option key={l.id}>{l.name}</option>
-                ))}
-              </select>
-            </div>
-            <div className="sm:col-span-2">
-              <label htmlFor="svc-msg" className="field-label">Ärende</label>
-              <textarea id="svc-msg" className="field min-h-[110px]" placeholder="Beskriv ärendet: service, ljud, felkoder, skada…" />
-            </div>
-          </div>
-          <p className="mt-4 text-xs leading-relaxed text-ink-500">
-            Ärendet mejlas till verkstaden via formuläret på{" "}
-            <Link href="/kontakt#meddelande" className="link">kontaktsidan</Link> – där fyller du även i namn och
-            telefonnummer så servicerådgivarna kan nå dig.
-          </p>
-          <Link href="/kontakt#meddelande" className="btn-primary mt-4">Fortsätt till kontaktformuläret</Link>
+        <div className="mt-6">
+          <ServiceForm locations={locations} />
         </div>
       </section>
 

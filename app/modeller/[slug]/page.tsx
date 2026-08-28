@@ -71,7 +71,7 @@ export default function ModelPage({ params }: { params: { slug: string } }) {
 
               <div className="mt-7 flex flex-wrap gap-3">
                 <a href={quoteMailto(model.name, seller?.email ?? "info@kihlstroms.se")} className="btn-primary">
-                  Begär offert
+                  Begär offert – svar samma arbetsdag
                 </a>
                 <Link href="/kontakt#meddelande" className="btn-ghost">Boka provkörning</Link>
                 {stockMatches.length > 0 && (
@@ -80,6 +80,16 @@ export default function ModelPage({ params }: { params: { slug: string } }) {
                   </Link>
                 )}
               </div>
+              <p className="mt-3.5 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-ink-500">
+                <span className="inline-flex items-center gap-1.5">
+                  <svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8.5 3.2 3L13 5" stroke="#1B5FAA" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                  Direkt till namngiven säljare
+                </span>
+                <span className="inline-flex items-center gap-1.5">
+                  <svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m3 8.5 3.2 3L13 5" stroke="#1B5FAA" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                  Offert med pris, leveranstid och finansiering
+                </span>
+              </p>
             </div>
 
             <div className="grid gap-3">
@@ -161,9 +171,28 @@ export default function ModelPage({ params }: { params: { slug: string } }) {
             </dl>
           </section>
 
+          {model.benefits && model.benefits.length > 0 && (
+            <section aria-labelledby="benefits-heading">
+              <p className="section-label">Därför väljer företag den här modellen</p>
+              <h2 id="benefits-heading" className="h-section">Fördelar i ditt arbete</h2>
+              <ul className="mt-6 grid gap-4 sm:grid-cols-2">
+                {model.benefits.map((b) => (
+                  <li key={b} className="card flex gap-3.5 p-5">
+                    <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-brand-blue/10">
+                      <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                        <path d="m3 8.5 3.2 3L13 5" stroke="#1B5FAA" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </span>
+                    <span className="text-sm leading-relaxed text-ink-700">{b}</span>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
+
           <section aria-labelledby="suited-heading">
-            <p className="section-label">Passar för</p>
-            <h2 id="suited-heading" className="h-section">Byggd för de här uppdragen</h2>
+            <p className="section-label">Use cases</p>
+            <h2 id="suited-heading" className="h-section">Typiska uppdrag</h2>
             <ul className="mt-5 flex flex-wrap gap-2">
               {model.suitedFor.map((s) => (
                 <li key={s} className="chip !px-4 !py-2 !text-sm">{s}</li>
@@ -171,7 +200,7 @@ export default function ModelPage({ params }: { params: { slug: string } }) {
             </ul>
             <p className="mt-5 text-sm text-ink-500">
               Osäker om modellen räcker till?{" "}
-              <Link href="/bygg-din-lastbil" className="link">Gör behovsflödet Bygg din lastbil</Link> så föreslår vi rätt fordon och påbyggnad.
+              <Link href="/bygg-din-lastbil" className="link">Gör behovsguiden Bygg din lastbil</Link> så föreslår vi rätt fordon och påbyggnad.
             </p>
           </section>
         </div>
@@ -191,19 +220,20 @@ export default function ModelPage({ params }: { params: { slug: string } }) {
               </>
             )}
             <p className="mt-4 border-t border-ink-100 pt-4 text-xs leading-relaxed text-ink-500">
-              Offert innehåller pris, leveranstid och finansieringsförslag – oftast samma arbetsdag.
+              Offert med pris, leveranstid och finansieringsförslag – oftast svar samma arbetsdag.
             </p>
           </div>
 
           <div className="card p-6">
-            <p className="text-xs font-bold uppercase tracking-[0.14em] text-ink-400">Källa</p>
+            <p className="text-xs font-bold uppercase tracking-[0.14em] text-ink-400">Priser & källor</p>
             <p className="mt-2 text-sm leading-relaxed text-ink-600">
-              Modellfakta och priser hämtade från{" "}
-              <a href={model.sourceUrl} className="link" target="_blank" rel="noopener noreferrer">
-                {new URL(model.sourceUrl).hostname}
-              </a>
-              . Priser kan ändras av importören.
+              Priser och specifikationer följer {brandName(model.brand)}s officiella svenska prislista
+              (senast kontrollerad 2026-08-28) och anges exklusive moms. Offerten sätter alltid de
+              slutgiltiga villkoren – inklusive leveranstid och eventuell kampanj.
             </p>
+            <a href={model.sourceUrl} className="link mt-3 inline-block text-sm font-semibold" target="_blank" rel="noopener noreferrer">
+              Se {brandName(model.brand)}s egna sidor ↗
+            </a>
           </div>
         </aside>
       </div>

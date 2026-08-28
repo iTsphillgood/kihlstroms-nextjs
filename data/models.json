@@ -5,13 +5,13 @@
     "name": "IVECO Daily Skåpbil",
     "category": "Skåpbil",
     "fuel": "Diesel/HVO100",
-    "summary": "Den idealiska partnern för regionala leveranser och leveranser i städer – från 9 till 16 m³ på 3,5-tons chassi, upp till 5 tons totalvikt.",
+    "summary": "Lastbilens styrka i skåpbilens format. Hi-Matic-automat, 3 500 kg dragvikt och upp till 16 m³ – en komplett distributionsbil för dig som levererar varje dag.",
     "suitedFor": [
       "Regionala leveranser",
       "Leveranser i städer"
     ],
     "priceFrom": 419000,
-    "priceNote": "Kampanjpris 2026, exkl. moms. Gäller t.o.m. 30 september.",
+    "priceNote": "Kampanjpris 2026 exkl. moms – gäller t.o.m. 30 september.",
     "badge": "Kampanj",
     "image": "https://edge.sitecorecloud.io/hedinitaban27a1-hedin8837-prod5c4b-4604/media/project/hedin/distribution-cars/hedinnordictruck/shared/images/models/vans/stage-row-daily-12m3-proline.png?w=1200&iar=0",
     "gallery": [
@@ -24,7 +24,7 @@
         "code": "35S14A8 V 12m3",
         "price": 419000,
         "engine": "2,3 l · 136 hk",
-        "note": "Pris publicerat på iveco.se"
+        "note": "Pris verifierat mot iveco.se"
       },
       {
         "name": "Daily Skåpbil 9 m³ | Fastlane",
@@ -82,7 +82,12 @@
     ],
     "sourceUrl": "https://iveco.se/modeller/daily/skapbil",
     "campaignSource": "https://www.kihlstroms.se/v3/iveco-daily-modeller/",
-    "imageFallback": "/images/models/iveco-daily.png"
+    "imageFallback": "/images/models/iveco-daily.png",
+    "benefits": [
+      "Hi-Matic-automat och adaptiv farthållare – spar föraren på långa körda dagar",
+      "3 500 kg dragvikt och upp till 16 m³ i samma fordon – slipp extra släpvagnsupplägg",
+      "Kör HVO100 i befintlig motor – sänk CO₂-utsläppen direkt, utan nya investeringar"
+    ]
   },
   {
     "slug": "iveco-daily-skap-lift",
@@ -90,14 +95,14 @@
     "name": "IVECO Daily Skåp & Lift",
     "category": "Skåp & lift",
     "fuel": "Diesel/HVO100",
-    "summary": "Skåp med bakgavellift för tunga lyft – upp till 8 pallar och nästan 1 000 kg liftkapacitet, med marknadens minsta vändradie.",
+    "summary": "Leverera och lasta i samma vända. Skåpet tar åtta pallar och liften lyfter nästan ett ton – och bilen vänder på en parkeringsplats.",
     "suitedFor": [
       "Regionala leveranser",
       "Bygg och anläggning",
       "Service och installation"
     ],
     "priceFrom": 529000,
-    "priceNote": "Kampanjpris 2026, exkl. moms.",
+    "priceNote": "Kampanjpris 2026 exkl. moms – gäller t.o.m. 30 september.",
     "badge": "Kampanj",
     "image": "https://edge.sitecorecloud.io/hedinitaban27a1-hedin8837-prod5c4b-4604/media/project/hedin/distribution-cars/hedinnordictruck/shared/images/models/vans/stage-row-daily-box-lift-proline.png?w=1200&iar=0",
     "gallery": [
@@ -145,7 +150,12 @@
     ],
     "sourceUrl": "https://iveco.se/modeller/daily/chassibil",
     "campaignSource": "https://www.kihlstroms.se/v3/iveco-daily-modeller/",
-    "imageFallback": "/images/models/iveco-daily-2.jpg"
+    "imageFallback": "/images/models/iveco-daily-2.jpg",
+    "benefits": [
+      "Bakgavellift upp till 750 kg – en person clearar leveranser som kräver två",
+      "Marknadens minsta vändradie – kom åt i trånga gårdar och stadsmiljö",
+      "Motorvärmare och värme i vindruta och speglar – igång i vinterkylan"
+    ]
   },
   {
     "slug": "iveco-daily-flakbil",
@@ -153,13 +163,13 @@
     "name": "IVECO Daily Flakbil",
     "category": "Flakbil",
     "fuel": "Diesel/HVO100",
-    "summary": "Fabriksmonterat flak eller TMT-aluminiumflak – klar att jobba dag ett, med robust C-ram och 3 500 kg dragvikt.",
+    "summary": "Fabriksflak eller TMT-aluminiumflak på robust C-ram – en flakbil som är redo att jobba dag ett, med 3 500 kg på kroken.",
     "suitedFor": [
       "Bygg och anläggning",
       "Materialtransport"
     ],
     "priceFrom": 445000,
-    "priceNote": "Kampanjpris 2026, exkl. moms.",
+    "priceNote": "Kampanjpris 2026 exkl. moms – gäller t.o.m. 30 september.",
     "badge": "Kampanj",
     "image": "https://edge.sitecorecloud.io/hedinitaban27a1-hedin8837-prod5c4b-4604/media/project/hedin/distribution-cars/hedinnordictruck/shared/images/models/vans/stage-row-daily-cab-proline.png?w=1200&iar=0",
     "gallery": [
@@ -172,7 +182,7 @@
         "code": "35S14BA8 3750",
         "price": 445000,
         "engine": "2,3 l · 136 hk",
-        "note": "Pris publicerat på iveco.se"
+        "note": "Pris verifierat mot iveco.se"
       },
       {
         "name": "Daily Flakbil 3750 (fabriksflak)",
@@ -213,7 +223,12 @@
     ],
     "sourceUrl": "https://iveco.se/modeller/daily/chassibil",
     "campaignSource": "https://www.kihlstroms.se/v3/iveco-daily-modeller/",
-    "imageFallback": "/images/models/iveco-edaily.png"
+    "imageFallback": "/images/models/iveco-edaily.png",
+    "benefits": [
+      "Fabriksmonterat flak med kort leveranstid – bilen går rakt ut i produktion",
+      "C-ram i lastbilsklass – tål skälningar, kranlyft och tungt material",
+      "Välj hjulbas 3 750 eller 4 100 mm – matcha flaket efter ert typiska lass"
+    ]
   },
   {
     "slug": "iveco-daily-dubbelhytt",
@@ -221,13 +236,13 @@
     "name": "IVECO Daily Dubbelhytt",
     "category": "Dubbelhytt",
     "fuel": "Diesel/HVO100",
-    "summary": "Snoeks-dubbelhytt med 16 m³ kvarvarande lastvolym – besättning och last i ett fordon, perfekt för installations- och servicelag.",
+    "summary": "Hela laget och hela lasten i ett fordon. Snoeks-dubbelhytt ger upp till sju platser och 16 m³ last kvar – perfekt för service- och installationslag.",
     "suitedFor": [
       "Service och installation",
       "Arbetslag"
     ],
     "priceFrom": 541700,
-    "priceNote": "Kampanjpris 2026, exkl. moms.",
+    "priceNote": "Kampanjpris 2026 exkl. moms – gäller t.o.m. 30 september.",
     "badge": "Kampanj",
     "image": "https://edge.sitecorecloud.io/hedinitaban27a1-hedin8837-prod5c4b-4604/media/project/hedin/distribution-cars/hedinnordictruck/shared/images/models/vans/stage-row-daily-cab-fastlane.png?w=1200&iar=0",
     "gallery": [
@@ -268,7 +283,12 @@
     ],
     "sourceUrl": "https://iveco.se/modeller/daily/chassibil",
     "campaignSource": "https://www.kihlstroms.se/v3/iveco-daily-modeller/",
-    "imageFallback": "/images/models/iveco-daily.png"
+    "imageFallback": "/images/models/iveco-daily.png",
+    "benefits": [
+      "Upp till 7 sittplatser och 16 m³ last – slipp skicka två bilar till jobbet",
+      "Fabriksgodkänd Snoeks-påbyggnad – inga besiktnings- eller garantiöverraskningar",
+      "Samma chassi och reservdelar som övriga Daily – verkstaden kan bilen redan"
+    ]
   },
   {
     "slug": "iveco-esuperjolly",
@@ -276,13 +296,13 @@
     "name": "IVECO eSuperJolly",
     "category": "Eltransportbil",
     "fuel": "El",
-    "summary": "Stor eltransportbil med 279 hk, 110 kWh batteri och upp till 380 km WLTP-räckvidd. 150 kW snabbladdning ger ca 100 km på 15 minuter.",
+    "summary": "Eldrift som håller schemat: upp till 38 mil per laddning och 15 minuters snabbladdning ger dryga tio mil till. 13 m³ och 279 hk i arbete.",
     "suitedFor": [
       "Leveranser i städer",
       "Miljözoner"
     ],
     "priceFrom": 546000,
-    "priceNote": "Kampanjpris 2026, exkl. moms.",
+    "priceNote": "Kampanjpris 2026 exkl. moms – gäller t.o.m. 30 september.",
     "badge": "100% el",
     "image": "https://edge.sitecorecloud.io/hedinitaban27a1-hedin8837-prod5c4b-4604/media/project/hedin/distribution-cars/hedinnordictruck/shared/images/models/vans/stage-row-esuperjolly-proline.png?w=1200&iar=0",
     "gallery": [
@@ -294,7 +314,7 @@
         "code": "J35F20E V",
         "price": 546000,
         "engine": "279 hk · 110 kWh",
-        "note": "Pris publicerat på iveco.se"
+        "note": "Pris verifierat mot iveco.se"
       },
       {
         "name": "eSuperJolly 3,5 t | Fastlane",
@@ -339,7 +359,12 @@
     ],
     "sourceUrl": "https://iveco.se/modeller/edaily/skapbil",
     "campaignSource": "https://www.kihlstroms.se/v3/iveco-daily-modeller/",
-    "imageFallback": "/images/models/iveco-edaily.png"
+    "imageFallback": "/images/models/iveco-edaily.png",
+    "benefits": [
+      "150 kW snabbladdning – fikapausen blir laddpaus",
+      "Fri tillträde till alla miljözoner – kör där konkurrenterna stannar",
+      "13 m³ och upp till 1,4 ton last – eldrift utan lastkompromisser"
+    ]
   },
   {
     "slug": "iveco-edaily",
@@ -347,14 +372,14 @@
     "name": "IVECO eDaily",
     "category": "Eltransportbil",
     "fuel": "El",
-    "summary": "Sveriges enda eltransportbil som får dra 3,5 ton. eDaily tar dig in i miljözon klass 3 med full last- och dragförmåga – 8 års batterigaranti.",
+    "summary": "Enda eltransportbilen i Sverige som får dra 3 500 kg. Kör in i miljözon klass 3 med full last – med 8 års batterigaranti i ryggen.",
     "suitedFor": [
       "Leveranser i städer",
       "Miljözoner",
       "Regionala leveranser"
     ],
     "priceFrom": 679000,
-    "priceNote": "Kampanjpris 2026, exkl. moms.",
+    "priceNote": "Kampanjpris 2026 exkl. moms – gäller t.o.m. 30 september.",
     "badge": "Miljözon 3",
     "image": "https://edge.sitecorecloud.io/hedinitaban27a1-hedin8837-prod5c4b-4604/media/project/hedin/distribution-cars/hedinnordictruck/shared/images/campaigns/norge/edaily-kampanj/stage-row/iveco-edaily-kassebil---stage-row---desktop.png?w=1200&iar=0",
     "gallery": [
@@ -367,7 +392,7 @@
         "code": "eDaily 35S14E V 12m3",
         "price": 679000,
         "engine": "140 hk",
-        "note": "Pris publicerat på iveco.se"
+        "note": "Pris verifierat mot iveco.se"
       },
       {
         "name": "eDaily Chassi med fabriksflak",
@@ -401,7 +426,12 @@
     ],
     "sourceUrl": "https://iveco.se/modeller/edaily/skapbil",
     "campaignSource": "https://www.kihlstroms.se/v3/iveco-daily-modeller/",
-    "imageFallback": "/images/models/iveco-edaily.png"
+    "imageFallback": "/images/models/iveco-edaily.png",
+    "benefits": [
+      "3 500 kg dragvikt – släpet följer med in i miljözonen",
+      "8 års batterigaranti (250 000 km) – förutsägbar ägarkostnad",
+      "Assistans dygnet runt i hela Europa – aldrig ensam på vägen"
+    ]
   },
   {
     "slug": "iveco-eurocargo",
@@ -409,14 +439,14 @@
     "name": "IVECO Eurocargo",
     "category": "Lätt lastbil",
     "fuel": "Diesel / CBG",
-    "summary": "Distriktstryckens arbetshäst från 7 till 19 ton. Finns som 4x2 och 4x4 samt med biogasdrift (CBG) för kommunala uppdrag.",
+    "summary": "Distributionslastbil mellan 7 och 19 ton – med valbar 4x4 och biogasdrift för kommunala uppdrag, renhållning och bygg.",
     "suitedFor": [
       "Regionala leveranser",
       "Kommunala uppdrag",
       "Bygg och anläggning"
     ],
     "priceFrom": null,
-    "priceNote": "Pris på förfrågan – vi tar fram offert efter uppdrag och påbyggnad.",
+    "priceNote": "Pris på förfrågan – vi projekterar bilen efter ert uppdrag.",
     "image": "https://edge.sitecorecloud.io/hedinitaban27a1-hedin8837-prod5c4b-4604/media/project/hedin/distribution-cars/hedinnordictruck/shared/images/models/trucks/eurocargo-4x2.jpg?h=800&iar=0&w=1200",
     "gallery": [],
     "variants": [
@@ -451,7 +481,12 @@
       }
     ],
     "sourceUrl": "https://iveco.se/modeller/eurocargo/4x2",
-    "imageFallback": "/images/models/iveco-eurocargo.jpg"
+    "imageFallback": "/images/models/iveco-eurocargo.jpg",
+    "benefits": [
+      "Biogasvariant (CBG) – klara kommunala miljökrav utan el-satsning",
+      "4x4 för grusvägar och underhållsuppdrag året runt",
+      "Ett chassi, alla påbyggnader – vi projekterar rätt från start"
+    ]
   },
   {
     "slug": "iveco-s-way",
@@ -459,13 +494,13 @@
     "name": "IVECO S-Way",
     "category": "Tung lastbil",
     "fuel": "Diesel / LNG",
-    "summary": "Långtransport för långa sträckor och regional distribution. Finns som dragbil (Artic) och rigid, även med flytande naturgas (LNG) för lägre CO₂.",
+    "summary": "Långfärdens arbetsplats. S-Way finns som dragbil eller stelbil – och med naturgas sänker du både CO₂ och bränslekostnad per mil.",
     "suitedFor": [
       "Långa sträckor",
       "Regionala leveranser"
     ],
     "priceFrom": null,
-    "priceNote": "Pris på förfrågan – vi tar fram offert efter uppdrag och påbyggnad.",
+    "priceNote": "Pris på förfrågan – vi projekterar bilen efter ert uppdrag.",
     "image": "https://edge.sitecorecloud.io/hedinitaban27a1-hedin8837-prod5c4b-4604/media/project/hedin/distribution-cars/hedinnordictruck/shared/images/models/trucks/iveco-sway-artic.jpg?h=800&iar=0&w=1200",
     "gallery": [],
     "variants": [
@@ -505,7 +540,12 @@
       }
     ],
     "sourceUrl": "https://iveco.se/modeller/s-way/artic",
-    "imageFallback": "/images/models/iveco-sway.jpg"
+    "imageFallback": "/images/models/iveco-sway.jpg",
+    "benefits": [
+      "Natural Gas-drivlinan sänker både CO₂ och driftskostnad per mil",
+      "Förarmiljö och Driver Care-paket – hjälper dig behålla dina bästa förare",
+      "IVECO-nätverkets uptime-tjänster – rutterna går, även när något händer"
+    ]
   },
   {
     "slug": "isuzu-d-max-extended-cab",
@@ -513,14 +553,14 @@
     "name": "Isuzu D-Max Extended Cab",
     "category": "Pickup",
     "fuel": "Diesel",
-    "summary": "Rambyggd dieselpickup med förlängt flak på 180 cm, sittplatser för två fram plus fällbar bänk bak – ny 2,2-liters turbodiesel med 400 Nm och 8-växlad automat.",
+    "summary": "Den smarta kompromissen: 180 cm flak och plats för fyra i kompakt format – med automatlåda och 400 Nm som standard.",
     "suitedFor": [
       "Bygg och anläggning",
       "Lantbruk",
       "Service"
     ],
     "priceFrom": 469900,
-    "priceNote": "Rek. kundpris exkl. moms, enligt isuzusverige.se.",
+    "priceNote": "Rek. kundpris exkl. moms enligt Isuzu Sveriges prislista.",
     "image": "https://www.isuzusverige.se/media/a5wozl3o/my24_ec_xrl_kapa_modelimage2.jpg?width=1200&height=900&format=jpg&v=1dc22f6bdd5b1f0",
     "gallery": [
       "https://www.isuzusverige.se/media/j5dbhr3r/my24_ec_xrl_kapa_n2_rivning_9062_ec_gallery.png?width=1500&height=1125&format=png&v=1dc6912bf7843a0",
@@ -565,7 +605,12 @@
       }
     ],
     "sourceUrl": "https://isuzusverige.se/dmax/prislista/",
-    "imageFallback": "/images/models/isuzu-dmax-xrx-2.jpg"
+    "imageFallback": "/images/models/isuzu-dmax-xrx-2.jpg",
+    "benefits": [
+      "180 cm flak – mer lastyta än Double Cab, lättare att parkera",
+      "Fällbar bänk bak – lastutrymme när du kör solo",
+      "400 Nm och 8-växlad automat – dra och köra utan att tänka"
+    ]
   },
   {
     "slug": "isuzu-d-max-double-cab",
@@ -573,7 +618,7 @@
     "name": "Isuzu D-Max Double Cab",
     "category": "Pickup",
     "fuel": "Diesel / CNG",
-    "summary": "Sveriges mest sålda pickup tre år i rad (2023–2025). Lasta upp till ett ton, dra 3 500 kg och kör dit djuren finns – oavsett väder eller underlag.",
+    "summary": "Sveriges mest sålda pickup tre år i rad – för att den håller. Ett ton i flaket, 3 500 kg på kroken och fem platser i värmen.",
     "suitedFor": [
       "Bygg och anläggning",
       "Lantbruk",
@@ -581,7 +626,7 @@
       "Drag och släp"
     ],
     "priceFrom": 469900,
-    "priceNote": "Rek. kundpris exkl. moms, enligt isuzusverige.se. Med CNG-paketet från ca 4 244 kr/år i skatt.",
+    "priceNote": "Rek. kundpris exkl. moms enligt Isuzu Sveriges prislista. Med CNG-paketet från ca 4 244 kr/år i skatt.",
     "badge": "Mest sålda i Sverige",
     "image": "https://www.isuzusverige.se/media/qmtn33gp/my26-dc-xrx-rolltop-n3-7107_v.png?width=1500&height=1125&format=png&v=1dcdbb6c5322180",
     "gallery": [
@@ -635,7 +680,12 @@
       }
     ],
     "sourceUrl": "https://isuzusverige.se/dmax/prislista/",
-    "imageFallback": "/images/models/isuzu-dmax-xrx.jpg"
+    "imageFallback": "/images/models/isuzu-dmax-xrx.jpg",
+    "benefits": [
+      "1 000 kg lastvikt och 3 500 kg dragvikt – klassens arbetshäst",
+      "Automatlåda, HVO100-godkännande och 5 års garanti ingår",
+      "Ramchassi med spärrbar bakdiff och 80 cm vaddjup – fram där andra fastnar"
+    ]
   },
   {
     "slug": "isuzu-d-max-arctic-trucks",
@@ -643,14 +693,14 @@
     "name": "Isuzu D-Max Arctic Trucks",
     "category": "Pickup",
     "fuel": "Diesel / CNG",
-    "summary": "Arctic Trucks-byggda D-Max för extrem terräng – officiella AT-paket med BFGoodrich-däck, höjning och komplett godkännande. AT35 och AT37 just nu till kampanjpris.",
+    "summary": "När vägen tar slut börjar AT. Officiellt Arctic Trucks-byggd med 35- eller 37-tums BFGoodrich – komplett paket med godkännande och registrering.",
     "suitedFor": [
       "Terräng",
       "Kraftverk och underhåll",
       "Fjäll och skog"
     ],
     "priceFrom": 634900,
-    "priceNote": "Kampanjpriser exkl. moms enligt isuzusverige.se. AT35 ordinarie 738 900 kr, AT37 ordinarie 838 900 kr.",
+    "priceNote": "Kampanjpriser exkl. moms enligt Isuzu Sverige. AT35 ordinarie 738 900 kr, AT37 ordinarie 838 900 kr.",
     "badge": "Kampanj AT35/AT37",
     "image": "https://www.isuzusverige.se/media/1dvdjid1/at35-my26.png?width=1600&height=994&format=png&v=1dcd2579a552010",
     "gallery": [
@@ -703,7 +753,12 @@
       }
     ],
     "sourceUrl": "https://isuzusverige.se/dmax/prislista/",
-    "imageFallback": "/images/models/isuzu-dmax-at35.jpg"
+    "imageFallback": "/images/models/isuzu-dmax-at35.jpg",
+    "benefits": [
+      "35″ eller 37″ BFGoodrich KO2 och AT-fälgar – fram på kraftledningsgator och kalhyggen",
+      "Höjning, stänkskydd, fyrkantsfäste och registrering ingår – inga dolda tillkostnader",
+      "AT37 med Bilstein-dämpare och ny utväxling – lastat i terräng, hela dagen"
+    ]
   },
   {
     "slug": "isuzu-d-max-bev",
@@ -711,14 +766,14 @@
     "name": "Isuzu D-Max BEV",
     "category": "Pickup",
     "fuel": "El",
-    "summary": "100% elektrisk D-Max med ramchassi: 66,9 kWh batteri, 177 hk, 3 500 kg släpvagnsvikt och 990 kg maxlast – noll utsläpp, full kapacitet.",
+    "summary": "263 km räckvidd, 3 500 kg dragvikt och 990 kg maxlast – elpickuppen som jobbar lika hårt som dieseln, fast tyst och ren.",
     "suitedFor": [
       "Miljözoner",
       "Service och installation",
       "Kommunala uppdrag"
     ],
     "priceFrom": 685900,
-    "priceNote": "Rek. kundpris exkl. moms, enligt isuzusverige.se.",
+    "priceNote": "Rek. kundpris exkl. moms enligt Isuzu Sveriges prislista.",
     "badge": "100% el",
     "image": "https://www.isuzusverige.se/media/lgdjwqjg/gfx_1140_modelimage.png?width=1200&height=900&format=png&v=1dc57cbcc6b3d70",
     "gallery": [
@@ -773,7 +828,12 @@
       }
     ],
     "sourceUrl": "https://isuzusverige.se/dmax/prislista/",
-    "imageFallback": "/images/models/isuzu-dmax-xrx-2.jpg"
+    "imageFallback": "/images/models/isuzu-dmax-xrx-2.jpg",
+    "benefits": [
+      "Ramchassi och 4x4 (30/70) – full terrängegenskap kvar",
+      "3 500 kg släpvagnsvikt – släpet följer med även på el",
+      "Kör i miljözoner och inomhusanläggningar utan avgaser"
+    ]
   },
   {
     "slug": "maxus-e-deliver-5",
@@ -781,14 +841,14 @@
     "name": "MAXUS e-Deliver 5",
     "category": "Skåpbil",
     "fuel": "El",
-    "summary": "Smidig eltransportbil med 6,6 m³ lastutrymme och upp till 335 km räckvidd – byggd för service, leverans och hantverk.",
+    "summary": "Kompakt elskåpbil för stan: 33,5 mil per laddning, 6,6 m³ lastutrymme och 1 125 kg nyttolast – och en bråkdel av driftkostnaden.",
     "suitedFor": [
       "Service och installation",
       "Leveranser i städer",
       "Hantverk"
     ],
     "priceFrom": 339900,
-    "priceNote": "Frånpris exkl. moms, enligt maxus.se.",
+    "priceNote": "Officiellt frånpris från Maxus Sverige, exkl. moms.",
     "badge": "100% el",
     "image": "https://media.ffycdn.net/eu/rsa-norway/7mMy9wddZiSJzPcyTAaV.png?mod=v1/resize=1400",
     "gallery": [
@@ -827,7 +887,12 @@
       }
     ],
     "sourceUrl": "https://maxus.se/modeller/e-deliver-5",
-    "imageFallback": "/images/models/maxus-edeliver5.jpg"
+    "imageFallback": "/images/models/maxus-edeliver5.jpg",
+    "benefits": [
+      "335 km räckvidd (WLTP) – heldagsschemat på en laddning",
+      "1 125 kg nyttolast och 6,6 m³ – riktig last i kompakt format",
+      "360°-kamera och adaptiv farthållare som standard – tryggt för dina förare"
+    ]
   },
   {
     "slug": "maxus-e-deliver-7",
@@ -835,14 +900,14 @@
     "name": "MAXUS e-Deliver 7",
     "category": "Skåpbil",
     "fuel": "El",
-    "summary": "Elektrisk skåpbil med 6,7 m³, upp till 362 km räckvidd och både framhjuls- och fyrhjulsdrift. Tech+ utrustningsnivå.",
+    "summary": "Eltransportbil för heldagsjobbet: 36,2 mil per laddning och 6,7 m³ last – och som enda i klassen kan du välja fyrhjulsdrift.",
     "suitedFor": [
       "Leveranser i städer",
       "Regionala leveranser",
       "Vinterväghållning (4x4)"
     ],
     "priceFrom": 449900,
-    "priceNote": "Frånpris exkl. moms, enligt maxus.se. 4x4 Tech+ från 499 900 kr.",
+    "priceNote": "Officiellt frånpris från Maxus Sverige, exkl. moms. 4x4 Tech+ från 499 900 kr.",
     "badge": "Finns med 4x4",
     "image": "https://cdn.sanity.io/images/mcx434c9/production/eab0b9390b9373c2f4bdb55e0c973710ed668d5f-1920x1200.png?w=1200&q=85&auto=format",
     "gallery": [
@@ -892,7 +957,13 @@
       }
     ],
     "sourceUrl": "https://maxus.se/modeller/e-deliver-7",
-    "imageFallback": "/images/models/maxus-edeliver7.jpg"
+    "imageFallback": "/images/models/maxus-edeliver7.jpg",
+    "benefits": [
+      "88 kWh batteri och 36,2 mils räckvidd – en hel arbetsdag per laddning",
+      "Valbar 4x4 – blåsiga grusvägar och vinterväghållning utan tvekan",
+      "90 kW DC-laddning: 20–80 % på cirka 43 minuter",
+      "5 års nybilsgaranti och 8 års batterigaranti (250 000 km)"
+    ]
   },
   {
     "slug": "maxus-deliver-7",
@@ -900,14 +971,14 @@
     "name": "MAXUS Deliver 7",
     "category": "Skåpbil",
     "fuel": "Diesel",
-    "summary": "7,2 m³ dieselskåpbil med 2,0-litersmotor, 1 145 kg nyttolast och 2 000 kg dragvikt – det kompakta alternativet för mellanstora uppdrag.",
+    "summary": "Prisvärd diesel från 279 900 kr exkl. moms: 7,2 m³, 1 145 kg last och 2 000 kg dragvikt – låg inköps- och driftkostnad.",
     "suitedFor": [
       "Regionala leveranser",
       "Hantverk",
       "Drag och släp"
     ],
     "priceFrom": 279900,
-    "priceNote": "Frånpris exkl. moms, enligt maxus.se.",
+    "priceNote": "Officiellt frånpris från Maxus Sverige, exkl. moms.",
     "badge": "Prisvärd diesel",
     "image": "https://cdn.sanity.io/images/mcx434c9/production/2a274008d352b4a90c097535d6b01e6def9e4ef6-1920x1200.png?w=1200&q=85&auto=format",
     "gallery": [
@@ -942,7 +1013,12 @@
       }
     ],
     "sourceUrl": "https://maxus.se/modeller/deliver-7",
-    "imageFallback": "/images/models/maxus-deliver7.jpg"
+    "imageFallback": "/images/models/maxus-deliver7.jpg",
+    "benefits": [
+      "Lågt instegspris – full lastförmåga i 7-m³-klassen utan onödiga tillval",
+      "2 000 kg dragvikt – ta släpet utan att byta bil",
+      "5 års nybilsgaranti (160 000 km) och rostskyddsbehandling i Sverige"
+    ]
   },
   {
     "slug": "maxus-e-deliver-9",
@@ -950,13 +1026,13 @@
     "name": "MAXUS e-Deliver 9",
     "category": "Skåpbil",
     "fuel": "El",
-    "summary": "Stor elektrisk skåpbil med 11 m³ lastvolym och upp till 308 km räckvidd. Finns även som kylbil och volymskåp.",
+    "summary": "Skrymmande gods på el: 11 m³ och 30,8 mil per laddning med upp till 1 200 kg last. Finns även som kylbil och volymskåp.",
     "suitedFor": [
       "Större eldrivna transportuppdrag",
       "Leveranser i städer"
     ],
     "priceFrom": 469900,
-    "priceNote": "Frånpris exkl. moms, enligt maxus.se.",
+    "priceNote": "Officiellt frånpris från Maxus Sverige, exkl. moms.",
     "badge": "100% el",
     "image": "https://cdn.sanity.io/images/mcx434c9/production/2be537510d990f234993ec267bdb9d9dfa24f54d-1920x1200.png?w=1200&q=85&auto=format",
     "gallery": [
@@ -987,7 +1063,12 @@
       }
     ],
     "sourceUrl": "https://maxus.se/modeller/e-deliver-9-elektrisk-transportbil",
-    "imageFallback": "/images/models/maxus-edeliver9.jpg"
+    "imageFallback": "/images/models/maxus-edeliver9.jpg",
+    "benefits": [
+      "11 m³ lastvolym – volymgodset som inte får plats i mindre skåp",
+      "308 km räckvidd och 1 200 kg nyttolast – kapacitet utan avgaser",
+      "8 års batterigaranti och rostskyddsbehandling i Sverige"
+    ]
   },
   {
     "slug": "maxus-deliver-9",
@@ -995,13 +1076,13 @@
     "name": "MAXUS Deliver 9",
     "category": "Skåpbil",
     "fuel": "Diesel",
-    "summary": "Stor dieselskåpbil med 11,5 m³, 150 hk och hela 2 800 kg dragvikt – för stora transporter och tungt släp.",
+    "summary": "Stora dieseltransporter till ett bra pris: 11,5 m³ lastutrymme, 2 800 kg dragvikt och 150 hk – för dagarna när volym och släp styr.",
     "suitedFor": [
       "Stora skåptransporter",
       "Drag och släp"
     ],
     "priceFrom": 319900,
-    "priceNote": "Frånpris exkl. moms, enligt maxus.se.",
+    "priceNote": "Officiellt frånpris från Maxus Sverige, exkl. moms.",
     "image": "https://media.ffycdn.net/eu/rsa-norway/HwJ5gDSanp1J5rqWKwd9.png?mod=v1/resize=1400",
     "gallery": [
       "https://cdn.sanity.io/images/mcx434c9/production/ece0e7cb7259847deff4fc4819e8bdcc9f965848-2048x1366.jpg?w=1600&q=85&auto=format"
@@ -1031,7 +1112,12 @@
       }
     ],
     "sourceUrl": "https://maxus.se/modeller/deliver-9",
-    "imageFallback": "/images/models/maxus-deliver9.jpg"
+    "imageFallback": "/images/models/maxus-deliver9.jpg",
+    "benefits": [
+      "11,5 m³ – bland de större lastutrymmena i 3,5-tonsklassen",
+      "2 800 kg dragvikt – dra maskinsläpet utan att tveka",
+      "Lågt pris och 5 års nybilsgaranti – förutsägbar ägarkostnad"
+    ]
   },
   {
     "slug": "maxus-e-deliver-9-chassi",
@@ -1039,13 +1125,13 @@
     "name": "MAXUS e-Deliver 9 Chassi",
     "category": "Chassi",
     "fuel": "El",
-    "summary": "Fyra elektriska chassivarianter (L3/L4 i N1 och N2) för verksamhetsanpassade påbyggnader – flak, kyl, skåp eller special.",
+    "summary": "Chassit som blir exakt den bil ni behöver – flak, kyl, servicebil eller specialpåbyggnad. Fyra varianter och upp till 1 420 kg nyttolast.",
     "suitedFor": [
       "Påbyggnad",
       "Specialfordon"
     ],
     "priceFrom": 509900,
-    "priceNote": "Chassipris exkl. moms – påbyggnad tillkommer. Enligt maxus.se.",
+    "priceNote": "Chassipris exkl. moms enligt Maxus Sverige – påbyggnad tillkommer.",
     "badge": "För påbyggnad",
     "image": "https://cdn.sanity.io/images/mcx434c9/production/3731648cf73bb58180e749bcd3183cd299287d71-2400x1231.jpg?w=1600&q=85&auto=format",
     "gallery": [
@@ -1077,7 +1163,12 @@
       }
     ],
     "sourceUrl": "https://maxus.se/modeller/e-deliver-9-chassi",
-    "imageFallback": "/images/models/maxus-edeliver9.jpg"
+    "imageFallback": "/images/models/maxus-edeliver9.jpg",
+    "benefits": [
+      "Bygg exakt efter verksamheten – vi projekterar påbyggnaden tillsammans",
+      "Elchassi med upp till 1 420 kg nyttolast – kapaciteten finns kvar med påbyggnad",
+      "DC-laddning 20–80 % på cirka 36 minuter"
+    ]
   },
   {
     "slug": "maxus-t60-max",
@@ -1085,14 +1176,14 @@
     "name": "MAXUS T60 MAX",
     "category": "Pickup",
     "fuel": "Diesel",
-    "summary": "Dieselpickup med 215 hk, 500 Nm, 4x4, automat och 3 500 kg dragvikt. Nu med MAX-tillbehörspaket till kampanjpris.",
+    "summary": "Pickup med personbilskomfort och arbetskapacitet: 215 hk, 500 Nm, automatlåda och 3 500 kg dragvikt. Just nu med MAX-paketet till 10 000 kr.",
     "suitedFor": [
       "Drag och släp",
       "Bygg och anläggning",
       "Varierade arbetsmiljöer"
     ],
     "priceFrom": 389900,
-    "priceNote": "Frånpris exkl. moms. MAX-paketet 10 000 kr (ordinarie 35 000 kr) vid nybeställning.",
+    "priceNote": "Officiellt frånpris från Maxus Sverige, exkl. moms. MAX-paketet 10 000 kr vid nybeställning.",
     "badge": "MAX-paket 10 000 kr",
     "image": "https://media.ffycdn.net/eu/rsa-norway/Q8xi2Gkn9rK8xM9BPA1N.png?mod=v1/resize=1400",
     "gallery": [
@@ -1128,7 +1219,12 @@
       }
     ],
     "sourceUrl": "https://maxus.se/modeller/t60",
-    "imageFallback": "/images/models/maxus-t60.jpg"
+    "imageFallback": "/images/models/maxus-t60.jpg",
+    "benefits": [
+      "215 hk och 500 Nm med automat – fullt lastad uppför backen",
+      "MAX-paketet till 10 000 kr (ord. 35 000 kr): dragkrok, takrails, sidosteg och skärmbreddare",
+      "4WD och 975 kg nyttolast – jobb i veckan, stuga i helgen"
+    ]
   },
   {
     "slug": "maxus-eterron-9",
@@ -1136,14 +1232,14 @@
     "name": "MAXUS eTerron 9",
     "category": "Pickup",
     "fuel": "El",
-    "summary": "Elektrisk 4x4-pickup med 436 hk, upp till 432 km räckvidd, 3 500 kg dragvikt och 236 liters frunk. Fem säten.",
+    "summary": "436 hk, 43,2 mils räckvidd och 3 500 kg på kroken – elpickuppen som inte ber om ursäkt. Fem säten och 236 liters frunk.",
     "suitedFor": [
       "Drag och släp",
       "Krävande arbetsdagar",
       "Miljözoner"
     ],
     "priceFrom": 699900,
-    "priceNote": "Frånpris exkl. moms, enligt maxus.se.",
+    "priceNote": "Officiellt frånpris från Maxus Sverige, exkl. moms.",
     "badge": "436 hk",
     "image": "https://cdn.sanity.io/images/mcx434c9/production/0c054dacc93acca171f517f9a3991bc7eac9b0cd-1920x1200.png?w=1200&q=85&auto=format",
     "gallery": [
@@ -1183,7 +1279,12 @@
       }
     ],
     "sourceUrl": "https://maxus.se/modeller/eterron-9",
-    "imageFallback": "/images/models/maxus-eterron9.webp"
+    "imageFallback": "/images/models/maxus-eterron9.webp",
+    "benefits": [
+      "436 hk och fyrhjulsdrift – kraft i överflöd på alla underlag",
+      "432 km räckvidd (WLTP) – arbetsdagen utan räckviddsångest",
+      "236 liters frunk – verktyg och utrustning separerat från flaket"
+    ]
   },
   {
     "slug": "maxus-t90-ev",
@@ -1191,14 +1292,14 @@
     "name": "MAXUS T90 EV",
     "category": "Pickup",
     "fuel": "El",
-    "summary": "100% elektrisk pickup med plats för hela familjen – fem säten, 925 kg lastvikt och 4,1 m³. Nu till kampanjpris.",
+    "summary": "Hundra procent elektrisk pickup med fem säten: jobbet i veckan, familjen i helgen. 925 kg lastvikt och 4,1 m³ lastvolym – nu till kampanjpris.",
     "suitedFor": [
       "Service och installation",
       "Miljözoner",
       "Familj och jobb"
     ],
     "priceFrom": 299900,
-    "priceNote": "Kampanjpris enligt Maxus Sverige. Modellsidan på maxus.se är nedlagd – kontakta oss för aktuellt pris och leverans.",
+    "priceNote": "Kampanjpris enligt Maxus Sverige, exkl. moms och exklusive klimatpremie. Kontakta oss för leveranstid.",
     "badge": "Kampanjpris",
     "image": "/images/models/maxus-t90ev.jpg",
     "gallery": [
@@ -1234,7 +1335,12 @@
       }
     ],
     "sourceUrl": "https://maxus.se/modeller",
-    "imageFallback": "/images/models/maxus-t90ev.jpg"
+    "imageFallback": "/images/models/maxus-t90ev.jpg",
+    "benefits": [
+      "Fem säten och 4,1 m³ – kombifordonet som ersätter två bilar",
+      "Kampanjpris 299 900 kr exkl. moms – smart insteg till elpickup-klassen",
+      "5 års nybilsgaranti och 8 års batterigaranti (160 000 km)"
+    ]
   },
   {
     "slug": "maxus-e-deliver-3",
@@ -1242,13 +1348,13 @@
     "name": "MAXUS e-Deliver 3",
     "category": "Skåpbil",
     "fuel": "El",
-    "summary": "Kompakt eltransportbil för stan – smidig i trängseln med god lastförmåga. Finns även som chassi för påbyggnad.",
+    "summary": "Den lilla elaren för stan – smidig i trängseln, enkel att parkera och billig i drift. Säljs via lagerbilar och förfrågan.",
     "suitedFor": [
       "Leveranser i städer",
       "Service och installation"
     ],
     "priceFrom": null,
-    "priceNote": "Modellen säljs via lager och förfrågan – kontakta oss för aktuella objekt och priser.",
+    "priceNote": "Pris på förfrågan – kontakta oss för aktuella objekt.",
     "image": "/images/models/maxus-edeliver3.webp",
     "gallery": [],
     "variants": [
@@ -1276,6 +1382,11 @@
       }
     ],
     "sourceUrl": "https://maxus.se/modeller",
-    "imageFallback": "/images/models/maxus-edeliver3.webp"
+    "imageFallback": "/images/models/maxus-edeliver3.webp",
+    "benefits": [
+      "Kompakt yttermått – parkerar där större skåpbilar får leta",
+      "Låg driftkostnad per mil – perfekt för korta stadsrundor",
+      "Finns som skåpbil och chassi för lätt påbyggnad"
+    ]
   }
 ]

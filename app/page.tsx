@@ -18,7 +18,7 @@ const heroSlides: HeroSlide[] = [
     brandColor: "#1B5FAA",
     eyebrow: "Kampanj 2026 · t.o.m. 30 september",
     title: "20 färdiga kampanjbilar med tydligt företagspris",
-    text: "Skåpbil, skåp & lift, flak, dubbelhytt och el – paket byggda på det svenska företag faktiskt beställer. Kihlströms är Sveriges största IVECO-återförsäljare.",
+    text: "Färdigbyggda paket på det svenska företag verkligen beställer – till kampanjpris och med kort leveranstid. Hos Sveriges största IVECO-återförsäljare.",
     price: "Från 419 000 kr exkl. moms",
     priceNote: "Kampanjpris",
     image: `${V}campaigns/sverige/9-new-models/header-img/iveco-daily-12m3---16_9---header/12m3skpbilfastlane/fastlanevanhero/fastlanevanhero.png?w=1600&q=85`,
@@ -34,7 +34,7 @@ const heroSlides: HeroSlide[] = [
     brandColor: "#C8102E",
     eyebrow: "Sveriges mest sålda pickup",
     title: "Isuzu D-Max – vald av proffs, tre år i rad",
-    text: "Ny drivlina: 2,2-liters turbodiesel med 400 Nm och 8-växlad automat. Lasta upp till ett ton, dra 3 500 kg – HVO100-godkänd med 5 års garanti.",
+    text: "Ny drivlina med 400 Nm och automatlåda som standard. Lasta ett ton, dra 3 500 kg – och kör vidare var vintern än tar vägen.",
     price: "Från 469 900 kr exkl. moms",
     priceNote: "Rek. kundpris",
     image: `${I}glmkbrd4/my26-dc-xrx-rolltop-n3-7107_v_hero_desktop.png?width=1920&height=1080&format=png&v=1dcdeb427866170`,
@@ -50,7 +50,7 @@ const heroSlides: HeroSlide[] = [
     brandColor: "#C8102E",
     eyebrow: "Kampanj · Arctic Trucks",
     title: "D-Max AT35 – äkta Arctic Trucks till kampanjpris",
-    text: "35\" BFGoodrich KO2, AT-fälgar, 40 mm höjning, fyrkantsfäste med dragkrok samt godkännande och registrering – allt ingår i paketet.",
+    text: "Byggd för kraftledningsgator och skogsvägar där vanliga pickuper vänder. Höjning, däck, fälgar och registrering – allt ingår i paketpriset.",
     price: "729 900 kr exkl. moms",
     priceNote: "Kampanj · ord. 738 900 kr",
     image: `${I}1dvdjid1/at35-my26.png?width=1600&height=994&format=png&v=1dcd2579a552010`,
@@ -66,7 +66,7 @@ const heroSlides: HeroSlide[] = [
     brandColor: "#0E7490",
     eyebrow: "Elpickup med fyrhjulsdrift",
     title: "MAXUS eTerron 9 – 436 hk och 3,5 ton drag",
-    text: "Elektrisk 4x4-pickup med 102 kWh batteri, upp till 432 km räckvidd, 236 liters frunk och fem säten. Byggd för krävande arbetsdagar.",
+    text: "Elektrisk 4x4-pickup med 43,2 mils räckvidd och 3 500 kg dragvikt. Fem säten och 236 liters frunk – hela teamet och utrustningen i ett fordon.",
     price: "Från 699 900 kr exkl. moms",
     image: `${M}0c054dacc93acca171f517f9a3991bc7eac9b0cd-1920x1200.png?w=1600&q=85&auto=format`,
     imageFallback: "/images/models/maxus-eterron9.webp",
@@ -81,7 +81,7 @@ const heroSlides: HeroSlide[] = [
     brandColor: "#1B5FAA",
     eyebrow: "Miljözon klass 3",
     title: "eDaily – enda eltransportbilen som får dra 3,5 ton",
-    text: "Kom in i miljözonen med full last- och dragförmåga. Upp till 364 km WLTP, 8 års batterigaranti och assistans 24/7 i hela Europa.",
+    text: "Kör in i miljözonen med full last. Enda eltransportbilen i Sverige som får dra 3 500 kg – med åtta års batterigaranti och assistans dygnet runt.",
     price: "Från 679 000 kr exkl. moms",
     priceNote: "Kampanjpris",
     image: `${V}campaigns/norge/edaily-kampanj/stage-row/iveco-edaily-kassebil---stage-row---desktop.png?w=1600&iar=0`,
@@ -95,38 +95,38 @@ const heroSlides: HeroSlide[] = [
 
 const tasks = [
   {
-    title: "Hitta en lagerbil",
-    desc: "Nya och begagnade annonser – filtrera på skåp, flak, pickup eller el.",
+    title: "Köp ur lagret",
+    desc: "Färdiga bilar med kort leveranstid – filtrera på kaross, bränsle och skick.",
     href: "/lager",
     icon: "M3 13h2l1.6-4.4A2 2 0 0 1 8.5 7h7a2 2 0 0 1 1.9 1.6L19 13h2M5.5 13h13a1.5 1.5 0 0 1 1.5 1.5V17h-2.8M6.3 17H3.5v-2.5A1.5 1.5 0 0 1 5 13"
   },
   {
     title: "Bygg din lastbil",
-    desc: "Kyl, kran, flak eller servicebil – behovsflöde för hela arbetsbilen.",
+    desc: "Kyl, kran, flak eller servicebil? Gör behovsguiden – vi projekterar resten.",
     href: "/bygg-din-lastbil",
     icon: "M4 20h16M6 20V9l6-4 6 4v11M10 20v-5h4v5"
   },
   {
     title: "Service & verkstad",
-    desc: "Auktoriserad för IVECO, Isuzu och Maxus – MECA för alla märken.",
+    desc: "Auktoriserad service för IVECO, Isuzu och Maxus – och alla andra märken.",
     href: "/verkstad-service",
     icon: "M12 6v6l4 2M4.5 19a8.5 8.5 0 1 1 15 0"
   },
   {
     title: "Reservdelar",
-    desc: "Sök del via registreringsnummer eller VIN – lagret har tusentals artiklar.",
+    desc: "Originaldelar via reg.nr eller VIN – svar med pris och leveranstid.",
     href: "/reservdelar",
     icon: "M10 4 4 6l2 14 6-2m0-14 6 2-2 14m-4-14v14M7 9l3 .8m4-1.6 3 .8"
   },
   {
     title: "Tillbehör & paket",
-    desc: "Riktiga listpriser från Isuzu och Maxus – sätt ihop din offertlista.",
+    desc: "Se listpriser direkt och sätt ihop din offertlista – montering i egen verkstad.",
     href: "/tillbehor",
     icon: "M6 7V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2M5 7h14l-1 13H6L5 7Z"
   },
   {
     title: "Kampanjer just nu",
-    desc: "IVECO 20-modellerskampanj, T90 EV och MAX-paketet – aktuella priser.",
+    desc: "IVECO:s 20-modellerskampanj, Arctic Trucks-kampanjen och MAX-paketet.",
     href: "/kampanjer",
     icon: "M12 3v2m0 14v2M5.6 5.6l1.4 1.4m10 10 1.4 1.4M3 12h2m14 0h2M5.6 18.4 7 17m10-10 1.4-1.4M12 8a4 4 0 1 1 0 8 4 4 0 0 1 0-8Z"
   }
@@ -185,8 +185,8 @@ export default function HomePage() {
           <p className="section-label">Uppgiftsbaserad navigation</p>
           <h2 id="tasks-heading" className="h-section">Vad ska bilen göra i din verksamhet?</h2>
           <p className="mt-3 text-[15px] leading-relaxed text-ink-600">
-            Välj väg efter jobbet, inte efter märke. Vi hjälper er jämföra kapacitet, utförande och total ekonomi –
-            och samma team tar hand om bilen genom hela livscykeln.
+            Välj väg efter jobbet, inte efter märke – vi jämför kapacitet, utförande och total ekonomi åt dig.
+            Samma team tar hand om bilen genom hela livscykeln: val, påbyggnad, service och reservdelar.
           </p>
         </div>
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -300,7 +300,7 @@ export default function HomePage() {
                   <div className="mt-5 flex items-center gap-4">
                     <Link href={c.cta.href} className="btn-light">{c.cta.label}</Link>
                     <a href={c.sourceUrl} className="text-xs text-ink-300 underline-offset-4 hover:underline" target="_blank" rel="noopener noreferrer">
-                      Källa ↗
+                      Läs mer hos märket ↗
                     </a>
                   </div>
                 </article>
@@ -311,22 +311,31 @@ export default function HomePage() {
       </section>
 
       <section className="container-site py-14 md:py-20" aria-labelledby="usp-heading">
-        <div className="grid gap-4 rounded-3xl border border-ink-100 bg-white p-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="max-w-2xl">
+          <p className="section-label">Därför köper företag av Kihlströms</p>
+          <h2 id="usp-heading" className="h-section">Vi säljer inte en bil – vi håller den i arbete</h2>
+        </div>
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {company.promises?.map((promise) => (
+            <div key={promise.title} className="card p-6">
+              <span className="grid h-10 w-10 place-items-center rounded-xl bg-brand-blue/10 text-brand-blue">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d={promise.icon} stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </span>
+              <h3 className="mt-4 text-[15px] font-bold text-ink-900">{promise.title}</h3>
+              <p className="mt-1.5 text-sm leading-relaxed text-ink-600">{promise.desc}</p>
+            </div>
+          ))}
+        </div>
+        <div className="card mt-6 flex flex-col items-start justify-between gap-4 bg-ink-950 p-6 text-white sm:flex-row sm:items-center">
           <div>
-            <p className="text-4xl font-black tracking-tight text-brand-blue">1</p>
-            <p className="mt-1 text-sm font-semibold text-ink-800">Sveriges största IVECO-återförsäljare</p>
+            <p className="text-lg font-bold">Klar att prata bil?</p>
+            <p className="text-sm text-ink-300">Ring växeln {company.phone} – eller begär offert och få svar samma arbetsdag.</p>
           </div>
-          <div>
-            <p className="text-4xl font-black tracking-tight text-brand-blue">3</p>
-            <p className="mt-1 text-sm font-semibold text-ink-800">Märken auktoriserade – IVECO, Isuzu och Maxus</p>
-          </div>
-          <div>
-            <p className="text-4xl font-black tracking-tight text-brand-blue">2</p>
-            <p className="mt-1 text-sm font-semibold text-ink-800">Fullserviceanläggningar – Smista och Spånga</p>
-          </div>
-          <div>
-            <p className="text-4xl font-black tracking-tight text-brand-blue">{company.phone}</p>
-            <p className="mt-1 text-sm font-semibold text-ink-800">Växel – direkt till rätt person samma dag</p>
+          <div className="flex flex-wrap gap-3">
+            <a href={company.phoneHref} className="btn-light">Ring {company.phone}</a>
+            <Link href="/kontakt#meddelande" className="btn-primary">Begär offert</Link>
           </div>
         </div>
       </section>

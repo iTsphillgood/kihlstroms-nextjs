@@ -10,6 +10,8 @@ interface Props {
 
 const subjects = [
   "Köpa transportbil",
+  "Begär offert",
+  "Boka provkörning",
   "Sälja transportbil",
   "Min beställda bil",
   "Verkstad/service",
@@ -25,15 +27,17 @@ export default function ContactForm({ staff, defaultSubject }: Props) {
   const [company, setCompany] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
+  const [prefer, setPrefer] = useState("Telefon");
   const [message, setMessage] = useState("");
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [sent, setSent] = useState(false);
 
   const validate = () => {
     const e: Record<string, string> = {};
-    if (!name.trim()) e.name = "Fyll i ditt namn.";
-    if (!phone.trim() && !email.trim()) e.phone = "Fyll i telefonnummer eller mejladress.";
-    if (email.trim() && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email.trim())) e.email = "Mejladressen ser inte rätt ut.";
-    if (!message.trim()) e.message = "Skriv några rader om ditt ärende.";
+    if (!name.trim()) e.name = "Skriv ditt namn så vet vi vem vi pratar med.";
+    if (!phone.trim() && !email.trim()) e.phone = "Lämna telefonnummer eller mejl så kan vi nå dig.";
+    if (email.trim() && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email.trim())) e.email = "Kolla mejladressen – den ser inte helt rätt ut.";
+    if (!message.trim()) e.message = "Skriv några rader om ärendet så kan vi förbereda svaret.";
     setErrors(e);
     return Object.keys(e).length === 0;
   };
@@ -42,7 +46,7 @@ export default function ContactForm({ staff, defaultSubject }: Props) {
     ? staff.find((s) => s.role === "Reservdelar" && s.location.includes(location.includes("Syd") ? "Smista" : "Spånga"))
     : subject.includes("Verkstad")
       ? staff.find((s) => s.role.includes("Servicerådgivare") && s.location.includes(location.includes("Syd") ? "Smista" : "Spånga"))
-      : staff.find((s) => s.role.includes("sälj") && s.location.includes(location.includes("Syd") ? "Smista" : "Spånga"));
+      : staff.find((s) => s.role.toLowerCase().includes("sälj") && s.location.includes(location.includes("Syd") ? "Smista" : "Spånga"));
 
   const send = () => {
     if (!validate()) return;
@@ -56,6 +60,7 @@ export default function ContactForm({ staff, defaultSubject }: Props) {
         company ? `Företag: ${company}` : "",
         `Telefon: ${phone}`,
         `Mejl: ${email}`,
+        `Vill bli kontaktad via: ${prefer}`,
         "",
         message,
         "",
@@ -63,6 +68,7 @@ export default function ContactForm({ staff, defaultSubject }: Props) {
       ].filter(Boolean).join("\n")
     });
     window.location.href = `mailto:${to}?${params.toString()}`;
+    setSent(true);
   };
 
   return (
@@ -76,13 +82,13 @@ export default function ContactForm({ staff, defaultSubject }: Props) {
     >
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
-          <label htmlFor="cf-subject" className="field-label">Ärende *</label>
+          <label htmlFor="cf-subject" className="field-label">Vad gäller ärendet? *</label>
           <select id="cf-subject" className="field" value={subject} onChange={(e) => setSubject(e.target.value)}>
             {subjects.map((s) => <option key={s}>{s}</option>)}
           </select>
         </div>
         <div>
-          <label htmlFor="cf-location" className="field-label">Anläggning *</label>
+          <label htmlFor="cf-location" className="field-label">Närmaste anläggning *</label>
           <select id="cf-location" className="field" value={location} onChange={(e) => setLocation(e.target.value)}>
             <option>Syd (Smista)</option>
             <option>Norr (Spånga)</option>
@@ -90,31 +96,48 @@ export default function ContactForm({ staff, defaultSubject }: Props) {
         </div>
         <div>
           <label htmlFor="cf-name" className="field-label">Mitt namn *</label>
-          <input id="cf-name" className="field" value={name} onChange={(e) => setName(e.target.value)} autoComplete="name" />
+          <input id="cf-name" className="field" value={name} onChange={(e) => setName(e.target.value)} autoComplete="name" placeholder="För- och efternamn" />
           {errors.name && <p className="mt-1 text-xs font-medium text-brand-red">{errors.name}</p>}
         </div>
         <div>
           <label htmlFor="cf-company" className="field-label">Företag</label>
-          <input id="cf-company" className="field" value={company} onChange={(e) => setCompany(e.target.value)} autoComplete="organization" />
+          <input id="cf-company" className="field" value={company} onChange={(e) => setCompany(e.target.value)} autoComplete="organization" placeholder="Företagets namn" />
         </div>
         <div>
-          <label htmlFor="cf-phone" className="field-label">Mitt telefonnummer</label>
-          <input id="cf-phone" className="field" value={phone} onChange={(e) => setPhone(e.target.value)} inputMode="tel" autoComplete="tel" />
+          <label htmlFor="cf-phone" className="field-label">Telefon</label>
+          <input id="cf-phone" className="field" value={phone} onChange={(e) => setPhone(e.target.value)} inputMode="tel" autoComplete="tel" placeholder="07X-XXX XX XX" />
           {errors.phone && <p className="mt-1 text-xs font-medium text-brand-red">{errors.phone}</p>}
         </div>
         <div>
-          <label htmlFor="cf-email" className="field-label">Min mejladress</label>
-          <input id="cf-email" className="field" value={email} onChange={(e) => setEmail(e.target.value)} inputMode="email" autoComplete="email" />
+          <label htmlFor="cf-email" className="field-label">Mejl</label>
+          <input id="cf-email" className="field" value={email} onChange={(e) => setEmail(e.target.value)} inputMode="email" autoComplete="email" placeholder="namn@foretag.se" />
           {errors.email && <p className="mt-1 text-xs font-medium text-brand-red">{errors.email}</p>}
         </div>
         <div className="sm:col-span-2">
-          <label htmlFor="cf-message" className="field-label">Mitt meddelande *</label>
+          <span className="field-label">Hur vill du bli kontaktad?</span>
+          <div className="flex gap-4">
+            {["Telefon", "Mejl"].map((option) => (
+              <label key={option} className="flex cursor-pointer items-center gap-2 text-sm font-medium text-ink-700">
+                <input type="radio" name="prefer" checked={prefer === option} onChange={() => setPrefer(option)} className="h-4 w-4 accent-[#1B5FAA]" />
+                {option}
+              </label>
+            ))}
+          </div>
+        </div>
+        <div className="sm:col-span-2">
+          <label htmlFor="cf-message" className="field-label">Meddelande *</label>
           <textarea
             id="cf-message"
             className="field min-h-[130px] resize-y"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            placeholder="Beskriv ärendet: fordon, behov av service eller vad ni vill ha pris på."
+            placeholder={
+              subject.includes("Verkstad")
+                ? "Berätta om fordonet: reg.nr, vad som behöver göras och när det passar."
+                : subject.includes("Reservdelar")
+                  ? "Reg.nr eller VIN och vilken del du söker."
+                  : "Vilken bil eller vilket behov gäller det? Beskriv gärna körning, last och önskad leveranstid."
+            }
           />
           {errors.message && <p className="mt-1 text-xs font-medium text-brand-red">{errors.message}</p>}
         </div>
@@ -122,13 +145,20 @@ export default function ContactForm({ staff, defaultSubject }: Props) {
 
       <div className="mt-6 flex flex-col items-start gap-3 sm:flex-row sm:items-center">
         <button type="submit" className="btn-primary">
-          Skicka meddelande
+          Skicka – svar samma arbetsdag
         </button>
         <p className="text-xs leading-relaxed text-ink-500">
-          Mejlet öppnas färdigt ifyllt i din e-postklient och går till rätt anläggningsadress.
-          {sellerForRouting && ` Ärenden som "${subject}" routas normalt till ${sellerForRouting.name} (${sellerForRouting.role}).`}
+          Ärendet läggs färdigt skrivet i din e-postklient och går till {location.includes("Syd") ? "Smista" : "Spånga"}-anläggningen.
+          {sellerForRouting && ` Ärenden som detta hanteras normalt av ${sellerForRouting.name} (${sellerForRouting.role}).`}
         </p>
       </div>
+
+      {sent && (
+        <p className="mt-4 rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-sm font-medium text-green-800" role="status">
+          Klart – mejlet är förberett i din e-postklient. Tryck på Skicka där, så återkommer vi oftast samma arbetsdag.
+          Ring gärna växeln 08-19 56 26 om det brådskar.
+        </p>
+      )}
     </form>
   );
 }

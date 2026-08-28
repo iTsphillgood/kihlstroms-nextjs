@@ -109,7 +109,7 @@ export default function BrandPage({ params }: { params: { brand: string } }) {
                   </ul>
                   <div className="mt-5 flex items-center gap-4">
                     <Link href={c.cta.href} className="btn-ghost">{c.cta.label}</Link>
-                    <a href={c.sourceUrl} className="link text-xs" target="_blank" rel="noopener noreferrer">Källa ↗</a>
+                    <a href={c.sourceUrl} className="link text-xs" target="_blank" rel="noopener noreferrer">Läs mer hos märket ↗</a>
                   </div>
                 </article>
               ))}

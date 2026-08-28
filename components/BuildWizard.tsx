@@ -219,8 +219,9 @@ export default function BuildWizard({ models, sellerEmail, sellerName }: Props) 
               ))}
             </div>
             <button type="button" onClick={mailto} className="btn-primary mt-6">
-              Skicka behovet till {sellerName}
+              Begär offert – svar samma arbetsdag
             </button>
+            <p className="mt-2 text-xs text-ink-500">Behovet skickas till {sellerName}, som ritar ett förslag med bil, påbyggnad och leveranstid.</p>
           </div>
         )}
 

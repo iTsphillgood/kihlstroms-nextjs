@@ -187,7 +187,7 @@ export default function Header() {
             08-19 56 26
           </a>
           <Link href="/kontakt#meddelande" className="hidden btn-primary !py-2 !px-4 sm:inline-flex">
-            Kontakta oss
+            Begär offert
           </Link>
           <button
             type="button"

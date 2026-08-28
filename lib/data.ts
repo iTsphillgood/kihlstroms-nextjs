@@ -21,6 +21,7 @@ export interface Model {
   fuel: string;
   summary: string;
   suitedFor: string[];
+  benefits?: string[];
   priceFrom: number | null;
   priceNote?: string;
   badge?: string;
@@ -31,6 +32,12 @@ export interface Model {
   specs: Spec[];
   sourceUrl: string;
   campaignSource?: string;
+}
+
+export interface CompanyPromise {
+  title: string;
+  desc: string;
+  icon: string;
 }
 
 export interface Staff {
@@ -126,7 +133,7 @@ import stockJson from "../data/stock.json";
 import accessoriesJson from "../data/accessories.json";
 import campaignsJson from "../data/campaigns.json";
 
-export const company = companyJson.company;
+export const company = companyJson.company as { name: string; shortName: string; tagline: string; pitch: string; phone: string; phoneHref: string; email: string; claims: string[]; brands: string[]; promises: CompanyPromise[] };
 export const locations = companyJson.locations as Location[];
 export const staff = companyJson.staff as Staff[];
 export const brandInfo = companyJson.brands as BrandInfo[];

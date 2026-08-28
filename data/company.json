@@ -17,6 +17,28 @@
       "IVECO",
       "Isuzu",
       "Maxus"
+    ],
+    "promises": [
+      {
+        "title": "Svar samma arbetsdag",
+        "desc": "Offertförfrågningar besvaras oftast samma arbetsdag – av en namngiven säljare, inte ett callcenter.",
+        "icon": "M4.5 19a8.5 8.5 0 1 1 15 0M12 9.5V13l3 1.5"
+      },
+      {
+        "title": "Tre märken, ärlig rådgivning",
+        "desc": "IVECO, Isuzu och Maxus under samma tak. Vi jämför mellan märkena och rekommenderar bilen som passar ert jobb.",
+        "icon": "M8.5 12H21M3 17h18M3 21h13M3 7l4-4 4 4"
+      },
+      {
+        "title": "Egen verkstad, hela livscykeln",
+        "desc": "Service, reservdelar och skadejobb i Smista och Spånga. Vi säljer inte bara bilen – vi håller den i arbete.",
+        "icon": "M14.7 6.3a2.8 2.8 0 0 1 4 4L10 19H6v-4l8.7-8.7Z"
+      },
+      {
+        "title": "Färdiga arbetsbilar",
+        "desc": "Kyl, flak, kran, inredning eller dubbelhytt – vi levererar en bil som är klar att jobba, inte ett chassi.",
+        "icon": "M4 8h16v11H4zM4 8l2-4h12l2 4M10 13h4"
+      }
     ]
   },
   "locations": [

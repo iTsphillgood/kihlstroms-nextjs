@@ -80,7 +80,7 @@ export default function Footer() {
 
       <div className="border-t border-ink-800">
         <div className="container-site flex flex-col gap-2 py-5 text-xs text-ink-400 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} {company.name}. Prototyp – priser och utbud enligt angivna källor och kan ändras.</p>
+          <p>© {new Date().getFullYear()} {company.name}. Priser och utbud kan ändras – kontakta oss för aktuell offert.</p>
           <p>Alla priser exklusive moms om inget annat anges.</p>
         </div>
       </div>

@@ -22,10 +22,10 @@ export default function StockPage() {
         <p className="section-label">Transportbilar och lätta lastbilar · Stockholm</p>
         <h1 className="mt-2 text-3xl font-extrabold tracking-tight sm:text-4xl">Transportbilar i lager</h1>
         <p className="mt-4 text-[15px] leading-relaxed text-ink-600">
-          Se Kihlströms aktuella fordonsannonser och sortera efter märke, bränsle eller kaross. Vi hjälper er att
-          jämföra bilen, utrustningen och den totala lösningen. {stock.sourceNote}
+          Färdiga bilar som kan levereras inom några dagar – filtrera på kaross, bränsle och skick tills du hittar rätt.
+          Hittar du ingen passande bil byggar vi en åt dig i stället. {stock.sourceNote}
         </p>
-        <p className="mt-3 text-xs text-ink-400">Uppgifter verifierade {stock.verifiedAt}. Kontakt: {stock.contactSeller.name}, {stock.contactSeller.email}.</p>
+        <p className="mt-3 text-xs text-ink-400">Uppgifter verifierade {stock.verifiedAt}. Ring växeln 08-19 56 26 så bokar säljaren en visning – ofta samma dag.</p>
       </header>
 
       <div className="mt-10">
