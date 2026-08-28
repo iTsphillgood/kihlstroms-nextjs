@@ -1,0 +1,67 @@
+[
+  {
+    "id": "iveco-kampanj-2026",
+    "brand": "iveco",
+    "title": "IVECO kampanjbilar 2026",
+    "punchline": "20 färdiga kampanjmodeller med tydligt företagspris – från 419 000 kr exkl. moms",
+    "facts": [
+      "Lägsta pris 419 000 kr exkl. moms",
+      "5 eldrivna modeller – fri körning i miljözon",
+      "Gäller t.o.m. 30 september 2026"
+    ],
+    "cta": {
+      "label": "Se alla 20 modellerna",
+      "href": "/marke/iveco"
+    },
+    "sourceUrl": "https://www.kihlstroms.se/v3/iveco-daily-modeller/"
+  },
+  {
+    "id": "isuzu-at-kampanj",
+    "brand": "isuzu",
+    "title": "Arctic Trucks AT35 & AT37 – kampanjpris",
+    "punchline": "Äkta Arctic Trucks-byggda D-Max med BFGoodrich-däck – AT35 729 900 kr och AT37 793 900 kr exkl. moms",
+    "facts": [
+      "AT35 kampanjpris 729 900 kr (ord. 738 900 kr) exkl. moms",
+      "AT37 kampanjpris 793 900 kr (ord. 838 900 kr) exkl. moms",
+      "AT33 från 634 900 kr – 33″ BFGoodrich KO2"
+    ],
+    "cta": {
+      "label": "Se Arctic Trucks-modellerna",
+      "href": "/modeller/isuzu-d-max-arctic-trucks"
+    },
+    "sourceUrl": "https://isuzusverige.se/modeller/double-cab-arctic-trucks/"
+  },
+  {
+    "id": "maxus-t60-max-paket",
+    "brand": "maxus",
+    "title": "MAX-paketet till T60 MAX – 0 kr just nu",
+    "punchline": "Dragkrok, takrails, sidosteg och skärmbreddare utan extra kostnad vid nybeställning – ordinarie 35 000 kr exkl. moms.",
+    "facts": [
+      "Vårkampanj: MAX-paketet 0 kr vid nybeställning av T60 MAX",
+      "Ordinarie 35 000 kr exkl. moms enligt Maxus prislista",
+      "T60 MAX från 389 900 kr exkl. moms – business lease från 6 995 kr/mån",
+      "5 års nybilsgaranti / 160 000 km"
+    ],
+    "cta": {
+      "label": "Se T60 MAX",
+      "href": "/modeller/maxus-t60-max"
+    },
+    "sourceUrl": "https://maxus.se/modeller/t60"
+  },
+  {
+    "id": "isuzu-mest-salda",
+    "brand": "isuzu",
+    "title": "Sveriges mest sålda pickup – tre år i rad",
+    "punchline": "Isuzu D-Max 2023, 2024 och 2025 – vald av proffs som kör varje dag",
+    "facts": [
+      "Från 469 900 kr exkl. moms",
+      "Skatt från ca 4 244 kr/år med CNG-paketet",
+      "Klassens lägsta CO₂ och kraftigaste ram"
+    ],
+    "cta": {
+      "label": "Se D-Max-modellerna",
+      "href": "/marke/isuzu"
+    },
+    "sourceUrl": "https://isuzusverige.se/sveriges-mest-salda-pickup/"
+  }
+]

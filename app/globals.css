@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-ink-50 text-ink-900 antialiased;
+  font-feature-settings: "cv11", "ss01";
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@layer components {
+  .container-site {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-blue;
+  }
+  .btn-primary {
+    @apply btn bg-brand-blue text-white hover:bg-brand-blueDark;
+  }
+  .btn-dark {
+    @apply btn bg-ink-900 text-white hover:bg-ink-800;
+  }
+  .btn-ghost {
+    @apply btn border border-ink-200 bg-white text-ink-800 hover:border-ink-300 hover:bg-ink-50;
+  }
+  .btn-light {
+    @apply btn bg-white/10 text-white ring-1 ring-inset ring-white/30 backdrop-blur hover:bg-white/20;
+  }
+  .card {
+    @apply rounded-2xl border border-ink-100 bg-white shadow-card;
+  }
+  .section-label {
+    @apply text-xs font-bold uppercase tracking-[0.18em] text-brand-blue;
+  }
+  .h-section {
+    @apply mt-2 text-2xl font-bold tracking-tight text-ink-900 sm:text-3xl;
+  }
+  .link {
+    @apply text-brand-blue underline-offset-4 hover:underline;
+  }
+  .field {
+    @apply w-full rounded-lg border border-ink-200 bg-white px-3.5 py-2.5 text-sm text-ink-900 placeholder:text-ink-400 focus:border-brand-blue focus:outline-none focus:ring-2 focus:ring-brand-blue/20;
+  }
+  .field-label {
+    @apply mb-1.5 block text-sm font-medium text-ink-700;
+  }
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-ink-200 bg-white px-3 py-1 text-xs font-medium text-ink-700;
+  }
+  .chip-active {
+    @apply border-brand-blue bg-brand-blue text-white;
+  }
+}
+
+/* Hero-slider: förloppsindikator (lyfts ur komponenten så den följer med i statisk export) */
+@keyframes heroProgress {
+  from { width: 0%; }
+  to { width: 100%; }
+}

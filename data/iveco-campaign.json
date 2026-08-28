@@ -1,0 +1,368 @@
+{
+  "brand": "iveco",
+  "title": "IVECO kampanjbilar 2026",
+  "validUntil": "2026-09-30",
+  "sourceUrl": "https://www.kihlstroms.se/v3/iveco-daily-modeller/",
+  "models": [
+    {
+      "name": "Daily Skåpbil 12 m³ | Proline",
+      "code": "35S14A8 V 12m3",
+      "level": "Proline",
+      "driveline": "Diesel/HVO100 · 2,3 l · 136 hk",
+      "category": "Skåpbil",
+      "price": "419 000 kr",
+      "source": "Pris publicerat på iveco.se",
+      "image": "https://edge.sitecorecloud.io/hedinitaban27a1-hedin8837-prod5c4b-4604/media/project/hedin/distribution-cars/hedinnordictruck/shared/images/models/vans/stage-row-daily-12m3-proline.png?w=760",
+      "specUrl": "https://iveco.se/kopverktyg/kampanjer/iveco-skapbil-12m3-proline",
+      "family": "iveco-daily-skapbil",
+      "highlights": [
+        "Ståhöjd 1,90 m i lastutrymmet",
+        "3 500 kg dragvikt på kroken",
+        "DAB-radio, USB-laddning & Apple CarPlay",
+        "5 års IVECO ON-service"
+      ]
+    },
+    {
+      "name": "Daily Skåpbil 9 m³ | Fastlane",
+      "code": "35S14A8 V 9m3",
+      "level": "Fastlane",
+      "driveline": "Diesel/HVO100 · 2,3 l · 136 hk",
+      "category": "Skåpbil",
+      "price": "469 000 kr",
+      "source": "Retail-lista 2026 – ej publicerad av IVECO",
+      "image": "https://edge.sitecorecloud.io/hedinitaban27a1-hedin8837-prod5c4b-4604/media/project/hedin/distribution-cars/hedinnordictruck/shared/images/models/vans/stage-row-daily-12m3-fastlane.png?w=760",
+      "specUrl": "https://iveco.se/kopverktyg/kampanjer/iveco-skapbil-fast-lane",
+      "family": "iveco-daily-skapbil",
+      "highlights": [
+        "8-stegs Hi-Matic automatlåda",
+        "Adaptiv farthållare med Stop & Go",
+        "Full LED-strålkastare",
+        "Smidigast i det kompakta formatet"
+      ]
+    },
+    {
+      "name": "Daily Skåpbil 12 m³ | Fastlane",
+      "code": "35S14A8 V 12m3",
+      "level": "Fastlane",
+      "driveline": "Diesel/HVO100 · 2,3 l · 136 hk",
+      "category": "Skåpbil",
+      "price": "469 000 kr",
+      "source": "Retail-lista 2026 – ej publicerad av IVECO",
+      "image": "https://edge.sitecorecloud.io/hedinitaban27a1-hedin8837-prod5c4b-4604/media/project/hedin/distribution-cars/hedinnordictruck/shared/images/models/vans/stage-row-daily-12m3-fastlane.png?w=760",
+      "specUrl": "https://iveco.se/kopverktyg/kampanjer/iveco-skapbil-fast-lane",
+      "family": "iveco-daily-skapbil",
+      "highlights": [
+        "8-stegs Hi-Matic automatlåda",
+        "Komfortstol, klimatanläggning & elhandbroms",
+        "Apple CarPlay / Android Auto + digital instrumentering",
+        "3 års nybilsgaranti"
+      ]
+    },
+    {
+      "name": "Daily Skåpbil 12 m³ | Fastlane 180 hk",
+      "code": "35S18HA8 V 12m3",
+      "level": "Fastlane",
+      "driveline": "Diesel/HVO100 · 3,0 l · 180 hk",
+      "category": "Skåpbil",
+      "price": "489 000 kr",
+      "source": "Retail-lista 2026 – ej publicerad av IVECO",
+      "image": "https://edge.sitecorecloud.io/hedinitaban27a1-hedin8837-prod5c4b-4604/media/project/hedin/distribution-cars/hedinnordictruck/shared/images/models/vans/stage-row-daily-12m3-fastlane.png?w=760",
+      "specUrl": "https://iveco.se/kopverktyg/kampanjer/iveco-skapbil-fast-lane",
+      "family": "iveco-daily-skapbil",
+      "highlights": [
+        "3,0-litersmotor med 430 Nm",
+        "8-stegs Hi-Matic automatlåda",
+        "Byggd för tunga laster och släp",
+        "Full LED + adaptiv farthållare"
+      ]
+    },
+    {
+      "name": "Daily Skåpbil 16 m³ | Fastlane 180 hk",
+      "code": "35S18HA8 V 16m3",
+      "level": "Fastlane",
+      "driveline": "Diesel/HVO100 · 3,0 l · 180 hk",
+      "category": "Skåpbil",
+      "price": "499 000 kr",
+      "source": "Retail-lista 2026 – ej publicerad av IVECO",
+      "image": "https://edge.sitecorecloud.io/hedinitaban27a1-hedin8837-prod5c4b-4604/media/project/hedin/distribution-cars/hedinnordictruck/shared/images/models/vans/stage-row-daily-12m3-fastlane.png?w=760",
+      "specUrl": "https://iveco.se/kopverktyg/kampanjer/iveco-skapbil-fast-lane",
+      "family": "iveco-daily-skapbil",
+      "highlights": [
+        "16 m³ lastvolym på 3,5-tons chassi",
+        "Ca 4,6 m lastutrymme",
+        "3,0 l med 430 Nm och Hi-Matic",
+        "Backkamera & parkeringssensorer"
+      ]
+    },
+    {
+      "name": "Daily Skåpbil 16 m³ | Fastlane 5 ton",
+      "code": "50C18HA8 V 16m3",
+      "level": "Fastlane",
+      "driveline": "Diesel/HVO100 · 3,0 l · 180 hk",
+      "category": "Skåpbil",
+      "price": "539 000 kr",
+      "source": "Retail-lista 2026 – ej publicerad av IVECO",
+      "image": "https://edge.sitecorecloud.io/hedinitaban27a1-hedin8837-prod5c4b-4604/media/project/hedin/distribution-cars/hedinnordictruck/shared/images/models/vans/stage-row-daily-12m3-fastlane.png?w=760",
+      "specUrl": "https://iveco.se/kopverktyg/kampanjer/iveco-skapbil-fast-lane",
+      "family": "iveco-daily-skapbil",
+      "highlights": [
+        "Twinwheel – 5 tons totalvikt",
+        "Hög lastkapacitet, ca 2,3 ton",
+        "Stabilt även fullastad och med släp",
+        "Låg fordonsskatt i klassen"
+      ]
+    },
+    {
+      "name": "Daily Dubbelhytt Skåpbil 16 m³ | SNOEKS",
+      "code": "35S18HA8 V 16m3 SNOEKS",
+      "level": "Fastlane / Snoeks",
+      "driveline": "Diesel/HVO100 · 3,0 l · 180 hk",
+      "category": "Dubbelhytt",
+      "price": "569 000 kr",
+      "source": "Retail-lista 2026 – ej publicerad av IVECO",
+      "image": "https://edge.sitecorecloud.io/hedinitaban27a1-hedin8837-prod5c4b-4604/media/project/hedin/distribution-cars/hedinnordictruck/shared/images/models/vans/stage-row-daily-12m3-fastlane.png?w=760",
+      "specUrl": "https://iveco.se/kopverktyg/kampanjer/iveco-skapbil-fast-lane",
+      "family": "iveco-daily-dubbelhytt",
+      "highlights": [
+        "Snoeks-dubbelhytt – besättning och last i ett",
+        "Fabriksgodkänd påbyggnad",
+        "16 m³ kvarvarande lastvolym",
+        "Perfekt för installations- och servicelag"
+      ]
+    },
+    {
+      "name": "Daily Skåp & Lift | Proline",
+      "code": "35S14A8 3750",
+      "level": "Proline",
+      "driveline": "Diesel/HVO100 · 2,3 l · 136 hk",
+      "category": "Skåp & lift",
+      "price": "529 000 kr",
+      "source": "Pris publicerat på iveco.se",
+      "image": "https://edge.sitecorecloud.io/hedinitaban27a1-hedin8837-prod5c4b-4604/media/project/hedin/distribution-cars/hedinnordictruck/shared/images/models/vans/stage-row-daily-box-lift-proline.png?w=760",
+      "specUrl": "https://iveco.se/kopverktyg/kampanjer/iveco-skab-och-liftbil-proline",
+      "family": "iveco-daily-skap-lift",
+      "highlights": [
+        "Nästan 1 000 kg kapacitet och plats för 8 pallar",
+        "Marknadens minsta vändradie",
+        "Värme i vindruta/backspeglar + Webasto motorvärmare",
+        "3 500 kg dragvikt på kroken"
+      ]
+    },
+    {
+      "name": "Daily Skåp & Lift | Fastlane 3750",
+      "code": "35S16HA8 3750",
+      "level": "Fastlane",
+      "driveline": "Diesel/HVO100 · 160 hk",
+      "category": "Skåp & lift",
+      "price": "578 000 kr",
+      "source": "Retail-lista 2026 – ej publicerad av IVECO",
+      "image": "https://edge.sitecorecloud.io/hedinitaban27a1-hedin8837-prod5c4b-4604/media/project/hedin/distribution-cars/hedinnordictruck/shared/images/models/vans/stagerow-daily-box-lift-fastlane.png?w=760",
+      "specUrl": "https://iveco.se/kopverktyg/kampanjer/iveco-skapbil-12m3-fast-lane",
+      "family": "iveco-daily-skap-lift",
+      "highlights": [
+        "Hjulbas 3750 mm – smidig i stadsmiljö",
+        "Hi-Matic automat & elektrisk handbroms",
+        "Adaptiv farthållare med Stop & Go",
+        "5 års IVECO ON-service"
+      ]
+    },
+    {
+      "name": "Daily Skåp & Lift | Fastlane 4100",
+      "code": "35S16HA8 4100",
+      "level": "Fastlane",
+      "driveline": "Diesel/HVO100 · 160 hk",
+      "category": "Skåp & lift",
+      "price": "578 000 kr",
+      "source": "Retail-lista 2026 – ej publicerad av IVECO",
+      "image": "https://edge.sitecorecloud.io/hedinitaban27a1-hedin8837-prod5c4b-4604/media/project/hedin/distribution-cars/hedinnordictruck/shared/images/models/vans/stagerow-daily-box-lift-fastlane.png?w=760",
+      "specUrl": "https://iveco.se/kopverktyg/kampanjer/iveco-skapbil-12m3-fast-lane",
+      "family": "iveco-daily-skap-lift",
+      "highlights": [
+        "Hjulbas 4100 mm – längre skåp",
+        "Bakgavellift för tunga lyft",
+        "Full LED-strålkastare & backkamera",
+        "3 års nybilsgaranti"
+      ]
+    },
+    {
+      "name": "Daily Dubbelhytt Chassi | Fastlane 4100",
+      "code": "35S16HA8 D 4100",
+      "level": "Fastlane",
+      "driveline": "Diesel/HVO100 · 160 hk",
+      "category": "Dubbelhytt",
+      "price": "541 700 kr",
+      "source": "Retail-lista 2026 – ej publicerad av IVECO",
+      "image": "https://edge.sitecorecloud.io/hedinitaban27a1-hedin8837-prod5c4b-4604/media/project/hedin/distribution-cars/hedinnordictruck/shared/images/models/vans/stage-row-daily-cab-fastlane.png?w=760",
+      "specUrl": "https://iveco.se/kopverktyg/kampanjer/iveco-flakbil-fast-lane",
+      "family": "iveco-daily-dubbelhytt",
+      "highlights": [
+        "Dubbelhytt för arbetslaget",
+        "Hjulbas 4100 mm för längre påbyggnad",
+        "Hi-Matic automat och full förarassistans",
+        "Fri påbyggnadslösning – be om offert"
+      ]
+    },
+    {
+      "name": "Daily Flakbil | Proline (fabriksflak)",
+      "code": "35S14BA8 3750",
+      "level": "Proline",
+      "driveline": "Diesel/HVO100 · 2,3 l · 136 hk",
+      "category": "Flakbil",
+      "price": "445 000 kr",
+      "source": "Pris publicerat på iveco.se",
+      "image": "https://edge.sitecorecloud.io/hedinitaban27a1-hedin8837-prod5c4b-4604/media/project/hedin/distribution-cars/hedinnordictruck/shared/images/models/vans/stage-row-daily-cab-proline.png?w=760",
+      "specUrl": "https://iveco.se/kopverktyg/kampanjer",
+      "family": "iveco-daily-flakbil",
+      "highlights": [
+        "Fabriksmonterat flak – klar att jobba",
+        "Flexibelt för material och utrustning",
+        "3 500 kg dragvikt på kroken",
+        "5 års IVECO ON-service"
+      ]
+    },
+    {
+      "name": "Daily Flakbil 3750 (fabriksflak)",
+      "code": "35S16BA8 3750",
+      "level": "Proline/Fastlane",
+      "driveline": "Diesel/HVO100 · 160 hk",
+      "category": "Flakbil",
+      "price": "486 000 kr",
+      "source": "Retail-lista 2026 – ej publicerad av IVECO",
+      "image": "https://edge.sitecorecloud.io/hedinitaban27a1-hedin8837-prod5c4b-4604/media/project/hedin/distribution-cars/hedinnordictruck/shared/images/models/vans/stage-row-daily-cab-proline.png?w=760",
+      "specUrl": "https://iveco.se/kopverktyg/kampanjer/iveco-flakbil-fast-lane",
+      "family": "iveco-daily-flakbil",
+      "highlights": [
+        "Fabriksflak med kort leveranstid",
+        "Robust C-ram för tunga uppdrag",
+        "Förberedd för dragkrok",
+        "Hjulbas 3750 mm"
+      ]
+    },
+    {
+      "name": "Daily Flakbil TMT 3750 | Fastlane",
+      "code": "35S16A8 3750",
+      "level": "Fastlane",
+      "driveline": "Diesel/HVO100 · 160 hk",
+      "category": "Flakbil",
+      "price": "497 700 kr",
+      "source": "Retail-lista 2026 – ej publicerad av IVECO",
+      "image": "https://edge.sitecorecloud.io/hedinitaban27a1-hedin8837-prod5c4b-4604/media/project/hedin/distribution-cars/hedinnordictruck/shared/images/models/vans/stage-row-daily-cab-fastlane.png?w=760",
+      "specUrl": "https://iveco.se/kopverktyg/kampanjer/iveco-flakbil-fast-lane",
+      "family": "iveco-daily-flakbil",
+      "highlights": [
+        "TMT-påbyggt aluminiumflak",
+        "8-stegs Hi-Matic automatlåda",
+        "Adaptiv farthållare, LED och backkamera",
+        "Smidig hjulbas för stadsjobb"
+      ]
+    },
+    {
+      "name": "Daily Flakbil TMT 4100 | Fastlane",
+      "code": "35S16A8 4100",
+      "level": "Fastlane",
+      "driveline": "Diesel/HVO100 · 160 hk",
+      "category": "Flakbil",
+      "price": "497 700 kr",
+      "source": "Retail-lista 2026 – ej publicerad av IVECO",
+      "image": "https://edge.sitecorecloud.io/hedinitaban27a1-hedin8837-prod5c4b-4604/media/project/hedin/distribution-cars/hedinnordictruck/shared/images/models/vans/stage-row-daily-cab-fastlane.png?w=760",
+      "specUrl": "https://iveco.se/kopverktyg/kampanjer/iveco-flakbil-fast-lane",
+      "family": "iveco-daily-flakbil",
+      "highlights": [
+        "Längre TMT-flak på 4100 mm hjulbas",
+        "Mer lastyta utan att tappa körkomfort",
+        "Hi-Matic automat & elektrisk handbroms",
+        "3 års nybilsgaranti"
+      ]
+    },
+    {
+      "name": "eSuperJolly 3,5 t | Proline",
+      "code": "J35F20E V",
+      "level": "Proline",
+      "driveline": "El · 279 hk · 110 kWh",
+      "category": "El",
+      "price": "546 000 kr",
+      "source": "Pris publicerat på iveco.se",
+      "image": "https://edge.sitecorecloud.io/hedinitaban27a1-hedin8837-prod5c4b-4604/media/project/hedin/distribution-cars/hedinnordictruck/shared/images/models/vans/stage-row-esuperjolly-proline.png?w=760",
+      "specUrl": "https://iveco.se/kopverktyg/kampanjer/iveco-esuperjolly-3t",
+      "family": "iveco-esuperjolly",
+      "highlights": [
+        "Upp till ca 380 km WLTP-räckvidd",
+        "150 kW snabbladdning – ca 100 km på 15 min",
+        "Ca 670 kg lastförmåga, 13 m³ lastvolym",
+        "Fri körning i alla miljözoner"
+      ]
+    },
+    {
+      "name": "eSuperJolly 3,5 t | Fastlane",
+      "code": "J35F20E V",
+      "level": "Fastlane",
+      "driveline": "El · 279 hk · 110 kWh",
+      "category": "El",
+      "price": "575 000 kr",
+      "source": "Pris publicerat på iveco.se",
+      "image": "https://edge.sitecorecloud.io/hedinitaban27a1-hedin8837-prod5c4b-4604/media/project/hedin/distribution-cars/hedinnordictruck/shared/images/models/vans/stage-row-esuperjolly-fastlane.png?w=760",
+      "specUrl": "https://iveco.se/kopverktyg/kampanjer/iveco-esuperjolly-3,5-fast-lane",
+      "family": "iveco-esuperjolly",
+      "highlights": [
+        "Extrautrustad som standard",
+        "FLEX TABLE – kontor på hjul",
+        "10″ pekskärm med navigation och full mobilintegration",
+        "270° bakdörrar för trånga lastzoner"
+      ]
+    },
+    {
+      "name": "eSuperJolly 4,25 t | Proline",
+      "code": "F42F20E V",
+      "level": "Proline",
+      "driveline": "El · 279 hk · 110 kWh",
+      "category": "El",
+      "price": "575 000 kr",
+      "source": "Pris publicerat på iveco.se",
+      "image": "https://edge.sitecorecloud.io/hedinitaban27a1-hedin8837-prod5c4b-4604/media/project/hedin/distribution-cars/hedinnordictruck/shared/images/models/vans/stage-row-esuperjolly-proline.png?w=760",
+      "specUrl": "https://iveco.se/kopverktyg/kampanjer/iveco-esuperjolly-4,2-t-proline",
+      "family": "iveco-esuperjolly",
+      "highlights": [
+        "Upp till ca 1,4 ton lastkapacitet",
+        "13 m³ lastutrymme",
+        "Byggd för tung citydistribution",
+        "Fri körning i alla miljözoner"
+      ]
+    },
+    {
+      "name": "eDaily Skåpbil 12 m³",
+      "code": "eDaily 35S14E V 12m3",
+      "level": "Kampanj",
+      "driveline": "El · 140 hk",
+      "category": "El",
+      "price": "679 000 kr",
+      "source": "Pris publicerat på iveco.se",
+      "image": "https://edge.sitecorecloud.io/hedinitaban27a1-hedin8837-prod5c4b-4604/media/project/hedin/distribution-cars/hedinnordictruck/shared/images/campaigns/norge/edaily-kampanj/stage-row/iveco-edaily-kassebil---stage-row---desktop.png?w=760",
+      "specUrl": "https://iveco.se/kopverktyg/kampanjer/iveco-edaily-skapbil",
+      "family": "iveco-edaily",
+      "highlights": [
+        "Sveriges enda eltransportbil som får dra 3,5 ton",
+        "8 års batterigaranti",
+        "Körning i alla miljözoner med tung last",
+        "Assistans 24/7 i hela Europa"
+      ]
+    },
+    {
+      "name": "eDaily Chassi med fabriksflak",
+      "code": "35S14E (190 hk)",
+      "level": "Kampanj",
+      "driveline": "El · 190 hk",
+      "category": "El",
+      "price": "769 000 kr",
+      "source": "Pris publicerat på iveco.se",
+      "image": "https://edge.sitecorecloud.io/hedinitaban27a1-hedin8837-prod5c4b-4604/media/project/hedin/distribution-cars/hedinnordictruck/shared/images/campaigns/norge/edaily-kampanj/stage-row/iveco-edaily-chassis-m-lad---stage-row---desktop.png?w=760",
+      "specUrl": "https://iveco.se/kopverktyg/kampanjer/iveco-edaily-flakbil",
+      "family": "iveco-edaily",
+      "highlights": [
+        "WLTP-räckvidd upp till 364 km",
+        "Får dra 3,5 ton – unikt bland eltransportbilar",
+        "8 års batterigaranti (250 000 km)",
+        "Scattolini fabriksmonterat flak"
+      ]
+    }
+  ]
+}
