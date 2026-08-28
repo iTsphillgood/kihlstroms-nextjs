@@ -187,7 +187,7 @@ export default function BrandPage({ params }: { params: { brand: string } }) {
           {brandInfo.filter((b) => b.id !== brand.id).map((b) => (
             <Link key={b.id} href={`/marke/${b.id}`} className="card group flex items-center gap-4 p-5 transition hover:shadow-lifted">
               <span className="grid h-12 w-[88px] shrink-0 place-items-center rounded-xl bg-ink-50 p-2" aria-hidden="true">
-                <BrandLogo brand={b.id} className="h-5" alt="" />
+                <BrandLogo brand={b.id} className="h-5" alt={`${b.name}-logotyp`} />
               </span>
               <span className="min-w-0">
                 <span className="block text-lg font-bold tracking-tight text-ink-900 group-hover:text-brand-blue">{b.name}</span>

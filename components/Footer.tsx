@@ -35,7 +35,7 @@ export default function Footer() {
             {brandInfo.map((b) => (
               <li key={b.id}>
                 <Link href={`/marke/${b.id}`} className="flex items-center gap-2 font-semibold text-white hover:text-brand-blue">
-                  <BrandLogo brand={b.id} dark className="h-4" alt="" />
+                  <BrandLogo brand={b.id} dark className="h-4" alt={`${b.name} – transportbilar hos Kihlströms`} />
                 </Link>
                 <p className="text-xs text-ink-400">{b.tagline}</p>
               </li>

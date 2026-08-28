@@ -26,7 +26,7 @@ export default function ModelCard({ model }: { model: Model }) {
       </Link>
       <div className="flex flex-1 flex-col p-5">
         <p className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.14em] text-ink-500">
-          <BrandLogo brand={model.brand} className="h-3.5" alt="" />
+          <BrandLogo brand={model.brand} className="h-3.5" alt={`${brandName(model.brand)}-logotyp`} />
           {model.category}
         </p>
         <h3 className="mt-1 text-lg font-bold tracking-tight text-ink-900">
