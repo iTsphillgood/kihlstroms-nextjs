@@ -5,6 +5,7 @@ import { getBrand, brandInfo, modelsByBrand, campaigns, staff, ivecoCampaign, ge
 import ModelGrid from "../../../components/ModelGrid";
 import StaffList from "../../../components/StaffList";
 import SmartImg from "../../../components/SmartImg";
+import BrandLogo from "../../../components/BrandLogo";
 
 export function generateStaticParams() {
   return brandInfo.map((b) => ({ brand: b.id }));
@@ -185,8 +186,8 @@ export default function BrandPage({ params }: { params: { brand: string } }) {
         <div className="mt-8 grid gap-4 sm:grid-cols-2">
           {brandInfo.filter((b) => b.id !== brand.id).map((b) => (
             <Link key={b.id} href={`/marke/${b.id}`} className="card group flex items-center gap-4 p-5 transition hover:shadow-lifted">
-              <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl text-sm font-black text-white" style={{ backgroundColor: b.color }} aria-hidden="true">
-                {b.name.slice(0, 2).toUpperCase()}
+              <span className="grid h-12 w-[88px] shrink-0 place-items-center rounded-xl bg-ink-50 p-2" aria-hidden="true">
+                <BrandLogo brand={b.id} className="h-5" alt="" />
               </span>
               <span className="min-w-0">
                 <span className="block text-lg font-bold tracking-tight text-ink-900 group-hover:text-brand-blue">{b.name}</span>

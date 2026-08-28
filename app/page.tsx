@@ -3,6 +3,7 @@ import HeroSlider, { type HeroSlide } from "../components/HeroSlider";
 import ModelCard from "../components/ModelCard";
 import StaffList from "../components/StaffList";
 import LocationCards from "../components/LocationCards";
+import BrandLogo from "../components/BrandLogo";
 import StockImg from "../components/StockImg";
 import { models, stock, campaigns, staff, locations, brandInfo, company } from "../lib/data";
 import { formatSek, formatMileage } from "../lib/format";
@@ -159,13 +160,7 @@ export default function HomePage() {
               href={`/marke/${b.id}`}
               className="group flex items-center gap-4 rounded-2xl border border-transparent p-3 transition hover:border-ink-100 hover:bg-ink-50"
             >
-              <span
-                className="grid h-11 w-11 shrink-0 place-items-center rounded-xl text-sm font-black text-white"
-                style={{ backgroundColor: b.color }}
-                aria-hidden="true"
-              >
-                {b.name.slice(0, 2).toUpperCase()}
-              </span>
+              <BrandLogo brand={b.id} className="h-8 shrink-0" alt={`${b.name} – officiell logotyp`} />
               <span className="min-w-0">
                 <span className="block text-[15px] font-extrabold tracking-tight text-ink-900 group-hover:text-brand-blue">
                   {b.name}

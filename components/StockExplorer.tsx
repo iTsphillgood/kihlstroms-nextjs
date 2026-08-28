@@ -145,13 +145,23 @@ export default function StockExplorer({ vehicles, sellerName, sellerEmail }: Pro
         </div>
       </div>
 
-      <p className="mt-5 text-sm font-medium text-ink-600" role="status">
+      <p id="stock-status" className="mt-5 text-sm font-medium text-ink-600" role="status">
         Visar {visible.length} av {vehicles.length} annonser. Priser exkl. moms där annonsen anger det.
       </p>
 
-      <div className="mt-5 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+      <div className="mt-5 grid gap-6 sm:grid-cols-2 xl:grid-cols-3" id="stock-grid">
         {visible.map((v) => (
-          <article key={v.id} className="card group flex flex-col overflow-hidden transition hover:shadow-lifted">
+          <article
+            key={v.id}
+            data-brand={v.brand}
+            data-fuel={v.fuel}
+            data-body={v.body}
+            data-condition={v.condition}
+            data-price={v.price ?? 0}
+            data-year={v.year}
+            data-text={`${v.brand} ${v.model} ${v.title} ${v.body}`.toLowerCase()}
+            className="card group flex flex-col overflow-hidden transition hover:shadow-lifted"
+          >
             <div className="relative bg-ink-100">
               <StockImage v={v} />
               <div className="absolute left-3 top-3 flex gap-2">

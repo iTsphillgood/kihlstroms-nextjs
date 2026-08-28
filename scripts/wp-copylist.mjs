@@ -52,8 +52,8 @@ const note = (f) => {
   if (base === "kontakt") return "Formuläret syns men skickar inte – ersätt med Contact Form 7/WPForms";
   if (base === "verkstad-service") return "Serviceformuläret syns men skickar inte – ersätt med plugin";
   if (base === "bygg-din-lastbil") return "Guiden visar steg 1 statiskt";
-  if (base === "lager") return "Fordonen listas utan filtrering";
-  if (base === "modeller") return "Listan visas utan filtrering";
+  if (base === "lager") return "Filtrering/sökning fungerar (inbyggd vanilla-JS)";
+  if (base === "modeller") return "Modelllistan visas utan filtrering";
   if (base === "index") return "Heroslidern visar bild 1";
   return "";
 };

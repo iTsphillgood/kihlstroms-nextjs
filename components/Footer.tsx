@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { company, locations, brandInfo } from "../lib/data";
+import BrandLogo from "./BrandLogo";
 
 export default function Footer() {
   return (
@@ -33,8 +34,8 @@ export default function Footer() {
           <ul className="space-y-2.5 text-sm">
             {brandInfo.map((b) => (
               <li key={b.id}>
-                <Link href={`/marke/${b.id}`} className="font-semibold text-white hover:text-brand-blue">
-                  {b.name}
+                <Link href={`/marke/${b.id}`} className="flex items-center gap-2 font-semibold text-white hover:text-brand-blue">
+                  <BrandLogo brand={b.id} dark className="h-4" alt="" />
                 </Link>
                 <p className="text-xs text-ink-400">{b.tagline}</p>
               </li>

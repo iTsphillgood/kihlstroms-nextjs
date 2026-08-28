@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Model } from "../lib/data";
 import { brandName, brandColor } from "../lib/data";
 import SmartImg from "./SmartImg";
+import BrandLogo from "./BrandLogo";
 import { formatSek } from "../lib/format";
 
 export default function ModelCard({ model }: { model: Model }) {
@@ -24,8 +25,9 @@ export default function ModelCard({ model }: { model: Model }) {
         )}
       </Link>
       <div className="flex flex-1 flex-col p-5">
-        <p className="text-[11px] font-bold uppercase tracking-[0.14em]" style={{ color: brandColor(model.brand) }}>
-          {brandName(model.brand)} · {model.category}
+        <p className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.14em] text-ink-500">
+          <BrandLogo brand={model.brand} className="h-3.5" alt="" />
+          {model.category}
         </p>
         <h3 className="mt-1 text-lg font-bold tracking-tight text-ink-900">
           <Link href={`/modeller/${model.slug}`} className="hover:text-brand-blue">

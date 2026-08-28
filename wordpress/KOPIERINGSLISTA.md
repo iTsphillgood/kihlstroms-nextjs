@@ -16,8 +16,8 @@
 | 2 | `fragments/index.html` | Startsidan | `/ (startsidan)` | Heroslidern visar bild 1 |
 | 3 | `fragments/kampanjer.html` | Kampanjer | `/kampanjer` |  |
 | 4 | `fragments/kontakt.html` | Kontakt | `/kontakt` | Formuläret syns men skickar inte – ersätt med Contact Form 7/WPForms |
-| 5 | `fragments/lager.html` | Bilar i lager | `/lager` | Fordonen listas utan filtrering |
-| 6 | `fragments/modeller.html` | Alla modeller | `/modeller` | Listan visas utan filtrering |
+| 5 | `fragments/lager.html` | Bilar i lager | `/lager` | Filtrering/sökning fungerar (inbyggd vanilla-JS) |
+| 6 | `fragments/modeller.html` | Alla modeller | `/modeller` | Modelllistan visas utan filtrering |
 | 7 | `fragments/om-oss.html` | Om oss | `/om-oss` |  |
 | 8 | `fragments/reservdelar.html` | Reservdelar | `/reservdelar` |  |
 | 9 | `fragments/tillbehor.html` | Tillbehör | `/tillbehor` |  |

@@ -159,10 +159,15 @@ for (const file of htmlFiles) {
   const raw = fs.readFileSync(file, "utf8");
 
   // Hel sida (med nav/footer, för granskning och som mall) – CSS inbäddad i <head>
-  const page = rewriteLinks(cleanHtml(raw)).replace(
+  let page = rewriteLinks(cleanHtml(raw)).replace(
     "</head>",
     `<style>\n${css}\n</style>\n</head>`
   );
+  // Statisk vanilla-JS för lagerfiltrering (historiskt döda kontroller i exporten)
+  if (page.includes('id="stock-grid"')) {
+    const stockJs = fs.readFileSync(path.join(ROOT, "scripts", "static-stock.js"), "utf8");
+    page = page.replace("</body>", `<script>\n${stockJs}\n</script>\n</body>`);
+  }
   fs.writeFileSync(path.join(WP, "pages", flat), page);
 
   // Fragment (endast <main>-innehållet) – scopad CSS inbäddad, klart att klistras in i WordPress

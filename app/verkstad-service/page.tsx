@@ -5,9 +5,9 @@ import LocationCards from "../../components/LocationCards";
 import ServiceForm from "../../components/ServiceForm";
 
 export const metadata: Metadata = {
-  title: "Verkstad & service – auktoriserad för IVECO, Isuzu och Maxus",
+  title: "Verkstad & service – vi servar alla transportbilar och lastbilar",
   description:
-    "Boka service i Kihlströms verkstad i Smista eller Spånga. Auktoriserade för IVECO, Isuzu och Maxus – MECA-verkstad som servar alla märken, även husbil."
+    "Kihlströms verkstad servar ALLA transportbilar och lätta lastbilar – alla märken. Auktoriserade för IVECO, Isuzu och Maxus, MECA-verkstad för övriga märken, även husbil. Smista och Spånga."
 };
 
 const services = [
@@ -19,6 +19,8 @@ const services = [
   { title: "Reservdelar", desc: "Originaldelar för IVECO, Isuzu och Maxus samt förfrågningar för övriga märken.", target: "parts" }
 ];
 
+const brandsServiced = ["IVECO", "Isuzu", "Maxus", "Volvo", "Scania", "Mercedes-Benz", "Volkswagen", "Ford", "Renault", "Husbil"];
+
 export default function ServicePage() {
   return (
     <div className="container-site py-12 md:py-16">
@@ -29,18 +31,41 @@ export default function ServicePage() {
       </nav>
 
       <header className="mt-4 max-w-3xl">
-        <p className="section-label">Håll bilen i arbete</p>
-        <h1 className="mt-2 text-3xl font-extrabold tracking-tight sm:text-4xl">Verkstad & service</h1>
+        <p className="section-label">Alla märken · alla modeller</p>
+        <h1 className="mt-2 text-3xl font-extrabold tracking-tight sm:text-4xl">Vi servar alla transportbilar och lastbilar</h1>
         <p className="mt-4 text-[15px] leading-relaxed text-ink-600">
-          Kihlströms är Stockholms kompletta verkstad för yrkestrafik. Vi är auktoriserade för IVECO, Isuzu och Maxus
-          och vår MECA-verkstad servar och reparerar alla marknadens märken – bland annat Volvo, Scania,
-          Mercedes-Benz, Volkswagen och Ford. Vi tar även hand om husbil.
+          Oavsett märke håller Kihlströms din arbetsbil i arbete. Vi är auktoriserade för IVECO, Isuzu och
+          Maxus – och vår MECA-verkstad servar och reparerar alla övriga märken: Volvo, Scania, Mercedes-Benz,
+          Volkswagen, Ford med flera. Vi tar även hand om husbilar och specialfordon.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
-          <a href={company.phoneHref} className="btn-primary">Ring växeln {company.phone}</a>
-          <a href="#boka" className="btn-ghost">Skicka bokningsärende</a>
+          <a href="#boka" className="btn-primary">Kontakta verkstaden</a>
+          <a href={company.phoneHref} className="btn-ghost">Ring växeln {company.phone}</a>
         </div>
       </header>
+
+      <div className="mt-8 flex flex-wrap gap-2">
+        {brandsServiced.map((b) => (
+          <span key={b} className="rounded-full border border-ink-100 bg-white px-3.5 py-1.5 text-[13px] font-semibold text-ink-700">
+            {b}
+          </span>
+        ))}
+      </div>
+
+      <div className="card mt-6 grid gap-4 p-6 sm:grid-cols-3">
+        <div>
+          <p className="text-2xl font-black tracking-tight text-brand-blue">70+ år</p>
+          <p className="mt-1 text-sm font-semibold text-ink-800">i Stockholm</p>
+        </div>
+        <div>
+          <p className="text-2xl font-black tracking-tight text-brand-blue">2016 &amp; 2020</p>
+          <p className="mt-1 text-sm font-semibold text-ink-800">Dealer of the Year</p>
+        </div>
+        <div>
+          <p className="text-2xl font-black tracking-tight text-brand-blue">2 verkstäder</p>
+          <p className="mt-1 text-sm font-semibold text-ink-800">Smista och Spånga – jour året runt</p>
+        </div>
+      </div>
 
       <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {services.map((s) => (

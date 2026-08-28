@@ -31,7 +31,7 @@ npm run build:docs      # regenerera docs/MEMORY.md efter dataändringar
 1. **Svenska i all kundvänd text.** Inga utvecklarkommentarer, debug-texter eller "prototyp"-formuleringar i frontend.
 2. **Priser alltid med moms-status** – sajten standard är "exkl. moms" (B2B). Aldrig pris utan källa.
 3. **Bilder originallänkas** från officiella källor (märkes-CDN, RSA-bank, Blocket-annons) – aldrig hotlinka från obehöriga tredjepartssajter, aldrig ladda ner i sandbox (curl-blockad). Lokala fallbacks i `public/images/`.
-4. **Inga logotyper** utan verifierad relation – idag används märkesfärger + initialer, inte varumärkeslogotyper.
+4. **Logotyper tillåtna** (godkänt av ägaren 2026-08-28): IVECO/Isuzu/Maxus-logotyper används via BrandLogo-komponenten (logoUrl i company.json, originallänkade). Svarta logotyper inverteras på mörk bakgrund.
 5. **Efter varje dataändring:** `npm run qa` → `npm run build:docs` (om data/*.json ändrats) → `next build` → vid live-ändring även `npm run build:wordpress`.
 7. **Commit till `arena/01a04797-kihlstroms-nextjs`** – PR #3 mot main uppdateras automatiskt vid push.
 

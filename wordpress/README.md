@@ -49,8 +49,8 @@ Genererad av `npm run build:wordpress` – kör igen efter ändringar i sajten s
   inget. Ersätt med t.ex. *Contact Form 7* eller *WPForms* och behåll fältens
   rubriker – eller länka `Begär offert`-knapparna till ett formulär.
 - **Hero-slidern** på startsidan visar första bilden (övriga ligger gömda i HTML:en).
-- **Lagerfiltret** visar alla fordon utan filtrering, och **byggguiden** visar
-  första steget.
+- **Lagerfiltret fungerar** på de statiska sidorna (sök, märke, bränsle, kaross, sortering
+  via inbäddad vanilla-JS) – men **byggguiden** visar första steget.
 - Bilderna laddas från märkenas officiella CDN:er (originallänkade). Fallback-bilderna
   i `assets/images/` laddar du bara upp om något CDN skulle försvinna.
 - WordPress kan rensa `<style>`-taggar för användare med låga behörigheter –

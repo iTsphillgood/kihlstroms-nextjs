@@ -252,7 +252,8 @@
         "20 färdiga kampanjmodeller 2026"
       ],
       "imageFallback": "/images/models/iveco-daily.png",
-      "guidelineUrl": "https://www.iveco.se/"
+      "guidelineUrl": "https://www.iveco.se/",
+      "logoUrl": "https://edge.sitecorecloud.io/hedinitaban27a1-hedin8837-prod5c4b-4604/media/project/hedin/distribution-cars/hedinnordictruck/shared/logo/iveco_logo_black.svg?h=36&iar=0&w=168"
     },
     {
       "id": "isuzu",
@@ -268,7 +269,8 @@
         "Klassens lägsta CO₂-utsläpp"
       ],
       "imageFallback": "/images/models/isuzu-dmax-xrx.jpg",
-      "guidelineUrl": "https://marketing.rsa.no/document/51"
+      "guidelineUrl": "https://marketing.rsa.no/document/51",
+      "logoUrl": "https://www.isuzusverige.se/media/rdappceh/isuzu_logo_top-module_desktop_2022.svg"
     },
     {
       "id": "maxus",
@@ -284,7 +286,8 @@
         "Rostskyddsbehandlas i Sverige"
       ],
       "imageFallback": "/images/models/maxus-eterron9.webp",
-      "guidelineUrl": "https://marketing.rsa.no/document/49"
+      "guidelineUrl": "https://marketing.rsa.no/document/49",
+      "logoUrl": "https://www.kihlstroms.se/v3/wp-content/uploads/2026/06/maxus_pc_logo-1-e1782804283926.png"
     }
   ]
 }
