@@ -118,6 +118,10 @@ function cleanHtml(html) {
 }
 
 /* ---------- 5. Interna länkar → filnamn ---------- */
+/* Radbryt minifierad HTML så filerna blir läsbara i texteditor (innehållet påverkas inte) */
+function prettyPrint(html) {
+  return html.replace(/></g, ">\n<");
+}
 const routeToFile = new Map();
 for (const file of htmlFiles) {
   const rel = path.relative(OUT, file).split(path.sep).join("/");
@@ -163,12 +167,13 @@ for (const file of htmlFiles) {
     "</head>",
     `<style>\n${css}\n</style>\n</head>`
   );
+
   // Statisk vanilla-JS för lagerfiltrering (historiskt döda kontroller i exporten)
   if (page.includes('id="stock-grid"')) {
     const stockJs = fs.readFileSync(path.join(ROOT, "scripts", "static-stock.js"), "utf8");
     page = page.replace("</body>", `<script>\n${stockJs}\n</script>\n</body>`);
   }
-  fs.writeFileSync(path.join(WP, "pages", flat), page);
+  fs.writeFileSync(path.join(WP, "pages", flat), prettyPrint(page));
 
   // Fragment (endast <main>-innehållet) – scopad CSS inbäddad, klart att klistras in i WordPress
   const mainStart = raw.indexOf('<main id="main"');
@@ -183,7 +188,7 @@ for (const file of htmlFiles) {
       `<div class="kms-scope">\n<style>\n${scopedCss}\n</style>\n` +
       cleanHtml(fragmentBody).trim() +
       `\n</div>\n`;
-    fs.writeFileSync(path.join(WP, "fragments", flat), fragment);
+    fs.writeFileSync(path.join(WP, "fragments", flat), prettyPrint(fragment));
   }
   pageCount++;
 }
