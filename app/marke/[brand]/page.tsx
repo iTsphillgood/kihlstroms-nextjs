@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getBrand, brandInfo, modelsByBrand, campaigns, staff } from "../../../lib/data";
+import { getBrand, brandInfo, modelsByBrand, campaigns, staff, ivecoCampaign, getModel } from "../../../lib/data";
 import ModelGrid from "../../../components/ModelGrid";
 import StaffList from "../../../components/StaffList";
 import SmartImg from "../../../components/SmartImg";
@@ -88,6 +88,80 @@ export default function BrandPage({ params }: { params: { brand: string } }) {
           <ModelGrid models={brandModels} showBrandFilter={false} />
         </div>
       </div>
+
+      {ivecoCampaign.brand === brand.id && (
+        <section className="border-t border-ink-100 bg-ink-50 py-14 md:py-20" aria-labelledby="campaign-models">
+          <div className="container-site">
+            <div className="max-w-2xl">
+              <p className="section-label">Kampanj 2026 · t.o.m. 30 september</p>
+              <h2 id="campaign-models" className="h-section">Alla {ivecoCampaign.models.length} kampanjmodellerna – välj efter jobbet</h2>
+              <p className="mt-3 text-[15px] leading-relaxed text-ink-600">
+                Färdigbyggda Daily och eldrivna transportbilar med tydligt företagspris. Skåpbil för distribution,
+                skåp &amp; lift för tunga lyft, flakbil för material, dubbelhytt för arbetslaget eller el för miljözonen.
+                Alla priser exkl. moms.
+              </p>
+            </div>
+            <div className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+              {ivecoCampaign.models.map((m) => {
+                const family = getModel(m.family);
+                return (
+                  <article key={m.name} className="card flex flex-col overflow-hidden">
+                    <div className="relative">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src={m.image} alt={m.name} loading="lazy" className="aspect-[16/10] w-full bg-white object-contain p-4" />
+                      <span className="absolute left-3 top-3 rounded-full px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide text-white" style={{ backgroundColor: brand.color }}>
+                        {m.level}
+                      </span>
+                    </div>
+                    <div className="flex flex-1 flex-col p-5">
+                      <p className="text-[11px] font-semibold uppercase tracking-wide text-ink-400">{m.category} · {m.driveline}</p>
+                      <h3 className="mt-1 text-[15px] font-bold leading-snug text-ink-900">{m.name}</h3>
+                      <p className="mt-0.5 font-mono text-xs text-ink-500">{m.code}</p>
+                      <ul className="mt-3 space-y-1 text-sm text-ink-600">
+                        {m.highlights.slice(0, 3).map((h) => (
+                          <li key={h} className="flex gap-2">
+                            <span className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full" style={{ backgroundColor: brand.color }} aria-hidden="true" />
+                            {h}
+                          </li>
+                        ))}
+                      </ul>
+                      <div className="mt-4 border-t border-ink-100 pt-4">
+                        <p className="text-lg font-extrabold tracking-tight text-ink-900">
+                          {m.price} <span className="text-xs font-medium text-ink-500">exkl. moms</span>
+                        </p>
+                        <p className="mt-0.5 text-[11px] text-ink-400">{m.source}</p>
+                      </div>
+                      <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
+                        <Link href="/kontakt#meddelande" className="font-semibold text-brand-blue hover:underline">Begär offert</Link>
+                        {family && (
+                          <Link href={`/modeller/${family.slug}`} className="font-semibold text-ink-700 hover:text-brand-blue">
+                            Mer om {family.name.split(" ").slice(0, 2).join(" ")} →
+                          </Link>
+                        )}
+                        <a href={m.specUrl} className="ml-auto text-xs text-ink-400 underline-offset-4 hover:underline" target="_blank" rel="noopener noreferrer">Specifikation ↗</a>
+                      </div>
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
+            <div className="card mt-8 flex flex-col items-start justify-between gap-4 bg-ink-950 p-6 text-white sm:flex-row sm:items-center">
+              <div>
+                <p className="text-lg font-bold">Hittar du inte rätt konfiguration?</p>
+                <p className="text-sm text-ink-300">Kyl, kran, servicebil eller specialpåbyggnad – vi bygger efter ert uppdrag.</p>
+              </div>
+              <div className="flex flex-wrap gap-3">
+                <Link href="/bygg-din-lastbil" className="btn-light">Bygg din lastbil</Link>
+                <Link href="/kontakt#meddelande" className="btn-primary">Begär offert</Link>
+              </div>
+            </div>
+            <p className="mt-4 text-xs text-ink-400">
+              Priser kontrollerade 2026-08-28 mot Kihlströms och IVECO Sverige. Lokala leveransomkostnader kan tillkomma.{" "}
+              <a href={ivecoCampaign.sourceUrl} className="underline-offset-4 hover:underline" target="_blank" rel="noopener noreferrer">Se kampanjsidan ↗</a>
+            </p>
+          </div>
+        </section>
+      )}
 
       {brandCampaigns.length > 0 && (
         <section className="border-t border-ink-100 bg-white py-14 md:py-16" aria-labelledby="brand-campaigns">

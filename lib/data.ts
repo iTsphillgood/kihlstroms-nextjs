@@ -132,6 +132,7 @@ import modelsJson from "../data/models.json";
 import stockJson from "../data/stock.json";
 import accessoriesJson from "../data/accessories.json";
 import campaignsJson from "../data/campaigns.json";
+import ivecoCampaignJson from "../data/iveco-campaign.json";
 
 export const company = companyJson.company as { name: string; shortName: string; tagline: string; pitch: string; phone: string; phoneHref: string; email: string; claims: string[]; brands: string[]; promises: CompanyPromise[] };
 export const locations = companyJson.locations as Location[];
@@ -151,6 +152,30 @@ export const accessories = accessoriesJson as {
   brands: AccessoryBrand[];
 };
 export const campaigns = campaignsJson as Campaign[];
+
+export interface CampaignModel {
+  name: string;
+  code: string;
+  level: string;
+  driveline: string;
+  category: string;
+  price: string;
+  source: string;
+  image: string;
+  specUrl: string;
+  family: string;
+  highlights: string[];
+}
+
+export interface BrandCampaignModels {
+  brand: BrandId;
+  title: string;
+  validUntil: string;
+  sourceUrl: string;
+  models: CampaignModel[];
+}
+
+export const ivecoCampaign = ivecoCampaignJson as BrandCampaignModels;
 
 export function getModel(slug: string): Model | undefined {
   return models.find((m) => m.slug === slug);
