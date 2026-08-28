@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getBrand, brandInfo, modelsByBrand, campaigns, staff, ivecoCampaign, getModel } from "../../../lib/data";
+import { getBrand, brandInfo, modelsByBrand, campaigns, staff, ivecoCampaign, getModel, stock } from "../../../lib/data";
 import ModelGrid from "../../../components/ModelGrid";
 import StaffList from "../../../components/StaffList";
 import SmartImg from "../../../components/SmartImg";
@@ -60,6 +60,11 @@ export default function BrandPage({ params }: { params: { brand: string } }) {
             </ul>
             <div className="mt-8 flex flex-wrap gap-3">
               <a href="#modeller" className="btn-primary">Se modellerna</a>
+              {brand.id === "iveco" && (
+                <Link href="/lager/iveco" className="btn-light">
+                  {stock.vehicles.filter((v) => v.brand === "IVECO").length} IVECO-bilar i lager
+                </Link>
+              )}
               <a href={brand.sourceUrl} className="btn-light" target="_blank" rel="noopener noreferrer">
                 {brand.name}s svenska sida ↗
               </a>

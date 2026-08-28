@@ -1,6 +1,6 @@
 {
   "noteIsuzu": "Priser enligt isuzusverige.se: inkl. montering i hamn på nybeställning, exkl. moms. 3 års/100 000 km garanti på tillbehör från utvalda leverantörer.",
-  "noteMaxus": "MAX-paketet enligt Maxus Sverige (RSA) pressmeddelande 2025-06-12: kampanjpris vid nybeställning, exkl. moms.",
+  "noteMaxus": "MAX-paketet enligt maxus.se/modeller/t60 (läst 2026-08-28): vårkampanj 0 kr vid nybeställning, ordinarie 35 000 kr exkl. moms. T60 MAX Luxury 389 900 kr exkl. moms (487 375 kr inkl.), 5 års nybilsgaranti/160 000 km, Tectyl-underredsbehandling ingår. Business lease från 6 995 kr/mån exkl. moms, service tillkommer.",
   "noteIveco": "IVECO originaldelar och tillbehör beställs via verkstaden – vi tar fram pris och monteringstid på förfrågan.",
   "brands": [
     {
@@ -194,9 +194,9 @@
             {
               "art": "MAX",
               "name": "MAX-paket till T60 MAX",
-              "price": 10000,
+              "price": 0,
               "regularPrice": 35000,
-              "desc": "Dragkrok, takrails, sidosteg och skärmbreddare. Kampanjpris vid nybeställning (ordinarie 35 000 kr exkl. moms)."
+              "desc": "Dragkrok, takrails, sidosteg och skärmbreddare. Vårkampanj: 0 kr vid nybeställning av T60 MAX – ordinarie 35 000 kr exkl. moms (43 750 kr inkl. moms) enligt Maxus prislista."
             }
           ]
         },

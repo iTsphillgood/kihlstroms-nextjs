@@ -22,6 +22,13 @@ export interface HeroSlide {
 
 const AUTOPLAY_MS = 6500;
 
+/* Logoknappar för direktval av märke – sliden märket pekar mot */
+const brandButtons = [
+  { brand: "IVECO", short: "IV", name: "IVECO", color: "#1B5FAA", slide: 0 },
+  { brand: "Isuzu", short: "IS", name: "Isuzu", color: "#C8102E", slide: 1 },
+  { brand: "Maxus", short: "MA", name: "Maxus", color: "#E4002B", slide: 3 }
+];
+
 export default function HeroSlider({ slides }: { slides: HeroSlide[] }) {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
@@ -153,54 +160,32 @@ export default function HeroSlider({ slides }: { slides: HeroSlide[] }) {
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink-950/40 via-transparent to-transparent" aria-hidden="true" />
           </div>
 
-          <div className="mt-5 flex items-center justify-between gap-4">
-            <div className="flex gap-2" role="tablist" aria-label="Välj bild">
-              {slides.map((s, i) => (
-                <button
-                  key={s.id}
-                  type="button"
-                  role="tab"
-                  aria-selected={i === index}
-                  aria-label={`${s.brand}: ${s.title}`}
-                  onClick={() => go(i)}
-                  className={`group relative h-1.5 overflow-hidden rounded-full transition-all ${
-                    i === index ? "w-10 bg-white/30" : "w-5 bg-white/25 hover:bg-white/50"
-                  }`}
-                >
-                  {i === index && (
+          <div className="mt-5" role="tablist" aria-label="Välj märke">
+            <div className="flex flex-wrap gap-2">
+              {brandButtons.map(({ brand, short, name, color, slide }) => {
+                const active = slides[index]?.brand === brand;
+                return (
+                  <button
+                    key={brand}
+                    type="button"
+                    role="tab"
+                    aria-selected={active}
+                    onClick={() => go(slide)}
+                    className={`flex items-center gap-2.5 rounded-full py-2 pl-2 pr-4 text-sm font-bold transition ${
+                      active ? "bg-white text-ink-950" : "bg-white/10 text-white ring-1 ring-inset ring-white/25 hover:bg-white/20"
+                    }`}
+                  >
                     <span
-                      key={`p-${index}-${paused}`}
-                      className="absolute inset-y-0 left-0 rounded-full bg-white"
-                      style={{
-                        animation: paused ? "none" : `heroProgress ${AUTOPLAY_MS}ms linear forwards`,
-                        width: paused ? "100%" : undefined
-                      }}
-                    />
-                  )}
-                </button>
-              ))}
-            </div>
-            <div className="flex gap-2">
-              <button
-                type="button"
-                onClick={() => go(index - 1)}
-                className="grid h-10 w-10 place-items-center rounded-full ring-1 ring-inset ring-white/30 transition hover:bg-white/10"
-                aria-label="Föregående bild"
-              >
-                <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                  <path d="M13 8H3m0 0 4-4m-4 4 4 4" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </button>
-              <button
-                type="button"
-                onClick={() => go(index + 1)}
-                className="grid h-10 w-10 place-items-center rounded-full ring-1 ring-inset ring-white/30 transition hover:bg-white/10"
-                aria-label="Nästa bild"
-              >
-                <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                  <path d="M3 8h10m0 0-4-4m4 4-4 4" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-              </button>
+                      className="grid h-7 w-7 place-items-center rounded-full text-[10px] font-black text-white"
+                      style={{ backgroundColor: color }}
+                      aria-hidden="true"
+                    >
+                      {short}
+                    </span>
+                    {name}
+                  </button>
+                );
+              })}
             </div>
           </div>
         </div>

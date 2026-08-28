@@ -18,6 +18,7 @@ const fileTitle = (f) => {
   if (base === "index") return "Startsidan";
   if (base === "modeller") return "Alla modeller";
   if (base === "lager") return "Bilar i lager";
+  if (base === "lager-iveco") return "Lagerbilar – IVECO";
   if (base === "kampanjer") return "Kampanjer";
   if (base === "bygg-din-lastbil") return "Bygg din lastbil";
   if (base === "verkstad-service") return "Verkstad & service";
@@ -40,6 +41,7 @@ const filePermalink = (f) => {
   const base = f.replace(".html", "");
   if (base === "index") return "/ (startsidan)";
   if (base === "404") return "– (anges i WP:s 404-inställning)";
+  if (base === "lager-iveco") return "/lager/iveco";
   if (base.startsWith("marke-")) return "/marke/" + base.replace("marke-", "");
   if (base.startsWith("modeller-")) return "/modeller/" + base.replace("modeller-", "");
   return "/" + base; // tankstreck är giltiga i permalänkar: /bygg-din-lastbil, /om-oss, /verkstad-service
@@ -58,9 +60,10 @@ const note = (f) => {
 
 const groups = [
   ["1. Grundsidor (skapa dessa först)", (f) => ["index", "modeller", "lager", "kampanjer", "bygg-din-lastbil", "verkstad-service", "reservdelar", "tillbehor", "om-oss", "kontakt"].includes(f.replace(".html", ""))],
-  ["2. Märkessidor (3 st)", (f) => f.startsWith("marke-")],
-  ["3. Modellsidor (22 st – permalänk /modeller/…)", (f) => f.startsWith("modeller-") && f !== "modeller.html"],
-  ["4. Övrigt", (f) => f.replace(".html", "") === "404"],
+  ["2. Lagerbilar", (f) => f.startsWith("lager-")],
+  ["3. Märkessidor (3 st)", (f) => f.startsWith("marke-")],
+  ["4. Modellsidor (22 st – permalänk /modeller/…)", (f) => f.startsWith("modeller-") && f !== "modeller.html"],
+  ["5. Övrigt", (f) => f.replace(".html", "") === "404"],
 ];
 
 let md = `# Kopieringslista – Kihlströms WordPress-filer

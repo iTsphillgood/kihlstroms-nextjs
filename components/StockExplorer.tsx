@@ -44,8 +44,8 @@ function StockImage({ v }: { v: StockVehicle }) {
 }
 
 const brandOptions = ["Alla", "IVECO", "Isuzu", "MAXUS"];
-const fuelOptions = ["Alla", "Diesel", "El", "CNG"];
-const bodyOptions = ["Alla", "Skåpbil", "Skåp & lift", "Flakbil", "Dubbelhytt", "Pickup"];
+const fuelOptions = ["Alla", "Diesel", "El", "CNG", "Hybrid"];
+const bodyOptions = ["Alla", "Skåpbil", "Skåp & lift", "Flakbil", "Kylbil", "Dubbelhytt", "Pickup", "Lastbil"];
 const conditionOptions = ["Alla", "Ny", "Begagnad"];
 
 export default function StockExplorer({ vehicles, sellerName, sellerEmail }: Props) {
