@@ -11,52 +11,174 @@
         {
           "name": "Tillbehörspaket",
           "items": [
-            { "art": "PKS", "name": "Style-pack med RollTop", "price": 92600, "desc": "Dragkrok inkl. elsats, flakinklädnad, Rolltop Mountain Top, sportsbar, flakmatta, tailgate assist, solfilm, terrängdäck Cooper 265/60-R18, skärmbreddare, RUP Extension m.m." },
-            { "art": "PKT", "name": "Style-pack kåpa", "price": 104900, "desc": "Samma nivå som Style-pack men med kåpa Maxliner Venture i two-tone lackering med centrallås och LED-belysning." },
-            { "art": "PLL", "name": "Work-pack DC", "price": 57900, "desc": "Paketet för funktion: dragkrok, flakinklädnad, kåpa Workman, flakmatta, tailgate assist, gummimattor och centrallås bakläm." },
-            { "art": "PIU", "name": "Baspaket DC Eberspächer", "price": 39100, "desc": "Grundpaketet för svenska klimatet: dragkrok, flakinklädnad, tailgate assist, centrallås, bränslevärmare Eberspächer med fjärrstart och tätningslist." }
+            {
+              "art": "PKS",
+              "name": "Style-pack med RollTop",
+              "price": 92600,
+              "desc": "Dragkrok inkl. elsats, flakinklädnad, Rolltop Mountain Top, sportsbar, flakmatta, tailgate assist, solfilm, terrängdäck Cooper 265/60-R18, skärmbreddare, RUP Extension m.m."
+            },
+            {
+              "art": "PKT",
+              "name": "Style-pack kåpa",
+              "price": 104900,
+              "desc": "Samma nivå som Style-pack men med kåpa Maxliner Venture i two-tone lackering med centrallås och LED-belysning."
+            },
+            {
+              "art": "PLL",
+              "name": "Work-pack DC",
+              "price": 57900,
+              "desc": "Paketet för funktion: dragkrok, flakinklädnad, kåpa Workman, flakmatta, tailgate assist, gummimattor och centrallås bakläm."
+            },
+            {
+              "art": "PIU",
+              "name": "Baspaket DC Eberspächer",
+              "price": 39100,
+              "desc": "Grundpaketet för svenska klimatet: dragkrok, flakinklädnad, tailgate assist, centrallås, bränslevärmare Eberspächer med fjärrstart och tätningslist."
+            }
+          ]
+        },
+        {
+          "name": "Drivlina och miljö",
+          "items": [
+            {
+              "art": null,
+              "name": "CNG-paket (alla modeller)",
+              "price": 39900,
+              "desc": "Komplett konvertering för biogas + diesel/HVO100. 23-liters komposittank där reservhjulet sitter. Miljöfordonsregistrering med lägre skatt – påverkar inte prestandan. 39 900 kr exkl. moms oavsett modell."
+            },
+            {
+              "art": null,
+              "name": "Extra 26-liters gastank",
+              "price": 19900,
+              "desc": "Tillval till CNG-paketet för längre räckvidd på gas."
+            }
           ]
         },
         {
           "name": "Kåpor och flaklock",
           "items": [
-            { "art": "PJD", "name": "Kåpa Maxliner Venture DC", "price": 47600, "desc": "Stylingkåpa i two-tone med öppningsbara sidorutor, centrallås, LED och defroster. Nio färger." }
+            {
+              "art": "PJD",
+              "name": "Kåpa Maxliner Venture DC",
+              "price": 47600,
+              "desc": "Stylingkåpa i two-tone med öppningsbara sidorutor, centrallås, LED och defroster. Nio färger."
+            }
           ]
         },
         {
           "name": "Last och förvaring",
           "items": [
-            { "art": "PAC", "name": "Flakinklädnad under kant", "price": 4000, "desc": "Formgjuten hårdplast som skyddar flaket från vardagens utmaningar." },
-            { "art": "PAZ", "name": "Flakmatta", "price": 1900, "desc": "Slittålig och halkmotverkande gummi som håller godset på plats." },
-            { "art": "PCH", "name": "12V uttag flaket med belysning", "price": 3400, "desc": "Ström och belysning i flaket för last som kräver det." }
+            {
+              "art": "PAC",
+              "name": "Flakinklädnad under kant",
+              "price": 4000,
+              "desc": "Formgjuten hårdplast som skyddar flaket från vardagens utmaningar."
+            },
+            {
+              "art": "PAZ",
+              "name": "Flakmatta",
+              "price": 1900,
+              "desc": "Slittålig och halkmotverkande gummi som håller godset på plats."
+            },
+            {
+              "art": "PCH",
+              "name": "12V uttag flaket med belysning",
+              "price": 3400,
+              "desc": "Ström och belysning i flaket för last som kräver det."
+            }
           ]
         },
         {
           "name": "Exteriör",
           "items": [
-            { "art": "PMH", "name": "Skärmbreddare Grå", "price": 9200, "desc": "Skärmbreddare i Gun Metallic-nyans som matchar XRX-grillen." },
-            { "art": "PMG", "name": "Stötfångarskydd fram", "price": 4200, "desc": "Skyddar stötfångaren och ger fronten ett tuffare utseende." },
-            { "art": "PCM", "name": "Solfilm", "price": 5900, "desc": "HP Supreme som blockerar upp till 70 % av solenergin och 99 % av UV-strålningen." },
-            { "art": "PCD", "name": "Vindavvisare dörrar DC", "price": 1600, "desc": "Håller regn och damm utanför kupén. Monteras utan borrhål." },
-            { "art": "PFB", "name": "Insteglister \"Isuzu\"", "price": 1300, "desc": "Främre instegslister i aluminium med Isuzu-logotyp." }
+            {
+              "art": "PMH",
+              "name": "Skärmbreddare Grå",
+              "price": 9200,
+              "desc": "Skärmbreddare i Gun Metallic-nyans som matchar XRX-grillen."
+            },
+            {
+              "art": "PMG",
+              "name": "Stötfångarskydd fram",
+              "price": 4200,
+              "desc": "Skyddar stötfångaren och ger fronten ett tuffare utseende."
+            },
+            {
+              "art": "PCM",
+              "name": "Solfilm",
+              "price": 5900,
+              "desc": "HP Supreme som blockerar upp till 70 % av solenergin och 99 % av UV-strålningen."
+            },
+            {
+              "art": "PCD",
+              "name": "Vindavvisare dörrar DC",
+              "price": 1600,
+              "desc": "Håller regn och damm utanför kupén. Monteras utan borrhål."
+            },
+            {
+              "art": "PFB",
+              "name": "Insteglister \"Isuzu\"",
+              "price": 1300,
+              "desc": "Främre instegslister i aluminium med Isuzu-logotyp."
+            }
           ]
         },
         {
           "name": "Interiör",
           "items": [
-            { "art": "PCJ", "name": "Tygmattor DC", "price": 800, "desc": "Tygmattor med broderad Isuzu-logga." },
-            { "art": "PCF", "name": "Gummimattor höga DC", "price": 700, "desc": "Skålformade gummimattor som samlar snö, smuts och vatten." },
-            { "art": "PFQ", "name": "Trådlös laddare mobiltelefon", "price": 1300, "desc": "Dold monterad laddare i facket framför växelspaken." }
+            {
+              "art": "PCJ",
+              "name": "Tygmattor DC",
+              "price": 800,
+              "desc": "Tygmattor med broderad Isuzu-logga."
+            },
+            {
+              "art": "PCF",
+              "name": "Gummimattor höga DC",
+              "price": 700,
+              "desc": "Skålformade gummimattor som samlar snö, smuts och vatten."
+            },
+            {
+              "art": "PFQ",
+              "name": "Trådlös laddare mobiltelefon",
+              "price": 1300,
+              "desc": "Dold monterad laddare i facket framför växelspaken."
+            }
           ]
         },
         {
           "name": "Funktion och säkerhet",
           "items": [
-            { "art": "PNA", "name": "Dragkrok inkl. elsats 13-pol", "price": 7300, "desc": "Dragkrok från Isuzu för 3 500 kg. Parkeringssensorer kopplas ur automatiskt vid släpkoppling." },
-            { "art": "PAG", "name": "Tailgate assist", "price": 2300, "desc": "Gaskolvar hjälper att öppna och stänga baklämmen även med händerna fulla." },
-            { "art": "PHN", "name": "Centrallås bakläm", "price": 3200, "desc": "Lås baklämmen med bilens nyckel." },
-            { "art": "PFM", "name": "Tätningslist bakläm", "price": 1000, "desc": "Minskar insläppet av damm och vatten på flaket." },
-            { "art": "PBV", "name": "Däck allväder terräng 265/60-R18 Cooper", "price": 15100, "desc": "Allvädersdäck lämpade för terräng från Cooper." }
+            {
+              "art": "PNA",
+              "name": "Dragkrok inkl. elsats 13-pol",
+              "price": 7300,
+              "desc": "Dragkrok från Isuzu för 3 500 kg. Parkeringssensorer kopplas ur automatiskt vid släpkoppling."
+            },
+            {
+              "art": "PAG",
+              "name": "Tailgate assist",
+              "price": 2300,
+              "desc": "Gaskolvar hjälper att öppna och stänga baklämmen även med händerna fulla."
+            },
+            {
+              "art": "PHN",
+              "name": "Centrallås bakläm",
+              "price": 3200,
+              "desc": "Lås baklämmen med bilens nyckel."
+            },
+            {
+              "art": "PFM",
+              "name": "Tätningslist bakläm",
+              "price": 1000,
+              "desc": "Minskar insläppet av damm och vatten på flaket."
+            },
+            {
+              "art": "PBV",
+              "name": "Däck allväder terräng 265/60-R18 Cooper",
+              "price": 15100,
+              "desc": "Allvädersdäck lämpade för terräng från Cooper."
+            }
           ]
         }
       ]
@@ -69,21 +191,47 @@
         {
           "name": "Tillbehörspaket",
           "items": [
-            { "art": "MAX", "name": "MAX-paket till T60 MAX", "price": 10000, "regularPrice": 35000, "desc": "Dragkrok, takrails, sidosteg och skärmbreddare. Kampanjpris vid nybeställning (ordinarie 35 000 kr exkl. moms)." }
+            {
+              "art": "MAX",
+              "name": "MAX-paket till T60 MAX",
+              "price": 10000,
+              "regularPrice": 35000,
+              "desc": "Dragkrok, takrails, sidosteg och skärmbreddare. Kampanjpris vid nybeställning (ordinarie 35 000 kr exkl. moms)."
+            }
           ]
         },
         {
           "name": "Last och säkring",
           "items": [
-            { "art": null, "name": "Inredning och lastsäkring", "price": null, "desc": "Skräddarsytt för e-Deliver och Deliver – kontakta oss för ritning och pris." },
-            { "art": null, "name": "Dragkrok med elsats", "price": null, "desc": "Monteras i vår verkstad i Smista eller Spånga." }
+            {
+              "art": null,
+              "name": "Inredning och lastsäkring",
+              "price": null,
+              "desc": "Skräddarsytt för e-Deliver och Deliver – kontakta oss för ritning och pris."
+            },
+            {
+              "art": null,
+              "name": "Dragkrok med elsats",
+              "price": null,
+              "desc": "Monteras i vår verkstad i Smista eller Spånga."
+            }
           ]
         },
         {
           "name": "Skydd och komfort",
           "items": [
-            { "art": null, "name": "Flaklock och kåpor till pickup", "price": null, "desc": "Rolltop, hardtop och softtop anpassade efter T60 och T90." },
-            { "art": null, "name": "Motorvärmare och kupévärmare", "price": null, "desc": "Förberett svenska vintrar – fråga efter paketpris vid nybeställning." }
+            {
+              "art": null,
+              "name": "Flaklock och kåpor till pickup",
+              "price": null,
+              "desc": "Rolltop, hardtop och softtop anpassade efter T60 och T90."
+            },
+            {
+              "art": null,
+              "name": "Motorvärmare och kupévärmare",
+              "price": null,
+              "desc": "Förberett svenska vintrar – fråga efter paketpris vid nybeställning."
+            }
           ]
         }
       ]
@@ -96,21 +244,46 @@
         {
           "name": "Originaldelar",
           "items": [
-            { "art": null, "name": "Originaldelar Daily och eDaily", "price": null, "desc": "Från originaldelar till renoverade – IVECO-nätverket håller underhållskostnaderna under kontroll." },
-            { "art": null, "name": "Andra linjens delar", "price": null, "desc": "Kostnadseffektiva alternativ för äldre fordon i drift." }
+            {
+              "art": null,
+              "name": "Originaldelar Daily och eDaily",
+              "price": null,
+              "desc": "Från originaldelar till renoverade – IVECO-nätverket håller underhållskostnaderna under kontroll."
+            },
+            {
+              "art": null,
+              "name": "Andra linjens delar",
+              "price": null,
+              "desc": "Kostnadseffektiva alternativ för äldre fordon i drift."
+            }
           ]
         },
         {
           "name": "Påbyggnad",
           "items": [
-            { "art": null, "name": "Kyl, kran, flak, servicebil", "price": null, "desc": "Vi bygger Daily efter er verksamhet – se Bygg din lastbil." },
-            { "art": null, "name": "Bakgavellift", "price": null, "desc": "Dokumenterade liftlösningar med rätt viktklass och besiktning." }
+            {
+              "art": null,
+              "name": "Kyl, kran, flak, servicebil",
+              "price": null,
+              "desc": "Vi bygger Daily efter er verksamhet – se Bygg din lastbil."
+            },
+            {
+              "art": null,
+              "name": "Bakgavellift",
+              "price": null,
+              "desc": "Dokumenterade liftlösningar med rätt viktklass och besiktning."
+            }
           ]
         },
         {
           "name": "Tillbehör",
           "items": [
-            { "art": null, "name": "Kofångarskydd, steg, inredning", "price": null, "desc": "Pris och monteringstid på förfrågan via verkstaden." }
+            {
+              "art": null,
+              "name": "Kofångarskydd, steg, inredning",
+              "price": null,
+              "desc": "Pris och monteringstid på förfrågan via verkstaden."
+            }
           ]
         }
       ]

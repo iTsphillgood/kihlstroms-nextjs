@@ -18,6 +18,9 @@ npm run qa         # validerar JSON, bildreferenser, mejl/tel-länkar, dev-läck
   T90 EV-kampanj och eDaily/miljözon. Autoplay, swipe, tangentbord, pausa vid hover, reduced-motion.
 - **22 modellfamiljer med riktiga svenska priser** – Maxus (maxus.se), Isuzu D-Max inkl. AT/BEV
   (isuzusverige.se prislista) och IVECO:s 20 kampanjmodeller med modellkoder (iveco.se / kihlstroms.se).
+- **Originallänkade bilder från märkenas svenska huvudsidor** – Maxus via maxus.se Sanity-CDN,
+  Isuzu via isuzusverige.se/media och IVECO via iveco.se (Hedin sitecore-CDN), med lokal fallback
+  (`SmartImg`) om ett CDN inte svarar.
 - **Lager med 16 speklade annonser** – märke-, bränsle-, kaross- och skickfilter + sök + sortering,
   direktlänkar till Blocket-annonser och säljare.
 - **Tillbehörskatalog med listpriser** – Isuzu D-Max 22 artiklar med artikelnummer, Maxus MAX-paket,
@@ -39,7 +42,9 @@ Alla priser exklusive moms om inget annat anges och kan ändras av importörerna
 ## Viktigt
 
 - Tesla, Hedin och Strada används som UX- och konkurrensreferenser. Deras bilder och texter ska inte kopieras.
-- Fordonsbilderna i `public/images/models/` är riktiga press-/objektbilder från angivna utgivare
-  (se docs/image-sources.md) och ska bytas till officiellt märkesmaterial efter skriftligt godkännande.
+- Fordonsbilderna laddas från märkenas officiella svenska CDN:er (originallänkar, se
+  docs/image-sources.md). Lokala fallback-bilder i `public/images/models/` är tredjeparts press-/objektbilder
+  med angivna utgivare och ska bytas ut om de blir huvudkälla. T90 EV och e-Deliver 3 saknar officiella
+  modellsidor på maxus.se just nu och använder fallback-bilder som huvudkälla.
 - Kundlogotyper ska endast publiceras efter verifierad relation och skriftligt godkännande.
 - Produktion sker via staging och manuell kontroll; `npm run qa` ska gå grönt innan varje publicering.

@@ -25,6 +25,7 @@ export interface Model {
   priceNote?: string;
   badge?: string;
   image: string;
+  imageFallback?: string;
   gallery: string[];
   variants: Variant[];
   specs: Spec[];
@@ -65,6 +66,7 @@ export interface BrandInfo {
   description: string;
   color: string;
   image: string;
+  imageFallback?: string;
   sourceUrl: string;
   highlights: string[];
 }

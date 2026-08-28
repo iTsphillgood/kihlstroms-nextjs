@@ -7,6 +7,10 @@ import StockImg from "../components/StockImg";
 import { models, stock, campaigns, staff, locations, brandInfo, company } from "../lib/data";
 import { formatSek, formatMileage } from "../lib/format";
 
+const M = "https://cdn.sanity.io/images/mcx434c9/production/";
+const I = "https://www.isuzusverige.se/media/";
+const V = "https://edge.sitecorecloud.io/hedinitaban27a1-hedin8837-prod5c4b-4604/media/project/hedin/distribution-cars/hedinnordictruck/shared/images/";
+
 const heroSlides: HeroSlide[] = [
   {
     id: "iveco-kampanj",
@@ -17,7 +21,8 @@ const heroSlides: HeroSlide[] = [
     text: "Skåpbil, skåp & lift, flak, dubbelhytt och el – paket byggda på det svenska företag faktiskt beställer. Kihlströms är Sveriges största IVECO-återförsäljare.",
     price: "Från 419 000 kr exkl. moms",
     priceNote: "Kampanjpris",
-    image: "/images/models/iveco-daily.png",
+    image: `${V}campaigns/sverige/9-new-models/header-img/iveco-daily-12m3---16_9---header/12m3skpbilfastlane/fastlanevanhero/fastlanevanhero.png?w=1600&q=85`,
+    imageFallback: "/images/models/iveco-daily.png",
     imageAlt: "IVECO Daily skåpbil – kampanjmodell 2026",
     primary: { label: "Se alla 20 modellerna", href: "/marke/iveco" },
     secondary: { label: "Begär offert", href: "/kontakt#meddelande" },
@@ -29,14 +34,31 @@ const heroSlides: HeroSlide[] = [
     brandColor: "#C8102E",
     eyebrow: "Sveriges mest sålda pickup",
     title: "Isuzu D-Max – vald av proffs, tre år i rad",
-    text: "Lasta upp till ett ton, dra 3 500 kg och kör dit djuren finns – på fält, grus och landsväg. Ramchassi som tål att användas varje arbetsdag.",
+    text: "Ny drivlina: 2,2-liters turbodiesel med 400 Nm och 8-växlad automat. Lasta upp till ett ton, dra 3 500 kg – HVO100-godkänd med 5 års garanti.",
     price: "Från 469 900 kr exkl. moms",
     priceNote: "Rek. kundpris",
-    image: "/images/models/isuzu-dmax-xrx.jpg",
-    imageAlt: "Isuzu D-Max Double Cab pickup",
+    image: `${I}glmkbrd4/my26-dc-xrx-rolltop-n3-7107_v_hero_desktop.png?width=1920&height=1080&format=png&v=1dcdeb427866170`,
+    imageFallback: "/images/models/isuzu-dmax-xrx.jpg",
+    imageAlt: "Isuzu D-Max Double Cab pickup med RollTop",
     primary: { label: "Se D-Max-modellerna", href: "/marke/isuzu" },
     secondary: { label: "Boka provkörning", href: "/kontakt#meddelande" },
-    facts: ["1 000 kg|Last i flaket", "3 500 kg|Dragvikt", "ca 4 244 kr/år|Skatt med CNG-paket"]
+    facts: ["400 Nm|Vridmoment", "3 500 kg|Dragvikt", "ca 4 244 kr/år|Skatt med CNG-paket"]
+  },
+  {
+    id: "isuzu-at35",
+    brand: "Isuzu",
+    brandColor: "#C8102E",
+    eyebrow: "Kampanj · Arctic Trucks",
+    title: "D-Max AT35 – äkta Arctic Trucks till kampanjpris",
+    text: "35\" BFGoodrich KO2, AT-fälgar, 40 mm höjning, fyrkantsfäste med dragkrok samt godkännande och registrering – allt ingår i paketet.",
+    price: "729 900 kr exkl. moms",
+    priceNote: "Kampanj · ord. 738 900 kr",
+    image: `${I}1dvdjid1/at35-my26.png?width=1600&height=994&format=png&v=1dcd2579a552010`,
+    imageFallback: "/images/models/isuzu-dmax-at35.jpg",
+    imageAlt: "Isuzu D-Max Arctic Trucks AT35",
+    primary: { label: "Se Arctic Trucks-modellerna", href: "/modeller/isuzu-d-max-arctic-trucks" },
+    secondary: { label: "Se AT37-kampanjen", href: "/kampanjer" },
+    facts: ["35\"|BFGoodrich KO2", "40 mm|Höjning", "793 900 kr|AT37 kampanjpris"]
   },
   {
     id: "maxus-eterron",
@@ -46,26 +68,12 @@ const heroSlides: HeroSlide[] = [
     title: "MAXUS eTerron 9 – 436 hk och 3,5 ton drag",
     text: "Elektrisk 4x4-pickup med 102 kWh batteri, upp till 432 km räckvidd, 236 liters frunk och fem säten. Byggd för krävande arbetsdagar.",
     price: "Från 699 900 kr exkl. moms",
-    image: "/images/models/maxus-eterron9.webp",
+    image: `${M}0c054dacc93acca171f517f9a3991bc7eac9b0cd-1920x1200.png?w=1600&q=85&auto=format`,
+    imageFallback: "/images/models/maxus-eterron9.webp",
     imageAlt: "MAXUS eTerron 9 – elektrisk fyrhjulsdriven pickup",
     primary: { label: "Se eTerron 9", href: "/modeller/maxus-eterron-9" },
     secondary: { label: "Alla Maxus-modeller", href: "/marke/maxus" },
     facts: ["436 hk|Effekt", "432 km|Räckvidd", "3 500 kg|Dragvikt"]
-  },
-  {
-    id: "maxus-t90",
-    brand: "Maxus",
-    brandColor: "#0E7490",
-    eyebrow: "Kampanjpris",
-    title: "T90 EV – 100% elektrisk pickup med fem säten",
-    text: "Plats för hela familjen och jobbet: 925 kg lastvikt, 4,1 m³ lastvolym och rostskyddsbehandling i Sverige. Nu till kampanjpris.",
-    price: "299 900 kr exkl. moms",
-    priceNote: "Exkl. klimatpremie",
-    image: "/images/models/maxus-t90ev.jpg",
-    imageAlt: "MAXUS T90 EV – elektrisk pickup",
-    primary: { label: "Se T90 EV", href: "/modeller/maxus-t90-ev" },
-    secondary: { label: "Se lagret", href: "/lager" },
-    facts: ["925 kg|Lastvikt", "4,1 m³|Lastvolym", "8 år|Batterigaranti"]
   },
   {
     id: "iveco-edaily",
@@ -76,7 +84,8 @@ const heroSlides: HeroSlide[] = [
     text: "Kom in i miljözonen med full last- och dragförmåga. Upp till 364 km WLTP, 8 års batterigaranti och assistans 24/7 i hela Europa.",
     price: "Från 679 000 kr exkl. moms",
     priceNote: "Kampanjpris",
-    image: "/images/models/iveco-edaily.png",
+    image: `${V}campaigns/norge/edaily-kampanj/stage-row/iveco-edaily-kassebil---stage-row---desktop.png?w=1600&iar=0`,
+    imageFallback: "/images/models/iveco-edaily.png",
     imageAlt: "IVECO eDaily – elektrisk skåpbil",
     primary: { label: "Se eDaily", href: "/modeller/iveco-edaily" },
     secondary: { label: "Jämför eltransportbilar", href: "/modeller?bransle=El" },

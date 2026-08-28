@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { getModel, models, brandName, brandColor, modelsByBrand, stock, staff } from "../../../lib/data";
 import { formatSek, quoteMailto } from "../../../lib/format";
 import ModelCard from "../../../components/ModelCard";
+import SmartImg from "../../../components/SmartImg";
 
 export function generateStaticParams() {
   return models.map((m) => ({ slug: m.slug }));
@@ -83,13 +84,13 @@ export default function ModelPage({ params }: { params: { slug: string } }) {
 
             <div className="grid gap-3">
               <div className="overflow-hidden rounded-2xl bg-ink-100 shadow-card">
-                <img src={gallery[0]} alt={`${model.name} – huvudbild`} className="aspect-[16/10] w-full object-cover" />
+                <SmartImg src={gallery[0]} fallback={model.imageFallback} alt={`${model.name} – huvudbild`} className="aspect-[16/10] w-full object-cover" eager />
               </div>
               {gallery.length > 1 && (
                 <div className="grid grid-cols-2 gap-3">
                   {gallery.slice(1).map((g, i) => (
                     <div key={g + i} className="overflow-hidden rounded-xl bg-ink-100">
-                      <img src={g} alt={`${model.name} – bild ${i + 2}`} className="aspect-[16/10] w-full object-cover" loading="lazy" />
+                      <SmartImg src={g} fallback={model.imageFallback} alt={`${model.name} – bild ${i + 2}`} className="aspect-[16/10] w-full object-cover" />
                     </div>
                   ))}
                 </div>

@@ -51,9 +51,13 @@ for (const m of models) {
 
 const imageRefs = new Set();
 for (const m of models) {
-  [m.image, ...(m.gallery ?? [])].forEach((i) => i && imageRefs.add(i));
+  [m.imageFallback, ...(m.gallery ?? []).filter((g) => g.startsWith("/"))].forEach((i) => i && i.startsWith("/") && imageRefs.add(i));
+  if (m.image.startsWith("/") && !m.imageFallback) imageRefs.add(m.image);
 }
-for (const b of data.company.brands) imageRefs.add(b.image);
+for (const b of data.company.brands) {
+  if (b.imageFallback) imageRefs.add(b.imageFallback);
+  else if (b.image.startsWith("/")) imageRefs.add(b.image);
+}
 for (const v of data.stock.vehicles) imageRefs.add(v.fallbackImage);
 let missing = 0;
 for (const ref of imageRefs) {

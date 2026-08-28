@@ -1,40 +1,74 @@
-# Bildkällor & rättigheter
+# Bildkällor & rättigheter – V4
 
-Alla fordonsbilder i `public/images/models/` är riktiga press- och objektbilder hämtade via bildsökning
-från publicerade svenska och europeiska fordonskällor. Ingen bild är AI-genererad.
+## Princip
 
-Produktionsbeslut (enligt README): officiellt modellmaterial ska hämtas från märkenas egna CDN:er
-(Maxus: `cdn.sanity.io` via maxus.se, Isuzu: `isuzusverige.se/media`, IVECO: `edge.sitecorecloud.io` via iveco.se)
-efter skriftligt godkännande — dessa filer är prototypmaterial och ska bytas mot officialmaterial före driftsättning.
+Alla fordonsbilder på sajten laddas **direkt från märkenas officiella svenska huvudsidors CDN:er**
+(originallänkar) – inga tredjeparts pressbilder i huvudflödet. Varje bild har en **lokal fallback**
+som visas automatiskt om CDN:et inte svarar (komponenten `SmartImg` / `onError`).
 
-| Fil | Modell | Källa | Utgivare |
-| --- | --- | --- | --- |
-| maxus-edeliver3.webp | Maxus e-Deliver 3 | https://www.niemibil.se/tjanstebil/maxus-elektriska-transportbilar/ | Niemibil (SE) |
-| maxus-edeliver5.jpg | Maxus e-Deliver 5 | https://alltomelbil.se/maxus-lanserar-eldrivna-transportbilen-e-deliver-5-i-sverige/ | Allt om Elbil (SE) |
-| maxus-edeliver7.jpg | Maxus e-Deliver 7 | https://byggvarlden.se/maxus-e-deliver-7-kompromiss-for-billiga-mil | Byggvärlden (SE) |
-| maxus-deliver7.jpg | Maxus Deliver 7 / Deliver 9 | https://www.caradisiac.com/maxus-deliver-7-et-deliver-9-les-fourgons-diesel-qui-bousculent-le-marche-220785.htm | Caradisiac (FR) |
-| maxus-edeliver9.jpg | Maxus e-Deliver 9 (kylbil) | https://klicket.se/annons/bil/maxus_e_deliver_9_moms_vat_exportnetto_kylbil_65_kwh_aut_2021_2257249 | Klicket (SE) |
-| maxus-deliver9.jpg | Maxus Deliver 9 | https://www.theaa.com/used-vans/maxus/deliver-9 | The AA (UK) |
-| maxus-t60.jpg, maxus-t60-2.jpg | Maxus T60 MAX | https://m3.se/article/2812713/maxus-t60-max.html | M3 (SE) |
-| maxus-eterron9.webp, maxus-eterron9-2.webp | Maxus eTerron 9 | https://www.electrichunter.com/electric-cars/maxus-eterron-9-electric-pickup-debuts-35-ton-towing-and-five-seats | Electric Hunter |
-| maxus-t90ev.jpg, maxus-t90ev-wide.jpg | Maxus T90 EV | https://msverige.se/allt-om-bilen/motor-provkor/maxus-t90ev | Motormännens Riksförbund (SE) |
-| isuzu-dmax-xrx.jpg, isuzu-dmax-xrx-2.jpg | Isuzu D-Max Double Cab | https://olofssonauto.com/vehicles/isuzu-d-max-xrx-double-cab-cng-lag-skatt-snabb-lev-ny-modell-18260913/ | Olofsson Auto (SE) |
-| isuzu-dmax-at35.jpg, isuzu-dmax-at35-2.jpg | Isuzu D-Max Arctic Trucks AT35 | https://www.autocar.co.uk/car-review/isuzu/d-max-arctic-trucks-at35 | Autocar (UK) |
-| iveco-daily.png | IVECO Daily | https://trucker.se/valj-bil/iveco/daily-2024 | Trucker.se (SE) |
-| iveco-daily-2.jpg | IVECO Daily 35-140 (2024) | https://psauction.se/item/view/918849/iveco-daily-35-140-skapbil-2-3-jtd-hi-matic-136hk-2024 | PS Auction (SE) |
-| iveco-edaily.png | IVECO Daily skåpbil (studio) | https://www.multibolaget.se/transportbilar | Multibolaget (SE) |
-| iveco-sway.jpg | IVECO S-Way | https://autoline.info/-/sale/control-units/truck-tractor/IVECO/STRALIS-EURO-6-emission-S-WAY-front-cabin-hood-front-hood-58027--20041613404920128800 | Autoline |
-| iveco-eurocargo.jpg | IVECO Eurocargo 75 E 12 | https://www.europa-lastbilar.se/lastbil-iveco/eurocargo/1-32-m379-415/lastbil-iveco-eurocargo.html | Europa Lastbilar (SE) |
+| Märke | CDN | Källa |
+| --- | --- | --- |
+| Maxus | `cdn.sanity.io/images/mcx434c9/...` | maxus.se (samma Sanity-projekt använder kihlstroms.se för officiellt Maxus-material) |
+| Isuzu | `www.isuzusverige.se/media/...` | isuzusverige.se |
+| IVECO | `edge.sitecorecloud.io/.../hedinnordictruck/...` | iveco.se (Hedin Nordic Truck) + Kihlströms kampanjmaterial på samma CDN |
+| Lagerbilar | `images.blocketcdn.se/...` | Kihlströms Blocket-annonser |
+
+## Ursprung per modell (data/models.json)
+
+### IVECO (iveco.se / Hedin – sitecore CDN)
+- Daily Skåpbil: `models/vans/stage-row-daily-12m3-proline.png` + hero `campaigns/sverige/.../fastlanevanhero.png` + `models/vans/iveco-daily-van.jpg`
+- Skåp & Lift: `models/vans/stage-row-daily-box-lift-proline.png` / `stagerow-daily-box-lift-fastlane.png`
+- Flakbil: `models/vans/stage-row-daily-cab-proline.png` / `-fastlane.png` + `iveco-daily-chassis.jpg`
+- Dubbelhytt: `models/vans/stage-row-daily-cab-fastlane.png` + `iveco-daily-4x4.jpg`
+- eSuperJolly: `models/vans/stage-row-esuperjolly-proline.png` / `-fastlane.png`
+- eDaily: `campaigns/norge/edaily-kampanj/stage-row/iveco-edaily-kassebil---stage-row---desktop.png` + `iveco-edaily-van.jpg` + `iveco-edaily-cab.jpg`
+- Eurocargo: `models/trucks/eurocargo-4x2.jpg`
+- S-Way: `models/trucks/iveco-sway-artic.jpg`
+
+### Isuzu (isuzusverige.se/media)
+- Extended Cab: `a5wozl3o/my24_ec_xrl_kapa_modelimage2.jpg` + galleri `j5dbhr3r`, `xnkcjs2z`
+- Double Cab: `qmtn33gp/my26-dc-xrx-rolltop-n3-7107_v.png` + hero `glmkbrd4/..._hero_desktop.png` + Skåne-galleri `2grm5ivo`
+- Arctic Trucks: `1dvdjid1/at35-my26.png` (huvud) + `eiwjkzic/at33-my26.png` + `02tgq4lc/at37-my26.png`
+- BEV: `lgdjwqjg/gfx_1140_modelimage.png` + `gjsgfbhf/my26_bev_xrl_front_splashwhite.png` + `5tthzxig/my26_bev_xrx_front_splashwhite.png`
+
+### Maxus (cdn.sanity.io, exakt de bilderna maxus.se serverar på /modeller)
+- e-Deliver 5: `5da2e871...-1920x1200.png` · e-Deliver 7: `eab0b939...` · Deliver 7: `2a274008...`
+- e-Deliver 9: `2be53751...` · Deliver 9: `b0da463f...` · e-Deliver 9 chassi: `3731648c...-2400x1231.jpg`
+- T60 MAX: `f5f6d2af...` · eTerron 9: `0c054dac...` + officiella galleribilder ur samma projekt
+- **T90 EV och e-Deliver 3:** maxus.se har tagit bort modellsidorna (404 vid besök 2026-08-28).
+  Dessa två modeller använder därför fortfarande lokala verkliga fordonsbilder
+  (M Sverige / Niemibil – se nedan) tills officiellt material finns igen.
+
+## Lokala fallback-bilder (public/images/models/)
+
+Endast fallback + T90 EV/e-Deliver 3. Riktiga press-/objektbilder:
+
+| Fil | Källa | Utgivare |
+| --- | --- | --- |
+| maxus-edeliver3.webp | niemibil.se/tjanstebil/maxus-elektriska-transportbilar | Niemibil (SE) |
+| maxus-edeliver5.jpg | alltomelbil.se | Allt om Elbil (SE) |
+| maxus-edeliver7.jpg | byggvarlden.se | Byggvärlden (SE) |
+| maxus-deliver7.jpg | caradisiac.com | Caradisiac (FR) |
+| maxus-edeliver9.jpg | klicket.se | Klicket (SE) |
+| maxus-deliver9.jpg | theaa.com/used-vans | The AA (UK) |
+| maxus-t60.jpg/-2.jpg | m3.se/article/2812713 | M3 (SE) |
+| maxus-eterron9.webp/-2.webp | electrichunter.com | Electric Hunter |
+| maxus-t90ev.jpg/-wide.jpg | msverige.se | Motormännens Riksförbund (SE) |
+| isuzu-dmax-xrx.jpg/-2.jpg | olofssonauto.com | Olofsson Auto (SE) |
+| isuzu-dmax-at35.jpg/-2.jpg | autocar.co.uk | Autocar (UK) |
+| iveco-daily.png/-2.jpg | trucker.se / psauction.se | Trucker (SE) / PS Auction (SE) |
+| iveco-edaily.png | multibolaget.se | Multibolaget (SE) |
+| iveco-sway.jpg | autoline.info | Autoline |
+| iveco-eurocargo.jpg | europa-lastbilar.se | Europa Lastbilar (SE) |
 
 ## Pris- och datakällor
 
-- Maxus modeller & priser: https://maxus.se/modeller (+ respektive modellsida), besökt 2026-08-28
-- Maxus T60 MAX-paket: https://www.mynewsdesk.com/se/rsa/pressreleases/maxus-t60-max-ny-robust-pickup-lanseras-i-sverige-3391716
-- Isuzu prislista D-Max (XRM/XRL/XRX/AT33/AT35/AT37/BEV): https://isuzusverige.se/dmax/prislista/
-- Isuzu tillbehör med artikelnummer och priser: https://isuzusverige.se/tillbehor/double-cab/ m.fl.
-- IVECO modellprogram: https://iveco.se/ (Fordon och uppdrag)
-- IVECO kampanjpriser (20 modeller, modellkoder): https://www.kihlstroms.se/v3/iveco-daily-modeller/ med hänvisning till iveco.se/kopverktyg/kampanjer
-- Lagerbilar: Kihlströms aktuella annonser via https://www.kihlstroms.se/v3/bilar-i-lager-2/ (Blocket-annonser)
-- Anläggningar, öppettider, kontaktuppgifter och personal: https://www.kihlstroms.se/v3/kontakt/
+- Maxus: https://maxus.se/modeller (besökt 2026-08-28; T90 EV- och e-Deliver 3-sidorna nedlagda)
+- Maxus T60 MAX-paket: mynewsdesk.com/se/rsa (pressmeddelande 2025-06-12)
+- Isuzu prislista, drivlina, CNG-paket och AT-kampanjer: isuzusverige.se/dmax/prislista, /modeller/double-cab, /modeller/extended-cab, /modeller/double-cab-arctic-trucks, /modeller/bev, /tillbehor
+- IVECO modellprogram: iveco.se; kampanjpriser: kihlstroms.se/v3/iveco-daily-modeller (flera priser publicerade på iveco.se/kopverktyg/kampanjer)
+- Lagerbilar: kihlstroms.se/v3/bilar-i-lager-2 (Blocket-annonser)
+- Företag/personal/anläggningar: kihlstroms.se/v3/kontakt
 
-Alla priser är exklusive moms om inget annat anges och kan komma att ändras av märkesimportörerna.
+Alla priser exklusive moms om inget annat anges och kan ändras av importörerna.
+Publicering i produktion ska ske efter skriftligt godkännande från respektive generalagent.

@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { getBrand, brandInfo, modelsByBrand, campaigns, staff } from "../../../lib/data";
 import ModelGrid from "../../../components/ModelGrid";
 import StaffList from "../../../components/StaffList";
+import SmartImg from "../../../components/SmartImg";
 
 export function generateStaticParams() {
   return brandInfo.map((b) => ({ brand: b.id }));
@@ -65,7 +66,7 @@ export default function BrandPage({ params }: { params: { brand: string } }) {
             </div>
           </div>
           <div className="overflow-hidden rounded-2xl ring-1 ring-white/15">
-            <img src={brand.image} alt={`${brand.name} – fordonsbild`} className="aspect-[16/10] w-full object-cover" />
+            <SmartImg src={brand.image} fallback={brand.imageFallback} alt={`${brand.name} – fordonsbild`} className="aspect-[16/10] w-full object-cover" eager />
           </div>
         </div>
       </section>

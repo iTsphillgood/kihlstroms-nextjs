@@ -13,6 +13,7 @@ export interface HeroSlide {
   price?: string;
   priceNote?: string;
   image: string;
+  imageFallback?: string;
   imageAlt: string;
   primary: { label: string; href: string };
   secondary: { label: string; href: string };
@@ -141,6 +142,12 @@ export default function HeroSlider({ slides }: { slides: HeroSlide[] }) {
                 loading={i === 0 ? "eager" : "lazy"}
                 fetchPriority={i === 0 ? "high" : "low"}
                 aria-hidden={i !== index}
+                onError={(e) => {
+                  const img = e.currentTarget;
+                  if (s.imageFallback && !img.src.endsWith(s.imageFallback)) {
+                    img.src = s.imageFallback;
+                  }
+                }}
               />
             ))}
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink-950/40 via-transparent to-transparent" aria-hidden="true" />

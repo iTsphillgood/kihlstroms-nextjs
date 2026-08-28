@@ -1,17 +1,18 @@
 import Link from "next/link";
 import type { Model } from "../lib/data";
 import { brandName, brandColor } from "../lib/data";
+import SmartImg from "./SmartImg";
 import { formatSek } from "../lib/format";
 
 export default function ModelCard({ model }: { model: Model }) {
   return (
     <article className="card group flex flex-col overflow-hidden transition hover:shadow-lifted">
       <Link href={`/modeller/${model.slug}`} className="relative block overflow-hidden bg-ink-100">
-        <img
+        <SmartImg
           src={model.image}
+          fallback={model.imageFallback}
           alt={`${model.name} – ${model.category.toLowerCase()} från ${brandName(model.brand)}`}
           className="aspect-[16/10] w-full object-cover transition duration-500 group-hover:scale-[1.03]"
-          loading="lazy"
         />
         {model.badge && (
           <span
