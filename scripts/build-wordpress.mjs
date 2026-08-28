@@ -192,3 +192,6 @@ fs.writeFileSync(path.join(WP, "index.html"), index);
 
 console.log(`✓ ${pageCount} sidor → wordpress/pages/ och wordpress/fragments/`);
 console.log(`✓ CSS inbäddad i varje fil (≈ ${(css.length / 1024).toFixed(0)} kB/sida, ingen separat css-fil)`);
+
+/* ---------- 8. Kopieringslista ---------- */
+execSync("node scripts/wp-copylist.mjs", { cwd: ROOT, stdio: "inherit" });
