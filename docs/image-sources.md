@@ -2,16 +2,41 @@
 
 ## Princip
 
-Alla fordonsbilder på sajten laddas **direkt från märkenas officiella svenska huvudsidors CDN:er**
-(originallänkar) – inga tredjeparts pressbilder i huvudflödet. Varje bild har en **lokal fallback**
-som visas automatiskt om CDN:et inte svarar (komponenten `SmartImg` / `onError`).
+Alla fordonsbilder på sajten laddas **direkt från märkenas officiella svenska huvudsidor och importörens
+officiella materialbanker** (originallänkar) – inga tredjeparts pressbilder i huvudflödet. Varje bild har en
+**lokal fallback** som visas automatiskt om CDN:et inte svarar (komponenten `SmartImg` / `onError`).
 
 | Märke | CDN | Källa |
 | --- | --- | --- |
-| Maxus | `cdn.sanity.io/images/mcx434c9/...` | maxus.se (samma Sanity-projekt använder kihlstroms.se för officiellt Maxus-material) |
-| Isuzu | `www.isuzusverige.se/media/...` | isuzusverige.se |
+| Maxus | `cdn.sanity.io/images/mcx434c9/...` + `media.ffycdn.net/eu/rsa-norway/...` | maxus.se + **RSA Guideline** (marketing.rsa.no/document/49) |
+| Isuzu | `www.isuzusverige.se/media/...` + `media.ffycdn.net/eu/rsa-norway/...` | isuzusverige.se + **RSA Guideline** (marketing.rsa.no/document/51) |
 | IVECO | `edge.sitecorecloud.io/.../hedinnordictruck/...` | iveco.se (Hedin Nordic Truck) + Kihlströms kampanjmaterial på samma CDN |
 | Lagerbilar | `images.blocketcdn.se/...` | Kihlströms Blocket-annonser |
+
+## RSA Guideline – importörens officiella materialbanker
+
+RSA (rsa.no) är importör för både Maxus och Isuzu på Norden och publicerar varumärkesmaterial via
+marketing.rsa.no. Bild-CDN: `media.ffycdn.net/eu/rsa-norway/{id}.{ext}?mod=v1/resize={px}`.
+
+- **Maxus – RSA Guideline**: https://marketing.rsa.no/document/49 — 2 149 tillgångar:
+  934 rena bilder (T60-studio 8K, eD5-studio, SK85/eTerron 9-interiörer, Deliver 9), 70 färgthumbs,
+  7 produktvideor, 42 sociala mallar, 5 annonsmallar, TV/radio.
+- **Isuzu – RSA Guideline**: https://marketing.rsa.no/document/51 — 1 130 tillgångar:
+  136 rena bilder (D-Max-studioserie i 8K), 60 färgthumbs, 25 annonsmallar, 56 sociala mallar, TV/radio.
+- Länkarna visas även i UI:t på respektive märkessida ("Officiellt bildmaterial från importören").
+
+### Använda RSA-bilder i sajten (data/models.json)
+
+- **T60 MAX**: `Q8xi2Gkn9rK8xM9BPA1N` (front), `HyLmVL2J9kYYzL8k9Ltu` (sida), `RKdwohxDDcBSmEPtAiiF`
+  (bak), `XoDV3CCFxBjjWtaSHwrM` (45°), `qmiAnxmXy1hPA3VvX6t4` (ratt), `PZ5rjvYLMfsvkcUT2egW` (skärm)
+- **e-Deliver 5**: `7mMy9wddZiSJzPcyTAaV` (White-Front), `yXc2DNbJPkBbJArBcpKF` (White-Side),
+  `EEV3hVpLFLBzruywAo8H` (White-Rear-45), `1vp9E1XxgnRZT1b3nCcf` (Cockpit), `awJAM8tgbSGhgMsrwPxy` (Cargo)
+- **Deliver 9**: `HwJ5gDSanp1J5rqWKwd9` (deliver9-white-1)
+- **eTerron 9 (SK85-interiörer)**: `ZeJdX978BftZhLipPzyZ` (Front Row), `qcwr6ziiRjcAWeA2RfQU`
+  (Large Screen), `r9RZjHDvChoFZL7h6LW1` (Passenger View)
+- **Isuzu D-Max-studio**: `jpVnngyHjN2J1cZsiHyV` (DMax-43), `tQrnoSiEhk6Gmu9EtfRt` (DMax-42),
+  `Q6saXAK6ieLvQGSGBANt` (DMax-38)
+
 
 ## Ursprung per modell (data/models.json)
 

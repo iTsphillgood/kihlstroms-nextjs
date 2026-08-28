@@ -67,6 +67,7 @@ export interface BrandInfo {
   color: string;
   image: string;
   imageFallback?: string;
+  guidelineUrl?: string;
   sourceUrl: string;
   highlights: string[];
 }

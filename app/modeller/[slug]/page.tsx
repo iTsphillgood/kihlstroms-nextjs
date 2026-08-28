@@ -25,7 +25,7 @@ export default function ModelPage({ params }: { params: { slug: string } }) {
   if (!model) notFound();
 
   const color = brandColor(model.brand);
-  const gallery = [model.image, ...model.gallery].slice(0, 3);
+  const gallery = [model.image, ...model.gallery].slice(0, 5);
   const related = modelsByBrand(model.brand).filter((m) => m.slug !== model.slug).slice(0, 3);
   const stockMatches = stock.vehicles.filter(
     (v) => v.brand.toLowerCase() === brandName(model.brand).toLowerCase() && v.model.toLowerCase().split(" ").some((w) => model.name.toLowerCase().includes(w))

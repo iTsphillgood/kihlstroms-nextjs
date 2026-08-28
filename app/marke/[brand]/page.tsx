@@ -63,6 +63,11 @@ export default function BrandPage({ params }: { params: { brand: string } }) {
               <a href={brand.sourceUrl} className="btn-light" target="_blank" rel="noopener noreferrer">
                 {brand.name}s svenska sida ↗
               </a>
+              {brand.guidelineUrl && (
+                <a href={brand.guidelineUrl} className="text-xs text-ink-300 underline-offset-4 hover:underline" target="_blank" rel="noopener noreferrer">
+                  Officiellt bildmaterial från importören ↗
+                </a>
+              )}
             </div>
           </div>
           <div className="overflow-hidden rounded-2xl ring-1 ring-white/15">

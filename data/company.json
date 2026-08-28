@@ -229,7 +229,8 @@
         "eDaily – enda eltransportbilen som drar 3,5 ton",
         "20 färdiga kampanjmodeller 2026"
       ],
-      "imageFallback": "/images/models/iveco-daily.png"
+      "imageFallback": "/images/models/iveco-daily.png",
+      "guidelineUrl": "https://www.iveco.se/"
     },
     {
       "id": "isuzu",
@@ -244,7 +245,8 @@
         "Från 469 900 kr exkl. moms",
         "Klassens lägsta CO₂-utsläpp"
       ],
-      "imageFallback": "/images/models/isuzu-dmax-xrx.jpg"
+      "imageFallback": "/images/models/isuzu-dmax-xrx.jpg",
+      "guidelineUrl": "https://marketing.rsa.no/document/51"
     },
     {
       "id": "maxus",
@@ -259,7 +261,8 @@
         "T90 EV till kampanjpris 299 900 kr",
         "Rostskyddsbehandlas i Sverige"
       ],
-      "imageFallback": "/images/models/maxus-eterron9.webp"
+      "imageFallback": "/images/models/maxus-eterron9.webp",
+      "guidelineUrl": "https://marketing.rsa.no/document/49"
     }
   ]
 }
