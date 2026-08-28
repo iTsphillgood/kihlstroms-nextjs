@@ -205,13 +205,6 @@ export default function HeroSlider({ slides }: { slides: HeroSlide[] }) {
           </div>
         </div>
       </div>
-
-      <style jsx global>{`
-        @keyframes heroProgress {
-          from { width: 0%; }
-          to { width: 100%; }
-        }
-      `}</style>
     </section>
   );
 }

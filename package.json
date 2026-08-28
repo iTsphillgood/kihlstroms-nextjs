@@ -10,7 +10,8 @@
     "lint": "next lint",
     "qa": "node scripts/qa.mjs",
     "sync": "node scripts/crawl-sites.mjs",
-    "sync:download": "node scripts/crawl-sites.mjs --download"
+    "sync:download": "node scripts/crawl-sites.mjs --download",
+    "build:wordpress": "WP_EXPORT=1 next build && node scripts/build-wordpress.mjs"
   },
   "dependencies": {
     "next": "^14.2.35",
