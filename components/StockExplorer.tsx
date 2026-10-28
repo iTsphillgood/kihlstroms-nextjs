@@ -193,8 +193,8 @@ export default function StockExplorer({ vehicles, sellerName, sellerEmail }: Pro
                   <p className="text-base font-extrabold text-ink-900">{formatSek(v.price)} <span className="text-xs font-medium text-ink-500">exkl. moms</span></p>
                 </div>
                 <div className="flex flex-col gap-1.5">
-                  <a href={v.adUrl} target="_blank" rel="noopener noreferrer" className="btn-dark !px-3.5 !py-2 text-[12px]">
-                    Annons ↗
+                  <a href={"/fordon/" + v.id} className="btn-dark !px-3.5 !py-2 text-[12px]">
+                    Se bilen →
                   </a>
                   <a href={mailtoAbout(v, sellerEmail, sellerName)} className="btn-ghost !px-3.5 !py-2 text-[12px]">
                     Fråga {sellerName.split(" ")[0]}
